@@ -9,6 +9,7 @@ index.html            # Little Lanterns homepage: hanging-lantern hero + one til
 word-garden/          # Word Garden: sight-word game (single-file HTML)
   index.html
   mocks.html          # original design mocks
+shared/nav.js         # persistent lantern menu (bottom-right) injected on every game page
 <new-game>/index.html # each new game gets its own folder
 ```
 
@@ -18,9 +19,11 @@ Peekaworld lives in its own repo/deploy and is linked from a tile: https://peeka
 
 - Plain static HTML/CSS/JS, no build step. Single-file games are preferred.
 - Preview: `python3 -m http.server 8090` from the repo root (`.claude/launch.json` → `word-garden`).
-- Every game links back to the hub with `href="../"` (Word Garden: the bee logo).
+- Every game page includes `<script src="../shared/nav.js" defer></script>` before `</body>`: a fixed lantern button (bottom-right) opening a menu with All games + every game. Keep the bottom-right corner free in game layouts.
+- Register each new game in the `GAMES` array in `shared/nav.js` (and add its tile on the hub).
+- Games can also link back to the hub with `href="../"` (Word Garden: the bee logo).
 - Each game prefixes its `localStorage` keys (Word Garden: `wg-`), since every game shares one origin.
-- New game: add a folder, add a tile in root `index.html` before the "More on the way" tile, update README's game table.
+- New game: add a folder, include `shared/nav.js`, add it to `GAMES` in `shared/nav.js`, add a tile in root `index.html` before the "More on the way" tile, update README's game table.
 - Workflow the user likes for new games: short one-page description → mocks → build, with approval at each step.
 
 ## Design system (shared across games)

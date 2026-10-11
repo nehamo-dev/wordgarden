@@ -25,5 +25,5 @@ Then visit http://localhost:8090.
 
 1. Create a folder, e.g. `counting-stars/`, with its own `index.html`.
 2. Add a tile for it in the root `index.html`, before the "More on the way" tile.
-3. Give the game a link back to `../` so kids can get home.
+3. Add `<script src="../shared/nav.js" defer></script>` before `</body>` and list the game in `GAMES` in `shared/nav.js`. This gives the page the lantern menu for getting home or switching games.
 4. Prefix its `localStorage` keys (Word Garden uses `wg-`), because every game shares one website.
