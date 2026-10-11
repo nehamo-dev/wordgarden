@@ -1,7 +1,7 @@
 /*
  * Little Lanterns: persistent game menu.
  * Include on every game page:  <script src="../shared/nav.js" defer></script>
- * Adds a lantern button (bottom-right) that opens a menu with Home and every game.
+ * Adds a "Little Lanterns" menu pill (top-right, in its own strip above the page) that opens a menu with Home and every game.
  * Add new games to GAMES below.
  */
 (function () {
@@ -18,7 +18,8 @@
   const urlOf = g => g.href || new URL(g.path, root).href;
   const isCurrent = g => !g.href && here.startsWith(urlOf(g));
 
-  const LANTERN = `<svg viewBox="-40 -14 80 106" aria-hidden="true"><path d="M0 -14V0" stroke="#B58863" stroke-width="3"/>
+  const CHEV = `<svg class="chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#3B3355" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>`;
+  const LANTERN = `<svg class="lantern" viewBox="-40 -14 80 106" aria-hidden="true"><path d="M0 -14V0" stroke="#B58863" stroke-width="3"/>
     <rect x="-13" y="0" width="26" height="9" rx="3" fill="#3B3355"/><ellipse cx="0" cy="34" rx="34" ry="27" fill="#FF8B7B"/>
     <ellipse cx="0" cy="34" rx="17" ry="27" fill="none" stroke="#3B3355" stroke-opacity=".14" stroke-width="2"/>
     <rect x="-13" y="59" width="26" height="9" rx="3" fill="#3B3355"/><path d="M0 68v9" stroke="#3B3355" stroke-width="2.5"/><path d="M-4 77h8l-1.5 12h-5z" fill="#FFC95E"/>
@@ -34,15 +35,18 @@
     <style>
       :host{all:initial}
       *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-      .wrap{position:fixed;right:max(14px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom));z-index:2147483000;font-family:'Outfit',system-ui,sans-serif;color:#3B3355}
-      .fab{width:60px;height:60px;border-radius:50%;border:0;background:#fff;cursor:pointer;display:grid;place-items:center;
-        box-shadow:0 5px 0 rgba(59,51,85,.14),0 10px 24px -10px rgba(59,51,85,.4);transition:transform .12s,box-shadow .12s}
-      .fab:active{transform:translateY(3px);box-shadow:0 2px 0 rgba(59,51,85,.14)}
-      .fab svg{width:30px;height:40px;transform-origin:50% 0;animation:sway 5s ease-in-out infinite}
+      .wrap{position:fixed;right:max(14px,env(safe-area-inset-right));top:calc(12px + env(safe-area-inset-top));z-index:2147483000;font-family:'Outfit',system-ui,sans-serif;color:#3B3355}
+      .fab{height:52px;border-radius:99px;border:0;background:#FFD8CF;cursor:pointer;display:flex;align-items:center;gap:8px;padding:0 16px 0 10px;
+        font:inherit;font-size:18px;font-weight:600;color:#3B3355;letter-spacing:-.01em;
+        box-shadow:0 5px 0 #F4B2A4,0 10px 24px -12px rgba(59,51,85,.45);transition:transform .12s,box-shadow .12s}
+      .fab:active{transform:translateY(3px);box-shadow:0 2px 0 #F4B2A4}
+      .fab .lantern{width:26px;height:36px;transform-origin:50% 0;animation:sway 5s ease-in-out infinite}
+      .fab .chev{width:18px;height:18px;transition:transform .2s}
+      .open .fab .chev{transform:rotate(180deg)}
       .fab:focus-visible,.item:focus-visible{outline:3px solid #3B3355;outline-offset:3px}
-      .menu{position:absolute;right:0;bottom:74px;width:min(290px,calc(100vw - 28px));background:#FFFBF5;border-radius:26px;padding:10px;
-        box-shadow:0 18px 44px -14px rgba(59,51,85,.45),0 0 0 1px rgba(59,51,85,.06);transform-origin:100% 100%;
-        transform:scale(.85) translateY(8px);opacity:0;pointer-events:none;transition:transform .2s cubic-bezier(.3,.8,.3,1.2),opacity .15s}
+      .menu{position:absolute;right:0;top:64px;width:min(300px,calc(100vw - 28px));background:#FFFBF5;border-radius:26px;padding:10px;
+        box-shadow:0 18px 44px -14px rgba(59,51,85,.45),0 0 0 1px rgba(59,51,85,.06);transform-origin:100% 0;
+        transform:scale(.85) translateY(-8px);opacity:0;pointer-events:none;transition:transform .2s cubic-bezier(.3,.8,.3,1.2),opacity .15s}
       .open .menu{transform:none;opacity:1;pointer-events:auto}
       .title{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#7A7194;padding:8px 12px 6px}
       .item{display:flex;align-items:center;gap:12px;padding:12px;border-radius:18px;text-decoration:none;color:inherit;font-size:18px;font-weight:600}
@@ -71,7 +75,7 @@
             ${isCurrent(g) ? '<span class="here">Playing</span>' : g.href ? `<span class="out">${OUT}</span>` : ''}
           </a>`).join('')}
       </nav>
-      <button class="fab" id="fab" aria-label="Menu" aria-expanded="false" aria-controls="menu">${LANTERN}</button>
+      <button class="fab" id="fab" aria-label="Little Lanterns menu" aria-expanded="false" aria-controls="menu">${LANTERN}<span>Little Lanterns</span>${CHEV}</button>
     </div>`;
 
   const wrap = shadow.querySelector('.wrap');
@@ -81,6 +85,11 @@
   shadow.getElementById('menu').addEventListener('click', e => e.stopPropagation());
   document.addEventListener('click', () => setOpen(false));
   document.addEventListener('keydown', e => { if (e.key === 'Escape') setOpen(false); });
+
+  // Reserve a strip at the top of the page so the pill never covers game content.
+  const space = document.createElement('style');
+  space.textContent = 'body{padding-top:calc(72px + env(safe-area-inset-top))}';
+  document.head.appendChild(space);
 
   const mount = () => document.body.appendChild(host);
   document.body ? mount() : document.addEventListener('DOMContentLoaded', mount);
