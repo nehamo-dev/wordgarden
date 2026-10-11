@@ -1,11 +1,11 @@
-# Playnest — Claude Project Guide
+# Little Lanterns — Claude Project Guide
 
 Hub site for kids' learning games made by a mom. This repo (GitHub: `nehamo-dev/wordgarden`) hosts ALL new games; don't create new repos for new games.
 
 ## Layout
 
 ```
-index.html            # Playnest homepage: hero + one tile per game + "More on the way" tile
+index.html            # Little Lanterns homepage: hanging-lantern hero + one tile per game + "More on the way" tile
 word-garden/          # Word Garden: sight-word game (single-file HTML)
   index.html
   mocks.html          # original design mocks
@@ -27,7 +27,7 @@ Peekaworld lives in its own repo/deploy and is linked from a tile: https://peeka
 
 - Background `#FFF6EA` cream with soft radial blobs (peach, lilac, mint). Ink `#3B3355`, soft text `#7A7194`.
 - Accents: coral `#FF8B7B`, sun `#FFC95E`, mint `#79D2B2`, sky `#8CC4FF`, lilac `#B7A3F3`, pink `#FFB3C7`.
-- Fonts: Outfit for UI; Lexend for words kids read; Fraunces italic for accents on the hub only.
+- Fonts: Outfit for UI; Lexend for words kids read; Fraunces italic for accents on the hub only. Hub mascot/logo is a smiling paper lantern (`#lan` SVG in root index.html).
 - Chunky press-able buttons (solid bottom shadow that compresses on press), big rounded corners, hand-drawn inline SVG art. No photos, no emoji.
 - Gentle feedback: wrong answers wiggle and say "try again". No fail screens.
 - Read-aloud uses the device's `speechSynthesis`; sound effects use WebAudio tones (no audio files).

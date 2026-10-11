@@ -404,7 +404,7 @@ function renderHome(){
   const bloomed = state.words.filter(w => stageOf(scoreOf(w)) === 3).length;
   app.innerHTML = `
     <header class="top">
-      <a class="brand" href="../" title="Back to Playnest" style="color:inherit;text-decoration:none">${beeSVG()}<h1>Word Garden</h1></a>
+      <a class="brand" href="../" title="Back to Little Lanterns" style="color:inherit;text-decoration:none">${beeSVG()}<h1>Word Garden</h1></a>
       <div style="display:flex;gap:10px;align-items:center">
         <span class="pill" id="starPill">${STAR}<span>${state.stars}</span></span>
         <button class="ibtn" id="parentBtn" aria-label="Grown-ups">${SLIDERS}</button>

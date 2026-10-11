@@ -1,8 +1,8 @@
-# Playnest
+# Little Lanterns
 
-Little learning games for curious kids, made by a mom.
+Small games that light up curious minds, made by a mom.
 
-This repo is the home for all of them. The front page (`index.html`) is the Playnest homepage with a tile for each game, and each game lives in its own folder.
+This repo is the home for all of them. The front page (`index.html`) is the Little Lanterns homepage with a tile for each game, and each game lives in its own folder.
 
 ## Games
 

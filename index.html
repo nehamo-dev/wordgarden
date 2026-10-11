@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#FFF6EA">
-<meta name="description" content="Playnest: little learning games for curious kids, made by a mom.">
-<title>Playnest</title>
+<meta name="description" content="Little Lanterns: small learning games that light up curious minds, made by a mom.">
+<title>Little Lanterns</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@1,9..144,500&display=swap" rel="stylesheet">
@@ -27,19 +27,22 @@ a{color:inherit;text-decoration:none}
 /* header */
 .nav{display:flex;align-items:center;justify-content:space-between}
 .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:22px}
-.logo svg{width:40px;height:32px}
+.logo svg{width:30px;height:40px}
 .nav small{color:var(--soft);font-size:15px}
 
 /* hero */
-.hero{text-align:center;padding:40px 0 34px}
-.hero .nest{width:min(260px,64vw);height:auto;display:block;margin:0 auto 6px}
-.hero h1{font-size:clamp(46px,9vw,76px);line-height:1;margin:6px 0 12px;font-weight:700;letter-spacing:-.03em}
+.hero{text-align:center;padding:24px 0 34px}
+.hero .lanterns{width:min(320px,80vw);height:auto;display:block;margin:0 auto}
+.hero h1{font-size:clamp(42px,8.5vw,72px);line-height:1;margin:6px 0 12px;font-weight:700;letter-spacing:-.03em}
 .hero h1 span{color:var(--coral)}
-.hero p{font-size:clamp(18px,2.6vw,22px);color:var(--soft);margin:0 auto;max-width:520px;line-height:1.45}
+.hero p{font-size:clamp(18px,2.6vw,22px);color:var(--soft);margin:0 auto;max-width:620px;line-height:1.45;text-wrap:balance}
 .hero p em{font-family:'Fraunces',serif;font-style:italic;color:var(--ink)}
-.bird{transform-box:fill-box;transform-origin:50% 100%;animation:peek 4s ease-in-out infinite}
-.bird.b2{animation-delay:.6s}.bird.b3{animation-delay:1.2s}
-@keyframes peek{0%,70%,100%{transform:translateY(0)}80%{transform:translateY(-6px) rotate(-4deg)}90%{transform:translateY(-2px) rotate(3deg)}}
+.sway{transform-box:fill-box;transform-origin:50% 0;animation:sway 5s ease-in-out infinite}
+.sway.s2{animation-delay:-1.6s;animation-duration:6s}.sway.s3{animation-delay:-3.1s}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.twinkle{transform-box:fill-box;transform-origin:center;animation:twinkle 2.6s ease-in-out infinite}
+.twinkle.t2{animation-delay:-.9s}.twinkle.t3{animation-delay:-1.7s}
+@keyframes twinkle{0%,100%{opacity:.35;transform:scale(.7)}50%{opacity:1;transform:scale(1.1)}}
 
 /* tiles */
 .section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:8px 4px 16px}
@@ -65,8 +68,6 @@ a.tile:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
 .world{--c:#E1EEFF;--d:#BCD6F7;--k:#2F5F99}
 .soon{--c:#FFF1DD;--d:#F1DDBF;--k:#9A6A2E;box-shadow:none;border:3px dashed #EBD9BF;background:rgba(255,255,255,.55)}
 .soon .art{background:transparent}
-.soon .egg{transform-box:fill-box;transform-origin:50% 90%;animation:wiggle 3s ease-in-out infinite}
-@keyframes wiggle{0%,80%,100%{transform:rotate(0)}84%{transform:rotate(-7deg)}88%{transform:rotate(6deg)}92%{transform:rotate(-4deg)}}
 
 footer{text-align:center;color:var(--soft);font-size:15px;margin-top:56px;line-height:1.6}
 footer svg{width:18px;height:18px;vertical-align:-3px;margin:0 2px}
@@ -78,24 +79,39 @@ footer svg{width:18px;height:18px;vertical-align:-3px;margin:0 2px}
 
   <header class="nav">
     <div class="logo">
-      <svg viewBox="0 0 50 40" aria-hidden="true"><path d="M4 20c0 11 9 17 21 17s21-6 21-17z" fill="#C9A27E"/><path d="M6 23c6 3 13 4 19 4s13-1 19-4M9 29c5 2 10 3 16 3s11-1 16-3" stroke="#9C7352" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="25" cy="14" r="9" fill="#FFC95E"/><circle cx="22" cy="12.5" r="1.6" fill="#3B3355"/><circle cx="28" cy="12.5" r="1.6" fill="#3B3355"/><path d="M23.5 16l1.5 2 1.5-2z" fill="#FF8B7B"/></svg>
-      Playnest
+      <svg viewBox="-48 -16 96 124" aria-hidden="true"><path d="M0 -16V0" stroke="#B58863" stroke-width="3"/><use href="#lan" color="#FF8B7B"/></svg>
+      Little Lanterns
     </div>
     <small>made by a mom</small>
   </header>
 
   <section class="hero">
-    <svg class="nest" viewBox="0 0 260 150" aria-hidden="true">
-      <g class="bird b1"><circle cx="80" cy="74" r="26" fill="#FF8B7B"/><circle cx="72" cy="70" r="3.4" fill="#3B3355"/><circle cx="88" cy="70" r="3.4" fill="#3B3355"/><path d="M76 78l4 6 4-6z" fill="#FFC95E"/><ellipse cx="66" cy="80" rx="4.5" ry="2.8" fill="#FFB3C7"/><ellipse cx="94" cy="80" rx="4.5" ry="2.8" fill="#FFB3C7"/><path d="M78 48q2-8 8-9" stroke="#FF8B7B" stroke-width="4" fill="none" stroke-linecap="round"/></g>
-      <g class="bird b2"><circle cx="130" cy="64" r="30" fill="#FFC95E"/><circle cx="121" cy="60" r="3.8" fill="#3B3355"/><circle cx="139" cy="60" r="3.8" fill="#3B3355"/><path d="M125 69l5 7 5-7z" fill="#FF8B7B"/><ellipse cx="113" cy="71" rx="5" ry="3" fill="#FFB3C7"/><ellipse cx="147" cy="71" rx="5" ry="3" fill="#FFB3C7"/><path d="M126 35q4-10 12-8M132 35q6-6 12-2" stroke="#F2B640" stroke-width="4" fill="none" stroke-linecap="round"/></g>
-      <g class="bird b3"><circle cx="180" cy="74" r="26" fill="#8CC4FF"/><circle cx="172" cy="70" r="3.4" fill="#3B3355"/><circle cx="188" cy="70" r="3.4" fill="#3B3355"/><path d="M176 78l4 6 4-6z" fill="#FFC95E"/><ellipse cx="166" cy="80" rx="4.5" ry="2.8" fill="#FFB3C7"/><ellipse cx="194" cy="80" rx="4.5" ry="2.8" fill="#FFB3C7"/></g>
-      <path d="M30 86c0 36 44 56 100 56s100-20 100-56z" fill="#C9A27E"/>
-      <path d="M34 98c26 12 60 16 96 16s70-4 96-16M42 114c24 9 54 13 88 13s64-4 88-13M58 128c20 6 44 9 72 9s52-3 72-9" stroke="#9C7352" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-      <path d="M26 88c30-6 70-8 104-8s74 2 104 8" stroke="#B58863" stroke-width="7" fill="none" stroke-linecap="round"/>
-      <path d="M22 84l14 6M238 84l-14 6M70 82l-10-8M196 82l10-8" stroke="#9C7352" stroke-width="3.5" stroke-linecap="round"/>
+    <svg class="lanterns" viewBox="0 0 300 200" aria-hidden="true">
+      <defs><g id="lan">
+        <circle cx="0" cy="34" r="46" fill="currentColor" opacity=".16"/>
+        <rect x="-13" y="0" width="26" height="9" rx="3" fill="#3B3355"/>
+        <ellipse cx="0" cy="34" rx="34" ry="27" fill="currentColor"/>
+        <ellipse cx="0" cy="34" rx="17" ry="27" fill="none" stroke="#3B3355" stroke-opacity=".14" stroke-width="2"/>
+        <path d="M0 7v54" stroke="#3B3355" stroke-opacity=".14" stroke-width="2"/>
+        <ellipse cx="-15" cy="21" rx="9" ry="5" fill="#fff" opacity=".4" transform="rotate(-20 -15 21)"/>
+        <rect x="-13" y="59" width="26" height="9" rx="3" fill="#3B3355"/>
+        <path d="M0 68v9" stroke="#3B3355" stroke-width="2.5"/><path d="M-4 77h8l-1.5 12h-5z" fill="#FF8B7B"/>
+        <circle cx="-9" cy="35" r="3.3" fill="#3B3355"/><circle cx="9" cy="35" r="3.3" fill="#3B3355"/>
+        <circle cx="-8" cy="33.8" r="1.1" fill="#fff"/><circle cx="10" cy="33.8" r="1.1" fill="#fff"/>
+        <ellipse cx="-17" cy="42" rx="4.5" ry="2.8" fill="#fff" opacity=".5"/><ellipse cx="17" cy="42" rx="4.5" ry="2.8" fill="#fff" opacity=".5"/>
+        <path d="M-5 42q5 5 10 0" stroke="#3B3355" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      </g></defs>
+      <path d="M6 14Q150 46 294 14" stroke="#B58863" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <g class="sway s1"><path d="M70 25V62" stroke="#B58863" stroke-width="2"/><use href="#lan" transform="translate(70 62)" color="#FF8B7B"/></g>
+      <g class="sway s2"><path d="M150 30V76" stroke="#B58863" stroke-width="2"/><use href="#lan" transform="translate(150 76) scale(1.25)" color="#FFC95E"/></g>
+      <g class="sway s3"><path d="M230 25V56" stroke="#B58863" stroke-width="2"/><use href="#lan" transform="translate(230 56) scale(.95)" color="#8CC4FF"/></g>
+      <path class="twinkle" d="M28 70l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="#FFC95E"/>
+      <path class="twinkle t2" d="M272 92l1.6 4.4 4.4 1.6-4.4 1.6-1.6 4.4-1.6-4.4-4.4-1.6 4.4-1.6z" fill="#B7A3F3"/>
+      <path class="twinkle t3" d="M196 150l1.4 3.6 3.6 1.4-3.6 1.4-1.4 3.6-1.4-3.6-3.6-1.4 3.6-1.4z" fill="#FF8B7B"/>
+      <path class="twinkle t2" d="M104 160l1.4 3.6 3.6 1.4-3.6 1.4-1.4 3.6-1.4-3.6-3.6-1.4 3.6-1.4z" fill="#79D2B2"/>
     </svg>
-    <h1>Play<span>nest</span></h1>
-    <p>Little learning games for curious kids, <em>made with love by a mom.</em></p>
+    <h1>Little <span>Lanterns</span></h1>
+    <p>Small games that light up curious minds, <em>made with love by a mom.</em></p>
   </section>
 
   <div class="section-head"><h2>Pick a game</h2><span>Best on a tablet</span></div>
@@ -180,15 +196,13 @@ footer svg{width:18px;height:18px;vertical-align:-3px;margin:0 2px}
     <div class="tile soon" aria-label="More games coming soon">
       <div class="art">
         <svg viewBox="0 0 320 200" aria-hidden="true">
-          <path d="M100 150c0 22 26 34 60 34s60-12 60-34z" fill="#E8D3B5"/>
-          <path d="M104 160c16 6 34 9 56 9s40-3 56-9" stroke="#CDAE86" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <g class="egg"><ellipse cx="160" cy="112" rx="38" ry="48" fill="#fff" stroke="#EBD9BF" stroke-width="3"/>
-          <path d="M138 98l8 8 8-10 8 10 8-8" stroke="#CDAE86" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="148" cy="128" r="5" fill="#FFB3C7"/><circle cx="174" cy="120" r="4" fill="#8CC4FF"/><circle cx="164" cy="138" r="3.5" fill="#FFC95E"/></g>
+          <g class="sway"><path d="M160 0V40" stroke="#CDAE86" stroke-width="2"/><use href="#lan" transform="translate(160 40) scale(1.3)" color="#F3E2C6"/></g>
+          <path class="twinkle" d="M108 74l2 5.5 5.5 2-5.5 2-2 5.5-2-5.5-5.5-2 5.5-2z" fill="#FFC95E"/>
+          <path class="twinkle t2" d="M214 112l1.6 4.4 4.4 1.6-4.4 1.6-1.6 4.4-1.6-4.4-4.4-1.6 4.4-1.6z" fill="#FFC95E"/>
         </svg>
       </div>
       <div class="body">
-        <span class="kicker">Hatching soon</span>
+        <span class="kicker">Lighting up soon</span>
         <h3>More on the way</h3>
         <p>New games are being dreamed up at the kitchen table. Check back soon.</p>
       </div>
