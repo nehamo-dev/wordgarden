@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Word Garden — Mocks</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFF6EA;--ink:#3B3355;--soft:#7A7194;--coral:#FF8B7B;--sun:#FFC95E;--mint:#79D2B2;--sky:#8CC4FF;--lilac:#B7A3F3;--pink:#FFB3C7}
+*{box-sizing:border-box}
+body{margin:0;background:#EDE8F2;font-family:'Outfit',system-ui,sans-serif;letter-spacing:-.005em;color:var(--ink);padding:32px 16px}
+h1.page{text-align:center;font-weight:600;margin:0 0 4px}
+p.sub{text-align:center;color:var(--soft);margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(460px,1fr));gap:32px;max-width:1040px;margin:0 auto}
+.label{font-weight:600;margin:0 0 10px;font-size:17px}.label span{color:var(--soft);font-weight:400;font-size:14px;margin-left:6px}
+.frame{background:#2E2840;border-radius:34px;padding:12px}
+.screen{position:relative;background:var(--bg);border-radius:24px;height:600px;overflow:hidden;padding:18px}
+.screen::before{content:'';position:absolute;inset:0;background:radial-gradient(300px 220px at 0 0,#FFE3D6,transparent 70%),radial-gradient(300px 240px at 100% 0,#E5E0FF,transparent 70%),radial-gradient(400px 260px at 50% 110%,#D9F3E8,transparent 70%);pointer-events:none}
+.screen>*{position:relative}
+.word{font-family:'Lexend',sans-serif;font-weight:500;letter-spacing:-.01em}
+.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.brand{display:flex;align-items:center;gap:8px}.brand h2{margin:0;font-size:22px;font-weight:600}
+.pill{display:inline-flex;align-items:center;gap:5px;background:#fff;padding:6px 12px;border-radius:99px;font-weight:600;box-shadow:0 3px 0 rgba(59,51,85,.08);font-size:15px}
+.ibtn{width:36px;height:36px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 3px 0 rgba(59,51,85,.08)}
+.card{background:rgba(255,255,255,.78);border-radius:24px;padding:14px;box-shadow:0 10px 30px -14px rgba(59,51,85,.25)}
+.card h3{margin:0;font-size:17px;font-weight:600}.card small{color:var(--soft)}
+.beds{display:flex;justify-content:space-between;margin-top:8px}
+.plant{display:flex;flex-direction:column;align-items:center}
+.plant .word{font-size:17px;background:#fff;padding:1px 10px;border-radius:10px;margin-top:-4px}
+.sec{font-size:17px;font-weight:600;margin:16px 0 10px}
+.games{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.g{border-radius:18px;padding:10px 10px 34px;background:var(--c);box-shadow:0 5px 0 var(--d);position:relative;min-height:86px}
+.g b{font-weight:600;font-size:14px;display:block}.g i{font-style:normal;font-size:11px;opacity:.7}
+.g svg{position:absolute;right:8px;bottom:6px;width:30px;height:30px}
+.sky{--c:#CFE5FF;--d:#A9CCF5}.lilac{--c:#E4DBFF;--d:#C6B8F2}.sun{--c:#FFE7AE;--d:#F2CF7E}.mint{--c:#CFF1E3;--d:#A3DDC6}.pink{--c:#FFDCE6;--d:#F4B6C8}.coral{--c:#FFD8CF;--d:#F4B2A4}
+.mix{grid-column:span 3;--d:#E0C7A8;background:linear-gradient(90deg,#FFD8CF,#FFE7AE,#CFF1E3,#CFE5FF,#E4DBFF);min-height:54px;padding-bottom:10px}
+.gtop{display:flex;align-items:center;gap:10px}.dots{flex:1;display:flex;gap:6px;justify-content:center}
+.dots i{width:11px;height:11px;border-radius:50%;background:rgba(59,51,85,.13)}.dots i.on{background:var(--coral)}.dots i.cur{background:var(--sun);transform:scale(1.3)}
+.gt{text-align:center;color:var(--soft);font-weight:600;margin:12px 0}
+.prompt{display:flex;align-items:center;gap:12px;background:#fff;padding:8px 18px 8px 8px;border-radius:99px;width:max-content;margin:0 auto 26px;box-shadow:0 4px 0 rgba(59,51,85,.07)}
+.hear{width:52px;height:52px;border-radius:50%;background:var(--sky);display:grid;place-items:center;box-shadow:0 4px 0 #6FA9E8;outline:6px solid rgba(140,196,255,.3)}
+.choices{display:flex;gap:12px;justify-content:center}
+.choice{background:#fff;border-radius:22px;width:120px;padding:26px 0;text-align:center;font-size:44px;box-shadow:0 6px 0 rgba(59,51,85,.12)}
+.choice.right{background:#D6F5E8;box-shadow:0 6px 0 #8FD6B8;transform:translateY(-6px)}
+.buddy{position:absolute;left:14px;bottom:12px;display:flex;align-items:flex-end;gap:6px}
+.bubble{background:#fff;padding:9px 14px;border-radius:18px 18px 18px 4px;font-weight:500;margin-bottom:48px;box-shadow:0 4px 0 rgba(59,51,85,.07)}
+.conf{position:absolute;width:9px;height:13px;border-radius:3px}
+.slots,.tiles{display:flex;gap:10px;justify-content:center}
+.slot{width:72px;height:86px;border-radius:18px;background:#fff;border:3px dashed #DCD4EC;display:grid;place-items:center;font-size:50px;color:#E7E1F2}
+.slot.f{border:3px solid var(--sun);background:#FFF4D6;color:var(--ink)}
+.tiles{flex-wrap:wrap;max-width:330px;margin:30px auto 0}
+.tile{width:64px;height:64px;border-radius:16px;background:var(--sun);font-size:38px;display:grid;place-items:center;box-shadow:0 6px 0 #E0A93E}.tile.u{visibility:hidden}
+.mword{display:flex;gap:4px;justify-content:center;font-size:96px;background:#fff;width:max-content;margin:6px auto 30px;padding:6px 36px;border-radius:30px;box-shadow:0 8px 0 rgba(59,51,85,.08);line-height:1.2}
+.gap{min-width:58px;border-bottom:7px solid var(--mint);margin:16px 0}
+.lc{display:flex;gap:16px;justify-content:center}.lc div{width:84px;height:84px;border-radius:22px;background:var(--mint);font-size:48px;display:grid;place-items:center;box-shadow:0 6px 0 #4FB893}
+.form label{display:block;font-weight:600;margin:12px 0 6px;font-size:15px}
+.ta{background:#fff;border:2px solid #E7E0F0;border-radius:16px;padding:10px;display:flex;flex-wrap:wrap;gap:6px;min-height:70px}
+.chipw{background:#FFF1E2;padding:3px 10px;border-radius:10px;font-size:18px}
+.presets{display:flex;gap:6px;flex-wrap:wrap}.presets span{background:#fff;border:2px solid #E7E0F0;border-radius:99px;padding:4px 12px;font-size:13px}
+.slider{height:8px;border-radius:9px;background:linear-gradient(90deg,var(--lilac) 45%,#E7E0F0 45%);position:relative;margin:10px 0}.slider::after{content:'';position:absolute;left:43%;top:-7px;width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid var(--lilac)}
+.prog{display:grid;grid-template-columns:60px 1fr 30px;align-items:center;gap:10px;font-size:14px;padding:5px 0;border-bottom:1px solid #F0E9F5}
+.bar{height:10px;border-radius:9px;background:#F0E9F5;overflow:hidden}.bar b{display:block;height:100%;background:var(--mint);border-radius:9px}
+.save{display:block;text-align:center;background:var(--coral);color:#fff;font-weight:600;padding:12px;border-radius:99px;margin-top:14px;box-shadow:0 5px 0 #E06A59}
+.overlay{position:absolute;inset:0;background:rgba(59,51,85,.35);display:grid;place-items:center;padding:20px}
+.sheet{background:#FFFBF5;border-radius:28px;padding:22px;text-align:center;width:100%}
+.sheet h3{font-size:28px;margin:4px 0;font-weight:600}
+.btns{display:flex;gap:10px;justify-content:center;margin-top:14px}.btns span{padding:10px 18px;border-radius:99px;font-weight:600;background:#fff;box-shadow:0 4px 0 rgba(59,51,85,.1)}.btns span.p{background:var(--mint);box-shadow:0 4px 0 #4FB893}
+</style>
+</head>
+<body>
+<h1 class="page">Word Garden: mocks</h1>
+<p class="sub">Tablet-sized screens. Bee guide, garden progress, chunky press-able buttons, Outfit for the interface, Lexend for the words.</p>
+
+<svg width="0" height="0" style="position:absolute">
+ <defs>
+  <symbol id="bee" viewBox="0 0 120 110">
+   <path d="M50 40 Q44 20 36 15" stroke="#3B3355" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="36" cy="15" r="4" fill="#3B3355"/>
+   <path d="M66 40 Q70 20 80 15" stroke="#3B3355" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="80" cy="15" r="4" fill="#3B3355"/>
+   <ellipse cx="46" cy="34" rx="15" ry="21" fill="#E3F1FF" stroke="#3B3355" stroke-width="3" transform="rotate(-25 46 34)"/>
+   <ellipse cx="76" cy="32" rx="15" ry="21" fill="#E3F1FF" stroke="#3B3355" stroke-width="3" transform="rotate(25 76 32)"/>
+   <clipPath id="bc"><ellipse cx="60" cy="68" rx="38" ry="31"/></clipPath>
+   <ellipse cx="60" cy="68" rx="38" ry="31" fill="#FFC95E"/>
+   <g clip-path="url(#bc)"><rect x="72" y="30" width="10" height="80" fill="#3B3355"/><rect x="89" y="30" width="10" height="80" fill="#3B3355"/></g>
+   <ellipse cx="60" cy="68" rx="38" ry="31" fill="none" stroke="#3B3355" stroke-width="3"/>
+   <circle cx="42" cy="62" r="5" fill="#3B3355"/><circle cx="43.5" cy="60.5" r="1.6" fill="#fff"/>
+   <circle cx="59" cy="62" r="5" fill="#3B3355"/><circle cx="60.5" cy="60.5" r="1.6" fill="#fff"/>
+   <ellipse cx="34" cy="74" rx="5" ry="3.2" fill="#FF9DB0"/><ellipse cx="66" cy="74" rx="5" ry="3.2" fill="#FF9DB0"/>
+   <path d="M44 73 Q50.5 80 57 73" stroke="#3B3355" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="star" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z" fill="#FFC95E" stroke="#E9A93A" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+  <symbol id="spk" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="#fff"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round"/></symbol>
+  <symbol id="soil" viewBox="0 0 80 100"><ellipse cx="40" cy="93" rx="30" ry="7" fill="#C9A27E"/><ellipse cx="40" cy="91" rx="25" ry="5" fill="#B58863"/></symbol>
+ </defs>
+</svg>
+
+<div class="grid">
+
+ <!-- 1 HOME -->
+ <div>
+  <p class="label">1 · Home / garden <span>each word is a plant that grows</span></p>
+  <div class="frame"><div class="screen">
+   <div class="top">
+    <div class="brand"><svg width="40" height="38"><use href="#bee"/></svg><h2>Word Garden</h2></div>
+    <div style="display:flex;gap:8px;align-items:center"><span class="pill"><svg width="18" height="18"><use href="#star"/></svg>24</span>
+    <span class="ibtn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B3355" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg></span></div>
+   </div>
+   <div class="card">
+    <h3>Your garden</h3><small>Tap a flower to hear its word</small>
+    <div class="beds">
+     <div class="plant"><svg width="70" height="88" viewBox="0 0 80 100"><use href="#soil"/><path d="M40 90V44" stroke="#5DBB8A" stroke-width="3.5" stroke-linecap="round"/><path d="M40 76C30 75 26 66 28 63C37 63 41 70 40 76Z" fill="#79D2B2"/><path d="M40 64C50 63 54 54 52 51C43 51 39 58 40 64Z" fill="#79D2B2"/><g transform="translate(0 0)"><ellipse cx="40" cy="22" rx="7.5" ry="11" fill="#FF8B7B"/><ellipse cx="40" cy="22" rx="7.5" ry="11" fill="#FF8B7B" transform="rotate(60 40 34)"/><ellipse cx="40" cy="22" rx="7.5" ry="11" fill="#FF8B7B" transform="rotate(120 40 34)"/><ellipse cx="40" cy="22" rx="7.5" ry="11" fill="#FF8B7B" transform="rotate(180 40 34)"/><ellipse cx="40" cy="22" rx="7.5" ry="11" fill="#FF8B7B" transform="rotate(240 40 34)"/><ellipse cx="40" cy="22" rx="7.5" ry="11" fill="#FF8B7B" transform="rotate(300 40 34)"/><circle cx="40" cy="34" r="8" fill="#FFE08A"/><circle cx="37" cy="33" r="1.4" fill="#3B3355"/><circle cx="43" cy="33" r="1.4" fill="#3B3355"/></g></svg><span class="word">the</span></div>
+     <div class="plant"><svg width="70" height="88" viewBox="0 0 80 100"><use href="#soil"/><path d="M40 90V50" stroke="#5DBB8A" stroke-width="3.5" stroke-linecap="round"/><path d="M40 76C30 75 26 66 28 63C37 63 41 70 40 76Z" fill="#79D2B2"/><path d="M40 66C50 65 54 56 52 53C43 53 39 60 40 66Z" fill="#79D2B2"/><ellipse cx="40" cy="42" rx="8" ry="11" fill="#B7A3F3"/><path d="M32 46Q40 56 48 46" fill="#79D2B2"/></svg><span class="word">and</span></div>
+     <div class="plant"><svg width="70" height="88" viewBox="0 0 80 100"><use href="#soil"/><path d="M40 90V72" stroke="#5DBB8A" stroke-width="3.5" stroke-linecap="round"/><path d="M40 78C31 78 27 71 28 68C36 68 40 73 40 78Z" fill="#79D2B2"/><path d="M40 78C49 78 53 71 52 68C44 68 40 73 40 78Z" fill="#79D2B2"/></svg><span class="word">a</span></div>
+     <div class="plant"><svg width="70" height="88" viewBox="0 0 80 100"><use href="#soil"/><path d="M40 90V44" stroke="#5DBB8A" stroke-width="3.5" stroke-linecap="round"/><path d="M40 76C30 75 26 66 28 63C37 63 41 70 40 76Z" fill="#79D2B2"/><g><ellipse cx="40" cy="22" rx="7.5" ry="11" fill="#8CC4FF"/><ellipse cx="40" cy="22" rx="7.5" ry="11" fill="#8CC4FF" transform="rotate(60 40 34)"/><ellipse cx="40" cy="22" rx="7.5" ry="11" fill="#8CC4FF" transform="rotate(120 40 34)"/><ellipse cx="40" cy="22" rx="7.5" ry="11" fill="#8CC4FF" transform="rotate(180 40 34)"/><ellipse cx="40" cy="22" rx="7.5" ry="11" fill="#8CC4FF" transform="rotate(240 40 34)"/><ellipse cx="40" cy="22" rx="7.5" ry="11" fill="#8CC4FF" transform="rotate(300 40 34)"/><circle cx="40" cy="34" r="8" fill="#FFE08A"/><circle cx="37" cy="33" r="1.4" fill="#3B3355"/><circle cx="43" cy="33" r="1.4" fill="#3B3355"/></g></svg><span class="word">go</span></div>
+     <div class="plant"><svg width="70" height="88" viewBox="0 0 80 100"><use href="#soil"/><ellipse cx="40" cy="86" rx="6" ry="4.5" fill="#8A6A4F"/></svg><span class="word">has</span></div>
+    </div>
+   </div>
+   <p class="sec">Pick a game</p>
+   <div class="games">
+    <div class="g sky"><b>Hear &amp; Find</b><i>Listen, tap the word</i><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#8CC4FF"/><use href="#spk" x="4" y="4" width="16" height="16"/></svg></div>
+    <div class="g lilac"><b>Bubble Pop</b><i>Pop the match</i><svg viewBox="0 0 30 30"><circle cx="11" cy="17" r="9" fill="#fff" stroke="#B7A3F3" stroke-width="2"/><circle cx="23" cy="9" r="6" fill="#fff" stroke="#B7A3F3" stroke-width="2"/><circle cx="8" cy="14" r="2" fill="#E4DBFF"/></svg></div>
+    <div class="g sun"><b>Word Builder</b><i>Letter by letter</i><svg viewBox="0 0 30 30"><rect x="2" y="12" width="12" height="12" rx="3" fill="#FFC95E" stroke="#E0A93E" stroke-width="2"/><rect x="16" y="12" width="12" height="12" rx="3" fill="#FFC95E" stroke="#E0A93E" stroke-width="2"/><rect x="9" y="2" width="12" height="10" rx="3" fill="#fff" stroke="#E0A93E" stroke-width="2"/></svg></div>
+    <div class="g mint"><b>Missing Letter</b><i>Find the lost one</i><svg viewBox="0 0 30 30"><rect x="2" y="8" width="8" height="14" rx="2" fill="#fff"/><rect x="11" y="8" width="8" height="14" rx="2" fill="none" stroke="#4FB893" stroke-width="2" stroke-dasharray="3 2"/><rect x="20" y="8" width="8" height="14" rx="2" fill="#fff"/></svg></div>
+    <div class="g pink"><b>Match Up</b><i>Flip, find pairs</i><svg viewBox="0 0 30 30"><rect x="3" y="6" width="13" height="18" rx="3" fill="#FFB3C7" transform="rotate(-10 9 15)"/><rect x="14" y="6" width="13" height="18" rx="3" fill="#fff" stroke="#FFB3C7" stroke-width="2" transform="rotate(8 20 15)"/></svg></div>
+    <div class="g coral"><b>Read to Me</b><i>Say it out loud</i><svg viewBox="0 0 30 30"><path d="M3 7c4-2 8-2 12 1v16c-4-3-8-3-12-1z" fill="#fff" stroke="#E06A59" stroke-width="2" stroke-linejoin="round"/><path d="M27 7c-4-2-8-2-12 1v16c4-3 8-3 12-1z" fill="#fff" stroke="#E06A59" stroke-width="2" stroke-linejoin="round"/></svg></div>
+    <div class="g mix"><b>Surprise Mix</b><i>A little of everything</i></div>
+   </div>
+  </div></div>
+ </div>
+
+ <!-- 2 HEAR & FIND -->
+ <div>
+  <p class="label">2 · Hear &amp; Find <span>moment of a correct tap</span></p>
+  <div class="frame"><div class="screen">
+   <div class="gtop"><span class="ibtn"><svg width="16" height="16" viewBox="0 0 24 24" stroke="#3B3355" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+    <div class="dots"><i class="on"></i><i class="on"></i><i class="cur"></i><i></i><i></i><i></i></div>
+    <span class="pill"><svg width="18" height="18"><use href="#star"/></svg>26</span></div>
+   <p class="gt">Hear &amp; Find</p>
+   <div class="prompt"><span class="hear"><svg width="28" height="28"><use href="#spk"/></svg></span><span style="font-size:18px">Find the word you hear</span></div>
+   <div class="choices" style="margin-top:40px">
+    <div class="choice word">go</div><div class="choice word right">the</div><div class="choice word">has</div>
+   </div>
+   <i class="conf" style="left:46%;top:250px;background:var(--coral);transform:rotate(30deg)"></i>
+   <i class="conf" style="left:58%;top:236px;background:var(--sky);transform:rotate(-20deg)"></i>
+   <i class="conf" style="left:40%;top:226px;background:var(--sun);transform:rotate(60deg)"></i>
+   <i class="conf" style="left:62%;top:270px;background:var(--mint)"></i>
+   <i class="conf" style="left:51%;top:214px;background:var(--lilac);transform:rotate(15deg)"></i>
+   <div class="buddy"><svg width="96" height="88" style="transform:rotate(-8deg) translateY(-8px)"><use href="#bee"/></svg><div class="bubble">You got it! That's <b class="word">the</b>.</div></div>
+  </div></div>
+ </div>
+
+ <!-- 3 WORD BUILDER -->
+ <div>
+  <p class="label">3 · Word Builder <span>faint letters guide the order</span></p>
+  <div class="frame"><div class="screen">
+   <div class="gtop"><span class="ibtn"><svg width="16" height="16" viewBox="0 0 24 24" stroke="#3B3355" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+    <div class="dots"><i class="on"></i><i class="cur"></i><i></i><i></i><i></i><i></i></div>
+    <span class="pill"><svg width="18" height="18"><use href="#star"/></svg>25</span></div>
+   <p class="gt">Word Builder</p>
+   <div class="prompt"><span class="hear" style="outline:none"><svg width="28" height="28"><use href="#spk"/></svg></span><span style="font-size:18px">Build the word <b class="word" style="font-size:24px">has</b></span></div>
+   <div class="slots word"><div class="slot f">h</div><div class="slot">a</div><div class="slot">s</div></div>
+   <div class="tiles word"><div class="tile">s</div><div class="tile u">h</div><div class="tile">m</div><div class="tile">a</div><div class="tile">t</div></div>
+   <div class="buddy"><svg width="96" height="88"><use href="#bee"/></svg><div class="bubble">Now find <b class="word">a</b></div></div>
+  </div></div>
+ </div>
+
+ <!-- 4 MISSING LETTER -->
+ <div>
+  <p class="label">4 · Missing Letter</p>
+  <div class="frame"><div class="screen">
+   <div class="gtop"><span class="ibtn"><svg width="16" height="16" viewBox="0 0 24 24" stroke="#3B3355" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+    <div class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="cur"></i><i></i><i></i></div>
+    <span class="pill"><svg width="18" height="18"><use href="#star"/></svg>27</span></div>
+   <p class="gt">Missing Letter</p>
+   <div class="prompt"><span class="hear" style="outline:none"><svg width="28" height="28"><use href="#spk"/></svg></span><span style="font-size:18px">Which letter is missing?</span></div>
+   <div class="mword word"><span>a</span><span class="gap"></span><span>d</span></div>
+   <div class="lc word"><div>m</div><div>n</div><div>u</div></div>
+   <div class="buddy"><svg width="96" height="88"><use href="#bee"/></svg><div class="bubble">Hmm, try again!</div></div>
+  </div></div>
+ </div>
+
+ <!-- 5 PARENT -->
+ <div>
+  <p class="label">5 · Grown-ups <span>behind a "what's 3 + 4?" lock</span></p>
+  <div class="frame"><div class="screen">
+   <div class="top"><div class="brand"><h2>For grown-ups</h2></div><span class="ibtn"><svg width="16" height="16" viewBox="0 0 24 24" stroke="#3B3355" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span></div>
+   <div class="card form">
+    <label style="margin-top:0">Sight words</label>
+    <div class="ta word"><span class="chipw">the</span><span class="chipw">and</span><span class="chipw">a</span><span class="chipw">go</span><span class="chipw">has</span><span style="color:#B9B0CC;font-family:Outfit;font-weight:400;font-size:15px;align-self:center">type a word…</span></div>
+   </div>
+   <p class="sec" style="margin-top:12px">Progress</p>
+   <div class="card" style="padding:6px 14px">
+    <div class="prog"><span class="word">the</span><div class="bar"><b style="width:100%"></b></div><span>5/5</span></div>
+    <div class="prog"><span class="word">and</span><div class="bar"><b style="width:60%"></b></div><span>3/5</span></div>
+    <div class="prog"><span class="word">a</span><div class="bar"><b style="width:20%"></b></div><span>1/5</span></div>
+    <div class="prog" style="border:0"><span class="word">has</span><div class="bar"><b style="width:0"></b></div><span>0/5</span></div>
+   </div>
+   <span class="save">Save words</span>
+  </div></div>
+ </div>
+
+ <!-- 6 CELEBRATION -->
+ <div>
+  <p class="label">6 · End of round</p>
+  <div class="frame"><div class="screen">
+   <div class="choices" style="margin-top:120px;opacity:.5"><div class="choice word">go</div><div class="choice word">a</div><div class="choice word">and</div></div>
+   <div class="overlay"><div class="sheet">
+    <svg width="110" height="100"><use href="#bee"/></svg>
+    <h3>Hooray!</h3>
+    <div style="color:var(--soft)">You earned 6 stars</div>
+    <div style="margin:10px 0">
+     <svg width="30" height="30"><use href="#star"/></svg><svg width="30" height="30"><use href="#star"/></svg><svg width="30" height="30"><use href="#star"/></svg><svg width="30" height="30"><use href="#star"/></svg><svg width="30" height="30"><use href="#star"/></svg><svg width="30" height="30"><use href="#star"/></svg>
+    </div>
+    <div style="font-weight:600;margin-top:6px">Your garden grew</div>
+    <div class="beds" style="justify-content:center;gap:16px">
+     <div class="plant"><svg width="60" height="76" viewBox="0 0 80 100"><use href="#soil"/><path d="M40 90V50" stroke="#5DBB8A" stroke-width="3.5" stroke-linecap="round"/><path d="M40 76C30 75 26 66 28 63C37 63 41 70 40 76Z" fill="#79D2B2"/><ellipse cx="40" cy="42" rx="8" ry="11" fill="#B7A3F3"/><path d="M32 46Q40 56 48 46" fill="#79D2B2"/></svg><span class="word">and</span></div>
+     <div class="plant"><svg width="60" height="76" viewBox="0 0 80 100"><use href="#soil"/><path d="M40 90V72" stroke="#5DBB8A" stroke-width="3.5" stroke-linecap="round"/><path d="M40 78C31 78 27 71 28 68C36 68 40 73 40 78Z" fill="#79D2B2"/><path d="M40 78C49 78 53 71 52 68C44 68 40 73 40 78Z" fill="#79D2B2"/></svg><span class="word">a</span></div>
+    </div>
+    <div class="btns"><span>Garden</span><span class="p">Play again</span></div>
+   </div></div>
+   <i class="conf" style="left:10%;top:40px;background:var(--coral);transform:rotate(30deg)"></i>
+   <i class="conf" style="left:30%;top:20px;background:var(--sky)"></i>
+   <i class="conf" style="left:70%;top:30px;background:var(--sun);transform:rotate(50deg)"></i>
+   <i class="conf" style="left:88%;top:60px;background:var(--mint);transform:rotate(-30deg)"></i>
+   <i class="conf" style="left:52%;top:10px;background:var(--lilac)"></i>
+  </div></div>
+ </div>
+
+</div>
+<p class="sub" style="margin-top:28px">Not shown: Bubble Pop (word bubbles float upward), Match Up (flip-card grid), Read to Me (giant word card with Hear it / Spell it / I read it!).</p>
+</body>
+</html>
