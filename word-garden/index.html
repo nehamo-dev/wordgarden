@@ -208,9 +208,10 @@ h1,h2,h3{font-weight:600;margin:0}
 <body>
 <div id="app"></div>
 
+<script src="audio/manifest.js"></script>
 <script>
 /* ---------- data + storage ---------- */
-const DEFAULT_WORDS = ['the','and','a','go','has'];
+const DEFAULT_WORDS = ['the','and','a','go','has','am','of','you'];
 const FILLER = ['is','it','in','to','see','can','we','me','my','up','look','like','you','for','at','on','he','she','was','are','big','run','come','here','play','not','one','red','blue','said','down'];
 const PRAISE = ['You got it!','Great job!','Super reading!','Wow!','Yes!','Amazing!','Nice one!'];
 const OOPS = ['Hmm, try again!','Almost! Try again.','Oops! One more try.','Keep going!'];
@@ -226,6 +227,12 @@ const state = {
   stars: store.get('wg-stars', 0),
 };
 if (!Array.isArray(state.words) || !state.words.length) state.words = DEFAULT_WORDS.slice();
+// One-time update: add the new words (am, of, you) to lists already saved on a device.
+if (!store.get('wg-added-am-of-you', false)){
+  ['am','of','you'].forEach(w => { if (!state.words.some(x => x.toLowerCase() === w)) state.words.push(w); });
+  store.set('wg-added-am-of-you', true);
+  store.set('wg-words', state.words);
+}
 function save(){ store.set('wg-words', state.words); store.set('wg-scores', state.scores); store.set('wg-stars', state.stars); }
 
 /* ---------- helpers ---------- */
@@ -251,6 +258,39 @@ function randomLetters(n, exclude){
 }
 
 /* ---------- voice + sound ---------- */
+// Words, letters and cheers are recorded clips (audio/, made by tools/make_audio.py) played through
+// WebAudio, so they work on tablets whose browsers have no built-in voice (e.g. Fire tablets).
+// Anything without a clip falls back to the browser's speechSynthesis.
+const CLIPS = window.WG_AUDIO || { words: {}, letters: {}, phrases: {} };
+let ac;
+function audioCtx(){
+  try {
+    ac = ac || new (window.AudioContext || window.webkitAudioContext)();
+    if (ac.state !== 'running') ac.resume();
+  } catch { ac = null; }
+  return ac;
+}
+// Browsers only allow sound after a tap; wake audio on the very first touch anywhere.
+['pointerdown', 'touchstart', 'keydown'].forEach(ev => document.addEventListener(ev, function wake(){
+  const c = audioCtx();
+  if (c){ const b = c.createBuffer(1, 1, 22050), s = c.createBufferSource(); s.buffer = b; s.connect(c.destination); s.start(0); }
+  if ('speechSynthesis' in window){ speechSynthesis.resume(); }
+  document.removeEventListener(ev, wake, true);
+}, true));
+
+const buffers = new Map();
+function loadClip(key){
+  if (!key) return Promise.resolve(null);
+  if (!buffers.has(key)){
+    buffers.set(key, fetch(`audio/${key}.m4a`)
+      .then(r => { if (!r.ok) throw new Error(r.status); return r.arrayBuffer(); })
+      .then(data => new Promise((res, rej) => audioCtx().decodeAudioData(data, res, rej)))
+      .catch(() => null));
+  }
+  return buffers.get(key);
+}
+function preloadWords(words){ words.forEach(w => loadClip(CLIPS.words[lc(w)])); }
+
 let voice = null;
 function pickVoice(){
   if (!('speechSynthesis' in window)) return;
@@ -261,40 +301,72 @@ function pickVoice(){
 }
 if ('speechSynthesis' in window){ pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
 
-function utter(text, opts = {}){
-  const u = new SpeechSynthesisUtterance(text);
-  if (voice) u.voice = voice;
-  u.lang = 'en-US'; u.rate = opts.rate || 0.82; u.pitch = 1.1;
-  if (opts.onstart) u.onstart = opts.onstart;
-  if (opts.onend) u.onend = opts.onend;
-  return u;
+// Resolves when the browser voice finishes, errors, or clearly isn't going to speak.
+function ttsSay(text, rate = .82){
+  return new Promise(resolve => {
+    if (!('speechSynthesis' in window)) return resolve();
+    const u = new SpeechSynthesisUtterance(text);
+    if (voice) u.voice = voice;
+    u.lang = 'en-US'; u.rate = rate; u.pitch = 1.1;
+    const t = setTimeout(resolve, 600 + text.length * 120);
+    u.onend = u.onerror = () => { clearTimeout(t); resolve(); };
+    speechSynthesis.resume();
+    speechSynthesis.speak(u);
+  });
+}
+let current = null;
+function playBuffer(buf){
+  return new Promise(resolve => {
+    const c = audioCtx();
+    if (!c) return resolve();
+    const src = c.createBufferSource();
+    src.buffer = buf; src.connect(c.destination);
+    src.onended = () => { if (current === src) current = null; resolve(); };
+    current = src; src.start(0);
+  });
+}
+let playToken = 0;
+function stopVoice(){
+  playToken++;
+  try { current && current.stop(); } catch {}
+  current = null;
+  if ('speechSynthesis' in window) speechSynthesis.cancel();
+}
+// items: [{ key, text, rate, onstart, onend }]. Plays the clip for `key`, or speaks `text` if there's none.
+async function playSeq(items){
+  stopVoice();
+  const token = playToken;
+  for (const it of items){
+    const buf = await loadClip(it.key);
+    if (token !== playToken) return;
+    it.onstart && it.onstart();
+    if (buf) await playBuffer(buf);
+    else await ttsSay(it.text, it.rate);
+    if (token !== playToken) return;
+    it.onend && it.onend();
+  }
 }
 // "a" on its own is read as the letter name by most voices; nudge it to the word sound.
 const sayable = w => lc(w) === 'a' ? 'uh' : w;
-function speak(text, opts){
-  if (!('speechSynthesis' in window)) return;
-  speechSynthesis.cancel();
-  setTimeout(() => speechSynthesis.speak(utter(text, opts)), 40);
-}
-function speakSeq(items){
-  if (!('speechSynthesis' in window)) return;
-  speechSynthesis.cancel();
-  setTimeout(() => items.forEach(it => speechSynthesis.speak(utter(it.text, it))), 40);
-}
+const wordItem = w => ({ key: CLIPS.words[lc(w)], text: sayable(w) });
+const letterItem = c => ({ key: CLIPS.letters[lc(c)], text: lc(c), rate: .9 });
+const phraseItem = p => ({ key: CLIPS.phrases[p], text: p });
+const sayWord = w => playSeq([wordItem(w)]);
+const sayLetter = c => playSeq([letterItem(c)]);
+const sayPhrase = p => playSeq([phraseItem(p)]);
 
-let ac;
 function tone(freqs, dur = .14, type = 'sine', gap = .09, vol = .16){
   try {
-    ac = ac || new (window.AudioContext || window.webkitAudioContext)();
-    if (ac.state === 'suspended') ac.resume();
-    const t0 = ac.currentTime;
+    const c = audioCtx();
+    if (!c) return;
+    const t0 = c.currentTime;
     freqs.forEach((f, i) => {
-      const o = ac.createOscillator(), g = ac.createGain(), t = t0 + i * gap;
+      const o = c.createOscillator(), g = c.createGain(), t = t0 + i * gap;
       o.type = type; o.frequency.value = f;
       g.gain.setValueAtTime(.0001, t);
       g.gain.exponentialRampToValueAtTime(vol, t + .02);
       g.gain.exponentialRampToValueAtTime(.0001, t + dur);
-      o.connect(g).connect(ac.destination);
+      o.connect(g); g.connect(c.destination);
       o.start(t); o.stop(t + dur + .05);
     });
   } catch {}
@@ -400,7 +472,7 @@ const GAME_LIST = [
 
 function renderHome(){
   session = null;
-  if ('speechSynthesis' in window) speechSynthesis.cancel();
+  stopVoice();
   const bloomed = state.words.filter(w => stageOf(scoreOf(w)) === 3).length;
   app.innerHTML = `
     <header class="top">
@@ -420,7 +492,7 @@ function renderHome(){
         <h3>${g.title}</h3><p>${g.desc}</p><span class="gicon">${GAME_ICONS[g.id]}</span>
       </button>`).join('')}
     </div>`;
-  $$('.plant', app).forEach(p => p.onclick = () => { speak(sayable(p.dataset.word)); replay(p, 'sway'); });
+  $$('.plant', app).forEach(p => p.onclick = () => { sayWord(p.dataset.word); replay(p, 'sway'); });
   $$('.game-card', app).forEach(c => c.onclick = () => startGame(c.dataset.game));
   $('#parentBtn').onclick = parentGate;
 }
@@ -430,6 +502,7 @@ let session = null;
 const MIX_POOL = ['listen','bubbles','build','missing','read','listen','build','memory'];
 
 function startGame(id){
+  preloadWords([...state.words, ...FILLER]);
   session = { id, mixed: id === 'mix', round: 0, total: id === 'mix' ? 8 : (GAMES[id].rounds || 6), stars: 0, grown: new Set(), last: null, missed: new Set(), locked: false, timers: [] };
   app.innerHTML = `
     <div class="game-top">
@@ -494,7 +567,7 @@ function hit(word, el, { silent = false } = {}){
   if (!silent){
     const p = pick(PRAISE);
     say(`${p} That's <b class="word">${esc(word)}</b>.`);
-    speak(`${sayable(word)}! ${p}`);
+    playSeq([wordItem(word), phraseItem(p)]);
   }
 }
 // Wrong answer. Gentle; only costs one point per word per round.
@@ -508,7 +581,7 @@ function done(delay = 1500){
   later(nextRound, delay);
 }
 function hearBtn(word, extra = ''){ return `<button class="hear pulse" data-say="${esc(word)}" aria-label="Hear the word">${SPEAKER}</button>${extra}`; }
-function wireHear(stage, word){ const b = $('.hear', stage); if (b) b.onclick = () => { b.classList.remove('pulse'); speak(sayable(word)); }; }
+function wireHear(stage, word){ const b = $('.hear', stage); if (b) b.onclick = () => { b.classList.remove('pulse'); sayWord(word); }; }
 
 /* ---------- games ---------- */
 const GAMES = {
@@ -523,9 +596,9 @@ const GAMES = {
       $$('.choice', stage).forEach(b => b.onclick = () => {
         if (session.locked) return;
         if (b.dataset.w === word){ b.classList.add('right'); hit(word, b); done(); }
-        else { b.classList.add('dim'); miss(word, b); later(() => speak(sayable(word)), 900); }
+        else { b.classList.add('dim'); miss(word, b); later(() => sayWord(word), 900); }
       });
-      later(() => speak(sayable(word)), 450);
+      later(() => sayWord(word), 450);
     },
   },
 
@@ -556,7 +629,7 @@ const GAMES = {
           if (w === word){
             b.classList.add('popped'); sfx.pop(); burst(b, 10); left--;
             if (left === 0){ hit(word, b); done(1600); }
-            else { speak(sayable(word)); say(`${left} more!`); }
+            else { sayWord(word); say(`${left} more!`); }
           } else {
             b.classList.add('nope'); setTimeout(() => b.classList.remove('nope'), 600);
             miss(word, b);
@@ -564,7 +637,7 @@ const GAMES = {
         };
         field.append(b);
       });
-      later(() => speak(sayable(word)), 450);
+      later(() => sayWord(word), 450);
     },
   },
 
@@ -583,7 +656,7 @@ const GAMES = {
       $$('.tile', stage).forEach(t => t.onclick = () => {
         if (session.locked || pos === letters.length) return;
         if (lc(t.dataset.c) === lc(letters[pos])){
-          slots[pos].classList.add('filled'); t.classList.add('used'); sfx.tap(); speak(lc(t.dataset.c), { rate: .9 });
+          slots[pos].classList.add('filled'); t.classList.add('used'); sfx.tap(); sayLetter(t.dataset.c);
           pos++;
           if (pos === letters.length){
             $('.slots', stage).classList.add('done');
@@ -591,7 +664,7 @@ const GAMES = {
           } else say(`Now find <b class="word">${esc(letters[pos])}</b>`);
         } else miss(word, t);
       });
-      later(() => speak(sayable(word)), 450);
+      later(() => sayWord(word), 450);
     },
   },
 
@@ -611,7 +684,7 @@ const GAMES = {
         if (lc(b.dataset.c) === lc(ans)){ $('.gap', stage).classList.add('filled'); hit(word, $('.mword', stage)); done(); }
         else { b.classList.add('dim'); miss(word, b); }
       });
-      later(() => speak(sayable(word)), 450);
+      later(() => sayWord(word), 450);
     },
   },
 
@@ -627,7 +700,7 @@ const GAMES = {
       let open = [], matched = 0, busy = false;
       $$('.mcard', stage).forEach(c => c.onclick = () => {
         if (busy || session.locked || c.classList.contains('flip')) return;
-        c.classList.add('flip'); sfx.tap(); speak(sayable(c.dataset.w));
+        c.classList.add('flip'); sfx.tap(); sayWord(c.dataset.w);
         open.push(c);
         if (open.length < 2) return;
         const [a, b] = open; open = [];
@@ -657,12 +730,12 @@ const GAMES = {
         </div>
         <button class="go-btn" id="readIt">I read it!</button>`;
       const spans = $$('.readcard span', stage);
-      $('#hearIt', stage).onclick = () => speak(sayable(word));
+      $('#hearIt', stage).onclick = () => sayWord(word);
       $('#spellIt', stage).onclick = () => {
         const clear = () => spans.forEach(s => s.classList.remove('lit'));
-        speakSeq([
-          ...word.split('').map((c, i) => ({ text: lc(c), rate: .8, onstart: () => { clear(); spans[i].classList.add('lit'); } })),
-          { text: sayable(word), onstart: () => spans.forEach(s => s.classList.add('lit')), onend: clear },
+        playSeq([
+          ...word.split('').map((c, i) => ({ ...letterItem(c), onstart: () => { clear(); spans[i].classList.add('lit'); } })),
+          { ...wordItem(word), onstart: () => spans.forEach(s => s.classList.add('lit')), onend: clear },
         ]);
       };
       $('#readIt', stage).onclick = () => { if (!session.locked){ hit(word, $('.readcard', stage)); done(); } };
@@ -686,7 +759,7 @@ function finish(){
       ${grown.length ? `<h3 style="margin-top:6px">Your garden grew</h3><div class="grew">${grown.map(w => plantHTML(w, 'div')).join('')}</div>` : ''}
       <div class="btns"><button class="btn" id="toGarden">Garden</button><button class="btn primary" id="again">Play again</button></div>
     </div></div>`);
-  speak(`Hooray! You earned ${s.stars} stars!`);
+  sayPhrase('Hooray! Great playing!');
   const close = () => $('#finish')?.remove();
   $('#toGarden').onclick = () => { close(); renderHome(); };
   $('#again').onclick = () => { close(); startGame(s.id); };

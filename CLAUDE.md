@@ -39,5 +39,9 @@ Peekaworld lives in its own repo/deploy and is linked from a tile: https://peeka
 
 - Scores per word are 0–5 → plant stages: seed (0), sprout (1–2), bud (3–4), flower (5).
 - A word only gains a point if it wasn't missed earlier in the same round; a miss costs at most one point per round.
-- "a" is spoken as "uh" (`sayable()`), because TTS reads a lone "a" as the letter name.
+- Audio: words, letter names and cheer phrases are pre-recorded clips in `word-garden/audio/*.m4a` (macOS `say`, Samantha), listed in `audio/manifest.js` and played via WebAudio (`playSeq`). This is because Fire tablets (Silk) and some browsers have no usable `speechSynthesis`. Words without a clip fall back to `speechSynthesis`.
+- To add clips for new words: add them to `WORDS` in `tools/make_audio.py` and run `python3 tools/make_audio.py` (skips existing clips; `say` sometimes hangs, hence the timeout/retry).
+- Audio is woken on the first tap anywhere (`wake` listener). Always start sound from a tap or shortly after one.
+- "a" is spoken as "uh" (recorded that way, and `sayable()` for the fallback), because a lone "a" is read as the letter name.
+- Default words: the, and, a, go, has, am, of, you. A one-time migration (`wg-added-am-of-you`) added am/of/you to lists already saved on devices.
 - Grown-ups screen is behind a simple addition question.
