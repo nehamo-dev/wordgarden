@@ -76,7 +76,13 @@ h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.02em}
 .cat{display:flex;align-items:center;gap:10px;text-align:left;background:#fff;border-radius:18px;padding:10px 12px;font-weight:600;font-size:15px;box-shadow:0 3px 0 rgba(59,51,85,.07);border:2.5px solid transparent}
 .cat i{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;flex:none}
 .cat i svg{width:18px;height:18px}
+.cat{transition:opacity .15s,border-color .15s,transform .12s}
+.cat:active{transform:scale(.97)}
 .cat.on{border-color:var(--ink)}
+.cat-tools{display:flex;align-items:baseline;gap:12px}
+.text-btn{font-weight:600;font-size:14px;color:var(--ink);text-decoration:underline;text-underline-offset:3px;padding:4px 2px}
+.cats-hint{color:#A3452F;font-weight:600;font-size:15px;margin:12px 2px 0}
+.cats-hint[hidden]{display:none}
 .catnote{display:block;font-size:12px;font-weight:500;color:var(--soft)}
 .cat:not(.on){opacity:.55}
 .cat.surprise{grid-column:1/-1;background:linear-gradient(100deg,#FFD8CF,#FFE7AE 25%,#CFF1E3 50%,#CFE5FF 75%,#E4DBFF);opacity:1}
@@ -243,8 +249,8 @@ const store = {
 };
 const prefs = Object.assign({ count: 10, readAloud: true }, store.get('tt-prefs', {}));
 let players = store.get('tt-players', []);
-let cats = store.get('tt-cats', CAT_IDS.slice()).filter(c => CATS[c]);
-if (!cats.length) cats = CAT_IDS.slice();
+let cats = store.get('tt-cats', null);
+cats = Array.isArray(cats) ? cats.filter(c => CATS[c]) : CAT_IDS.slice();
 // One-time update: switch on the new Sight words category for devices that saved a category choice before it existed.
 if (!store.get('tt-added-words', false)){ if (!cats.includes('words')) cats.push('words'); store.set('tt-added-words', true); store.set('tt-cats', cats); }
 const savePlayers = () => store.set('tt-players', players);
@@ -403,13 +409,13 @@ function nextQuestion(level, used){
 let game = null;
 let addOpen = false;
 
-function renderSetup(){
+// animate: play the fade-in. Re-draws while already on this screen (adding a player etc.) skip it to avoid a flicker.
+function renderSetup(animate = true){
   stopVoice();
   app.classList.add('wide');
   game = null;
-  const allOn = cats.length === CAT_IDS.length;
   app.innerHTML = `
-    <div class="fade">
+    <div class="${animate ? 'fade' : ''}">
       <div class="bar setup-head">
         <div class="title"><h1>Table Talk</h1><p>Dinner trivia. Pass the tablet around!</p></div>
         <button class="ibtn" id="settingsBtn" aria-label="Grown-ups settings">${SLIDERS}</button>
@@ -436,19 +442,20 @@ function renderSetup(){
       ${players.length ? '' : `<p class="hint">No players? Just press Let's play and answer together as one team.</p>`}
       </section>
       <section class="group g-cats">
-      <div class="group-head"><h2>Pick categories</h2><small>${cats.length} of ${CAT_IDS.length} on</small></div>
+      <div class="group-head"><h2>Pick categories</h2><div class="cat-tools"><small id="catCount"></small><button class="text-btn" id="catsToggle"></button></div></div>
       <div class="cats">
-        <button class="cat surprise ${allOn ? 'on' : ''}" id="allCats"><i style="background:#fff">${SPARK}</i>Surprise me (all categories)</button>
-        ${CAT_IDS.map(id => `<button class="cat ${cats.includes(id) ? 'on' : ''}" data-cat="${id}"><i style="background:${CATS[id].bg}">${catIcon(id)}</i><span>${CATS[id].name}${CATS[id].note ? `<small class="catnote">${CATS[id].note}</small>` : ''}</span></button>`).join('')}
+        <button class="cat surprise" id="allCats"><i style="background:#fff">${SPARK}</i>Surprise me (all categories)</button>
+        ${CAT_IDS.map(id => `<button class="cat" data-cat="${id}"><i style="background:${CATS[id].bg}">${catIcon(id)}</i><span>${CATS[id].name}${CATS[id].note ? `<small class="catnote">${CATS[id].note}</small>` : ''}</span></button>`).join('')}
       </div>
+      <p class="cats-hint" id="catsHint" hidden>Pick at least one category to play.</p>
       </section>
       <button class="big-btn press setup-go" id="go">Let's play</button>
       </div>
     </div>`;
 
-  $$('[data-rm]').forEach(b => b.onclick = () => { players.splice(+b.dataset.rm, 1); savePlayers(); renderSetup(); });
-  $$('[data-lvl]').forEach(b => b.onclick = () => { const p = players[+b.dataset.lvl]; p.level = p.level === 'easy' ? 'tricky' : 'easy'; savePlayers(); sfx.tap(); renderSetup(); });
-  $('#addBtn') && ($('#addBtn').onclick = () => { addOpen = true; renderSetup(); $('#nameInput').focus(); });
+  $$('[data-rm]').forEach(b => b.onclick = () => { players.splice(+b.dataset.rm, 1); savePlayers(); renderSetup(false); });
+  $$('[data-lvl]').forEach(b => b.onclick = () => { const p = players[+b.dataset.lvl]; p.level = p.level === 'easy' ? 'tricky' : 'easy'; savePlayers(); sfx.tap(); renderSetup(false); });
+  $('#addBtn') && ($('#addBtn').onclick = () => { addOpen = true; renderSetup(false); $('#nameInput').focus(); });
   if (addOpen){
     let level = 'easy';
     $$('[data-seg]').forEach(b => b.onclick = () => { level = b.dataset.seg; $$('[data-seg]').forEach(x => x.classList.toggle('on', x === b)); });
@@ -457,19 +464,32 @@ function renderSetup(){
       if (!name){ replay($('#nameInput'), 'shake'); return; }
       const used = players.map(p => p.color);
       players.push({ name, level, color: PLAYER_COLORS.find(c => !used.includes(c)) || pick(PLAYER_COLORS) });
-      savePlayers(); addOpen = false; sfx.yes(); renderSetup();
+      savePlayers(); addOpen = false; sfx.yes(); renderSetup(false);
     };
     $('#addOk').onclick = add;
-    $('#nameInput').onkeydown = e => { if (e.key === 'Enter') add(); if (e.key === 'Escape'){ addOpen = false; renderSetup(); } };
+    $('#nameInput').onkeydown = e => { if (e.key === 'Enter') add(); if (e.key === 'Escape'){ addOpen = false; renderSetup(false); } };
   }
-  $('#allCats').onclick = () => { cats = allOn ? [] : CAT_IDS.slice(); if (!cats.length) cats = ['animals']; saveCats(); renderSetup(); };
+  // Categories update in place (no re-draw), so tapping them never flickers the page.
+  const syncCats = () => {
+    const all = cats.length === CAT_IDS.length;
+    $$('[data-cat]').forEach(b => b.classList.toggle('on', cats.includes(b.dataset.cat)));
+    $('#allCats').classList.toggle('on', all);
+    $('#catCount').textContent = `${cats.length} of ${CAT_IDS.length} on`;
+    $('#catsToggle').textContent = cats.length ? 'Deselect all' : 'Select all';
+    if (cats.length) $('#catsHint').hidden = true;
+  };
+  const setCats = list => { cats = list; saveCats(); sfx.tap(); syncCats(); };
+  $('#allCats').onclick = () => setCats(cats.length === CAT_IDS.length ? [] : CAT_IDS.slice());
+  $('#catsToggle').onclick = () => setCats(cats.length ? [] : CAT_IDS.slice());
   $$('[data-cat]').forEach(b => b.onclick = () => {
     const id = b.dataset.cat;
-    if (cats.includes(id)){ if (cats.length > 1) cats = cats.filter(c => c !== id); else { replay(b, 'shake'); return; } }
-    else cats.push(id);
-    saveCats(); sfx.tap(); renderSetup();
+    setCats(cats.includes(id) ? cats.filter(c => c !== id) : [...cats, id]);
   });
-  $('#go').onclick = startGame;
+  syncCats();
+  $('#go').onclick = () => {
+    if (!cats.length){ $('#catsHint').hidden = false; replay($('.g-cats'), 'shake'); sfx.no(); return; }
+    startGame();
+  };
   $('#settingsBtn').onclick = parentGate;
 }
 
@@ -658,7 +678,7 @@ function openSettings(){
   $$('[data-count]', sheet).forEach(b => b.onclick = () => { prefs.count = +b.dataset.count; savePrefs(); $$('[data-count]', sheet).forEach(x => x.classList.toggle('on', x === b)); });
   $('#readToggle').onclick = e => { prefs.readAloud = !prefs.readAloud; savePrefs(); e.currentTarget.classList.toggle('on', prefs.readAloud); e.currentTarget.setAttribute('aria-pressed', prefs.readAloud); };
   $('#resetSeen').onclick = e => { store.set('tt-seen', []); e.currentTarget.textContent = 'Done'; $('small', e.currentTarget.parentElement).textContent = `0 of ${ALL.length} questions played on this device`; };
-  const close = () => { sheet.remove(); renderSetup(); };
+  const close = () => { sheet.remove(); renderSetup(false); };
   $('#done').onclick = close;
   sheet.onclick = e => { if (e.target === sheet) close(); };
 }
