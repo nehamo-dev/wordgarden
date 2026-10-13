@@ -36,16 +36,16 @@
     <style>
       :host{all:initial}
       *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-      .wrap{position:fixed;right:max(14px,env(safe-area-inset-right));top:calc(12px + env(safe-area-inset-top));z-index:2147483000;font-family:'Outfit',system-ui,sans-serif;color:#3B3355}
-      .fab{height:52px;border-radius:99px;border:0;background:#FFD8CF;cursor:pointer;display:flex;align-items:center;gap:8px;padding:0 16px 0 10px;
+      .wrap{position:fixed;right:max(14px,env(safe-area-inset-right));top:calc(8px + env(safe-area-inset-top));z-index:2147483000;font-family:'Outfit',system-ui,sans-serif;color:#3B3355}
+      .fab{height:46px;border-radius:99px;border:0;background:#FFD8CF;cursor:pointer;display:flex;align-items:center;gap:8px;padding:0 16px 0 10px;
         font:inherit;font-size:18px;font-weight:600;color:#3B3355;letter-spacing:-.01em;
         box-shadow:0 5px 0 #F4B2A4,0 10px 24px -12px rgba(59,51,85,.45);transition:transform .12s,box-shadow .12s}
       .fab:active{transform:translateY(3px);box-shadow:0 2px 0 #F4B2A4}
-      .fab .lantern{width:26px;height:36px;transform-origin:50% 0;animation:sway 5s ease-in-out infinite}
+      .fab .lantern{width:24px;height:32px;transform-origin:50% 0;animation:sway 5s ease-in-out infinite}
       .fab .chev{width:18px;height:18px;transition:transform .2s}
       .open .fab .chev{transform:rotate(180deg)}
       .fab:focus-visible,.item:focus-visible{outline:3px solid #3B3355;outline-offset:3px}
-      .menu{position:absolute;right:0;top:64px;width:min(300px,calc(100vw - 28px));background:#FFFBF5;border-radius:26px;padding:10px;
+      .menu{position:absolute;right:0;top:58px;width:min(300px,calc(100vw - 28px));background:#FFFBF5;border-radius:26px;padding:10px;
         box-shadow:0 18px 44px -14px rgba(59,51,85,.45),0 0 0 1px rgba(59,51,85,.06);transform-origin:100% 0;
         transform:scale(.85) translateY(-8px);opacity:0;pointer-events:none;transition:transform .2s cubic-bezier(.3,.8,.3,1.2),opacity .15s}
       .open .menu{transform:none;opacity:1;pointer-events:auto}
@@ -89,7 +89,7 @@
 
   // Reserve a strip at the top of the page so the pill never covers game content.
   const space = document.createElement('style');
-  space.textContent = 'body{padding-top:calc(72px + env(safe-area-inset-top))}';
+  space.textContent = 'body{padding-top:calc(62px + env(safe-area-inset-top))}';
   document.head.appendChild(space);
 
   const mount = () => document.body.appendChild(host);
