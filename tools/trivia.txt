@@ -1,0 +1,302 @@
+# Table Talk question bank.
+# Format: category | level | question | correct answer ; wrong ; wrong | fun fact
+# category: india science animals space geo history tech food body
+# level: easy (ages 4-5) or tricky (ages 6-8)
+# After editing, run: python3 tools/make_trivia.py
+
+india|easy|Which festival is called the festival of lights?|Diwali;Holi;Pongal|On Diwali, families light little clay lamps called diyas to fill their homes with light.
+india|easy|At which festival do people throw bright colors at each other?|Holi;Diwali;Onam|Holi celebrates the end of winter and the arrival of spring.
+india|easy|What is India's national animal?|The tiger;The lion;The elephant|No two tigers have the same stripes, just like no two people have the same fingerprints.
+india|easy|What is India's national bird?|The peacock;The parrot;The crow|A peacock spreads its long tail feathers like a giant shimmering fan.
+india|easy|Which god has the head of an elephant?|Ganesha;Hanuman;Krishna|Many people pray to Ganesha before starting something new.
+india|easy|Which strong monkey hero helped Lord Rama?|Hanuman;Ganesha;Garuda|In the Ramayana, Hanuman leaps all the way across the ocean to find Sita.
+india|easy|What are the colorful patterns drawn on the floor with colored powder?|Rangoli;Mehndi;Kites|People make rangoli at their doors to welcome guests during festivals.
+india|easy|What do people fly high in the sky on Makar Sankranti?|Kites;Balloons;Paper planes|On Makar Sankranti the sky fills with thousands of colorful kites.
+india|easy|What is India's national flower?|The lotus;The rose;The sunflower|The lotus grows in ponds, and its flower floats on top of the water.
+india|easy|How many stripes of color are on India's flag?|Three;Two;Five|The flag is saffron, white and green, with a blue wheel called the Ashoka Chakra in the middle.
+india|easy|At which festival do sisters tie a rakhi on their brother's wrist?|Raksha Bandhan;Diwali;Holi|Raksha Bandhan celebrates the love between brothers and sisters.
+india|easy|What is the famous white marble building in Agra?|The Taj Mahal;The Red Fort;The Gateway of India|The Taj Mahal seems to change color, looking pink in the morning and golden in the evening.
+india|easy|Which little animal does Lord Ganesha ride in the stories?|A mouse;A horse;A peacock|Ganesha's tiny mouse friend is called Mushika.
+india|easy|Which god plays the flute and wears a peacock feather?|Krishna;Shiva;Brahma|In the stories, little Krishna loved butter so much that he would sneak some from the pot.
+india|easy|Which crunchy triangle snack has potatoes inside?|Samosa;Idli;Jalebi|Samosas are often eaten with green mint chutney or sweet tamarind chutney.
+india|easy|What is the popular round, sweet treat made for festivals?|Laddoo;Dosa;Paratha|Ganesha is often shown holding a sweet treat, because he loves sweets.
+india|tricky|What is the capital city of India?|New Delhi;Mumbai;Kolkata|India's parliament, where laws are made, is in New Delhi.
+india|tricky|What is the name of India's most famous holy river?|The Ganga;The Nile;The Amazon|The Ganga begins high up in the Himalaya mountains, from a glacier.
+india|tricky|Which festival from Kerala has snake boat races and flower carpets called pookalam?|Onam;Lohri;Durga Puja|Onam welcomes the kind king Mahabali, who visits his people once a year in the story.
+india|tricky|Pongal is a harvest festival from which state?|Tamil Nadu;Punjab;Gujarat|Pongal is also a sweet rice dish, cooked in a pot until it bubbles over for good luck.
+india|tricky|Which mountains in the north of India have the tallest peaks in the world?|The Himalayas;The Alps;The Andes|Himalaya means home of snow.
+india|tricky|Which board game with kings, queens and knights first began in India?|Chess;Ludo;Carrom|An early form of chess from India was called chaturanga.
+india|tricky|Which sport is the most popular in India?|Cricket;Tennis;Basketball|Some cricket matches last for five whole days.
+india|tricky|Which story is about Rama, Sita and Hanuman?|The Ramayana;The Panchatantra;The Jungle Book|Diwali celebrates Rama coming home to Ayodhya, when people lit lamps to welcome him.
+india|tricky|Who is called the Father of the Nation in India?|Mahatma Gandhi;Jawaharlal Nehru;Subhas Chandra Bose|Gandhi believed in changing the world peacefully, without fighting.
+india|tricky|What is the orange-brown hand painting done at weddings and festivals?|Mehndi;Rangoli;Bindi|Mehndi is made from crushed henna leaves, and the pattern slowly fades after a couple of weeks.
+india|tricky|Which festival honors Goddess Durga with big decorated pandals, especially in Kolkata?|Durga Puja;Onam;Baisakhi|During Durga Puja, families visit many pandals, each decorated in its own special way.
+india|tricky|Which harvest festival from Punjab is celebrated with bhangra dancing?|Baisakhi;Pongal;Onam|Baisakhi is also a very special day for Sikhs.
+india|tricky|Who are the main characters in most Panchatantra stories?|Animals;Robots;Pirates|The Panchatantra teaches lessons with clever animals, like the monkey and the crocodile.
+india|tricky|What is India's money called?|The rupee;The dollar;The yen|The rupee has its own special symbol, which was chosen in 2010.
+india|tricky|Which festival do Muslims celebrate at the end of Ramadan, often with sweet sevaiyan?|Eid;Christmas;Holi|People greet each other by saying Eid Mubarak, which means blessed celebration.
+india|tricky|Which classical dance from Tamil Nadu uses hand gestures called mudras?|Bharatanatyam;Ballet;Salsa|Bharatanatyam dancers wear ankle bells called ghungroo that jingle as they dance.
+
+science|easy|What do plants need from the sky to grow?|Sunlight;Moonlight;Thunder|Plants make their own food using sunlight, water and air.
+science|easy|What happens to ice when it gets warm?|It melts;It gets bigger;It turns to stone|When ice melts, it turns back into water.
+science|easy|What color do you get when you mix blue and yellow paint?|Green;Purple;Orange|Mixing two colors to make a new one is like a little bit of magic.
+science|easy|What color do you get when you mix red and white paint?|Pink;Blue;Green|Adding white to any color makes it lighter.
+science|easy|What do you need to make a rainbow?|Sunlight and rain;Snow and wind;Clouds and thunder|You can see a rainbow when the sun is behind you and the rain is in front of you.
+science|easy|Which of these will a magnet pull?|A paper clip;A leaf;A crayon|Magnets pull things made of iron and steel.
+science|easy|What do we call water that falls from the clouds?|Rain;Fog;Dust|Every raindrop started as water that floated up into the sky.
+science|easy|What is water called when it freezes?|Ice;Steam;Sand|Ice floats, which is why ice cubes bob on top of your drink.
+science|easy|When water gets very hot and boils, what does it turn into?|Steam;Ice;Juice|Steam is water floating in the air as a gas.
+science|easy|Which of these floats in water?|A rubber duck;A rock;A coin|Things float when they are lighter than the water they push away.
+science|easy|What do we use to see tiny things up close?|A magnifying glass;A spoon;A pillow|A magnifying glass has a curved piece of glass called a lens.
+science|easy|What does a seed grow into?|A plant;A rock;A toy|A giant tree started as a tiny little seed.
+science|easy|Which is heavier?|A big rock;A feather;A bubble|A feather is so light it can float on the air.
+science|easy|What do you need to see in a dark room?|Light;Sound;Wind|Our eyes need light to see anything at all.
+science|easy|Which of these is a liquid?|Water;A stone;A pencil|Liquids flow and take the shape of whatever cup you pour them into.
+science|easy|What makes your shadow?|Your body blocking the light;The rain;The wind|Your shadow is longest in the early morning and late afternoon.
+science|tricky|What gas do we breathe in to stay alive?|Oxygen;Helium;Smoke|Trees and plants give off the oxygen that we breathe.
+science|tricky|What gas do plants take in from the air?|Carbon dioxide;Oxygen;Helium|We breathe out carbon dioxide, and plants breathe it in. We help each other.
+science|tricky|What force makes things fall to the ground?|Gravity;Wind;Magnetism|Gravity is what keeps our feet on the ground and the Moon going around the Earth.
+science|tricky|How many colors are in a rainbow?|Seven;Five;Ten|The colors are red, orange, yellow, green, blue, indigo and violet.
+science|tricky|At what temperature does water boil?|100 degrees Celsius;50 degrees Celsius;10 degrees Celsius|Water freezes at zero degrees Celsius.
+science|tricky|Which material lets electricity flow through it?|Metal;Wood;Plastic|Wires are made of metal on the inside and covered in plastic to keep us safe.
+science|tricky|What makes sound?|Vibrations;Colors;Shadows|Put your hand on your throat and hum. You can feel the vibrations.
+science|tricky|What is a scientist who studies dinosaur fossils called?|A paleontologist;An astronaut;A chef|Fossils are the remains of plants and animals turned to stone over millions of years.
+science|tricky|Which tool helps you see things that are very far away, like planets?|A telescope;A microscope;A stethoscope|Telescopes collect lots of light so we can see faraway stars.
+science|tricky|Which tool helps you see things too tiny for your eyes, like germs?|A microscope;A telescope;A periscope|A microscope can make things look hundreds of times bigger.
+science|tricky|What happens to a puddle on a hot, sunny day?|It dries up;It turns to ice;It gets bigger|The water evaporates, which means it turns into a gas and floats into the air.
+science|tricky|What do we call a machine that turns wind into electricity?|A wind turbine;A fridge;A lamp|Wind turbines can be taller than a twenty-story building.
+science|tricky|Which part of a plant drinks water from the soil?|The roots;The flowers;The petals|Roots also hold the plant firmly in the ground.
+science|tricky|What do we call the layer of air around the Earth?|The atmosphere;The ocean;The crust|The atmosphere protects us from the Sun's strongest rays, like a blanket.
+science|tricky|What do we call a baby plant that has just come out of a seed?|A seedling;A root;A fruit|A seedling's first leaves are often a different shape from its grown-up leaves.
+science|tricky|What are the three forms that water can be?|Solid, liquid and gas;Hot, cold and warm;Big, small and medium|Ice is solid, water is liquid, and steam is gas.
+
+animals|easy|Which is the biggest animal on land?|The elephant;The giraffe;The horse|Elephants are the only mammals that cannot jump.
+animals|easy|Which animal has the longest neck?|The giraffe;The camel;The zebra|A giraffe's tongue is dark blue and about as long as your arm.
+animals|easy|What do bees make?|Honey;Milk;Butter|Bees visit thousands of flowers to make one small jar of honey.
+animals|easy|Which animal says moo?|A cow;A dog;A duck|Cows have best friends and feel happier when they are together.
+animals|easy|Where do fish live?|In water;In trees;In the sand|Some fish live in salty seas, and some live in rivers and lakes.
+animals|easy|What is a baby dog called?|A puppy;A kitten;A calf|Puppies are born with their eyes closed.
+animals|easy|What is a baby cat called?|A kitten;A puppy;A cub|Cats spend about two thirds of the day sleeping.
+animals|easy|Which bird cannot fly but swims really well?|The penguin;The eagle;The parrot|Penguins use their wings like flippers to zoom through the water.
+animals|easy|Which animal has black and white stripes?|The zebra;The tiger;The leopard|No two zebras have exactly the same stripes.
+animals|easy|Which animal carries its home on its back?|A snail;A rabbit;A frog|A snail's shell grows bigger as the snail grows.
+animals|easy|How many legs does a spider have?|Eight;Six;Four|Insects have six legs, but spiders have eight, so spiders are not insects.
+animals|easy|What does a caterpillar turn into?|A butterfly;A spider;A bird|A caterpillar builds a case called a chrysalis and changes inside it.
+animals|easy|Which animal is called the king of the jungle?|The lion;The monkey;The mouse|Lions actually live on grassy plains called savannas, not in jungles.
+animals|easy|What do pandas love to eat?|Bamboo;Fish;Bananas|A panda can spend up to fourteen hours a day eating bamboo.
+animals|easy|Which animal hops and carries its baby in a pouch?|The kangaroo;The bear;The deer|A baby kangaroo is called a joey.
+animals|easy|Which of these animals lays eggs?|A hen;A cow;A dog|A hen can lay almost one egg every day.
+animals|tricky|What is the biggest animal in the whole world?|The blue whale;The elephant;The shark|A blue whale's heart is about as big as a small car.
+animals|tricky|What is the fastest land animal?|The cheetah;The lion;The horse|A cheetah can run as fast as a car on a highway.
+animals|tricky|Which of these is a mammal, not a fish?|The dolphin;The shark;The goldfish|Dolphins breathe air through a blowhole on top of their heads.
+animals|tricky|How many legs does an insect have?|Six;Eight;Ten|Ants, bees and beetles are all insects with six legs.
+animals|tricky|What do we call animals that eat only plants?|Herbivores;Carnivores;Omnivores|Cows, elephants and rabbits are all herbivores.
+animals|tricky|Which animal sleeps hanging upside down?|The bat;The owl;The parrot|Bats find their way in the dark by listening to echoes.
+animals|tricky|What is a group of lions called?|A pride;A herd;A flock|In a pride, the lionesses do most of the hunting.
+animals|tricky|Which bird is awake at night and can turn its head very far around?|The owl;The sparrow;The pigeon|An owl can turn its head about three quarters of the way around.
+animals|tricky|Where does a frog lay its eggs?|In water;In a tree nest;In the sand|Frog eggs hatch into tadpoles, which have tails and live in water.
+animals|tricky|Which animal can change its color to blend in?|The chameleon;The elephant;The rabbit|A chameleon can also move each eye in a different direction.
+animals|tricky|How do fish breathe underwater?|With gills;With lungs;Through their tails|Gills take oxygen out of the water.
+animals|tricky|Which is the only mammal that can really fly?|The bat;The flying squirrel;The ostrich|Flying squirrels don't really fly. They glide from tree to tree.
+animals|tricky|What is a baby frog called?|A tadpole;A cub;A chick|Tadpoles slowly grow legs and lose their tails as they turn into frogs.
+animals|tricky|What does a camel store in its hump?|Fat;Water;Sand|Many people think it is water, but the hump is full of fat for energy.
+animals|tricky|Which sea animal has eight arms and three hearts?|The octopus;The starfish;The jellyfish|An octopus can squirt ink to hide from danger.
+animals|tricky|Which animal builds dams across rivers?|The beaver;The otter;The duck|Beavers' front teeth never stop growing, so chewing wood keeps them short.
+
+space|easy|What is the star that keeps the Earth warm?|The Sun;The Moon;Mars|The Sun is so big that about a million Earths could fit inside it.
+space|easy|Which planet do we live on?|Earth;Mars;Jupiter|Earth is the only planet we know of with living things.
+space|easy|What do astronauts wear in space?|A spacesuit;A raincoat;Pajamas|A spacesuit gives astronauts air to breathe and keeps them warm.
+space|easy|What shines at night and seems to change shape?|The Moon;The Sun;A cloud|The Moon doesn't make its own light. It shines with light from the Sun.
+space|easy|What do we call a person who travels into space?|An astronaut;A pilot;A sailor|Astronauts float inside their space station.
+space|easy|What do we use to travel into space?|A rocket;A bus;A boat|Rockets need lots of fuel to push away from the Earth.
+space|easy|What are the twinkly lights in the night sky?|Stars;Bubbles;Lamps|Stars are giant balls of fire, very far away.
+space|easy|Which planet is called the Red Planet?|Mars;Venus;Neptune|Mars looks red because its ground is covered in rusty dust.
+space|easy|Which planet has big beautiful rings?|Saturn;Mars;Mercury|Saturn's rings are made of chunks of ice and rock.
+space|easy|Is the Sun a star or a planet?|A star;A planet;A moon|The Sun is the closest star to Earth.
+space|easy|Where did astronauts first walk in 1969?|On the Moon;On Mars;On the Sun|Footprints on the Moon can stay for millions of years because there is no wind.
+space|easy|Which is bigger, the Sun or the Earth?|The Sun;The Earth;They are the same size|The Sun looks small only because it is so far away.
+space|easy|What do we call a group of stars that makes a picture in the sky?|A constellation;A rainbow;A comet|One famous constellation looks like a big spoon, called the Big Dipper.
+space|easy|What does the Earth travel around?|The Sun;The Moon;Mars|One whole trip around the Sun takes one year.
+space|easy|Why do we have night?|Our side of Earth turns away from the Sun;The Sun goes to sleep;Clouds cover the Sun|The Earth spins like a top, so the Sun seems to rise and set.
+space|easy|What is the Moon made of?|Rock;Cheese;Ice cream|The Moon has big round holes called craters, made by space rocks crashing into it.
+space|tricky|How many planets are in our solar system?|Eight;Nine;Twelve|Pluto used to be called a planet, but now it is called a dwarf planet.
+space|tricky|Which is the biggest planet?|Jupiter;Earth;Mars|Jupiter has a giant storm called the Great Red Spot that is bigger than the Earth.
+space|tricky|Which planet is closest to the Sun?|Mercury;Venus;Earth|A year on Mercury is only 88 days long.
+space|tricky|Which planet is the hottest?|Venus;Mercury;Mars|Venus is covered in thick clouds that trap the heat like a blanket.
+space|tricky|What is India's space agency called?|ISRO;NASA;A rocket club|ISRO launched a mission to Mars called Mangalyaan.
+space|tricky|What was the name of India's mission that landed on the Moon in 2023?|Chandrayaan-3;Mangalyaan;Gaganyaan|Chandra means moon. It landed near the Moon's south pole.
+space|tricky|Who was the first person to walk on the Moon?|Neil Armstrong;Rakesh Sharma;Yuri Gagarin|He said, that's one small step for man, one giant leap for mankind.
+space|tricky|Who was the first Indian to travel into space?|Rakesh Sharma;Kalpana Chawla;Neil Armstrong|In 1984, he said India looked saare jahan se achha, better than the whole world.
+space|tricky|How long does the Earth take to go around the Sun once?|One year;One day;One week|That is why we have a birthday once every year.
+space|tricky|How long does the Earth take to spin around once?|One day;One year;One hour|One spin gives us one day and one night.
+space|tricky|What is a shooting star really?|A space rock burning up;A falling star;A firework|Shooting stars are called meteors.
+space|tricky|What is our galaxy called?|The Milky Way;The Chocolate Way;The Big Dipper|Our galaxy has hundreds of billions of stars.
+space|tricky|Which planet is farthest from the Sun?|Neptune;Saturn;Earth|Neptune is so far away that one trip around the Sun takes 165 years.
+space|tricky|About how long does sunlight take to reach the Earth?|About 8 minutes;About 8 days;About 8 seconds|Light is the fastest thing there is.
+space|tricky|What do we call a planet's natural satellite, like the one that goes around Earth?|A moon;A star;A comet|Jupiter and Saturn each have dozens of moons.
+space|tricky|What keeps the planets going around the Sun?|Gravity;Wind;Magnets|The Sun's gravity pulls on the planets and keeps them on their paths.
+
+geo|easy|What is the biggest ocean?|The Pacific Ocean;The Atlantic Ocean;The Indian Ocean|The Pacific Ocean is bigger than all the land on Earth put together.
+geo|easy|Which icy land is at the very bottom of the Earth?|Antarctica;Africa;Asia|Antarctica is the coldest place on Earth, and penguins live there.
+geo|easy|What do we call a very dry, sandy place?|A desert;A jungle;A lake|Some deserts are cold, like the ones in Antarctica.
+geo|easy|What is a mountain that can erupt with hot lava?|A volcano;A hill;A cave|The hot melted rock inside a volcano is called magma.
+geo|easy|India is on which continent?|Asia;Europe;Africa|Asia is the biggest continent, with the most people.
+geo|easy|What do we call land with water all around it?|An island;A desert;A valley|Sri Lanka, near India, is an island.
+geo|easy|In which direction does the Sun rise?|East;West;North|The Sun rises in the east and sets in the west.
+geo|easy|What shows places and roads on paper or a screen?|A map;A clock;A calendar|A globe is a map shaped like a ball, just like the Earth.
+geo|easy|What do we call a big place full of trees?|A forest;A desert;A beach|Forests are home to lots of animals and birds.
+geo|easy|Where do polar bears live?|The Arctic;The desert;The jungle|Under their white fur, polar bears have black skin to soak up warmth.
+geo|easy|What do we call water falling over the edge of a cliff?|A waterfall;A puddle;A well|The tallest waterfall in the world is Angel Falls in Venezuela.
+geo|easy|Which is the coldest place?|The North Pole;A desert;A beach|At the North Pole, there are months when the Sun never sets.
+geo|easy|What do we call a very big, tall hill?|A mountain;A valley;A river|The tallest mountain in the world is Mount Everest.
+geo|easy|What do we call the place where the land meets the sea?|The coast;The sky;The forest|Waves wash sand onto the coast to make beaches.
+geo|easy|Which of these is a huge body of salty water?|An ocean;A pond;A bathtub|Oceans cover most of our planet.
+geo|easy|What do we call a long stream of water flowing to the sea?|A river;A road;A tunnel|Rivers start up in hills and mountains and flow downhill.
+geo|tricky|How many continents are there?|Seven;Five;Ten|They are Asia, Africa, North America, South America, Antarctica, Europe and Australia.
+geo|tricky|Which river is often called the longest in the world?|The Nile;The Ganga;The Thames|The Nile flows through Africa to the sea in Egypt.
+geo|tricky|What is the tallest mountain in the world?|Mount Everest;Mount Kilimanjaro;Mount Fuji|Mount Everest is on the border of Nepal and China.
+geo|tricky|What is the biggest hot desert in the world?|The Sahara;The Thar;The Gobi|India has a desert too, called the Thar Desert, in Rajasthan.
+geo|tricky|Which country has the most people?|India;Russia;Canada|More than one billion people live in India.
+geo|tricky|Which country is home to kangaroos and koalas?|Australia;Brazil;Canada|Australia is a country and a continent at the same time.
+geo|tricky|Which country has the great pyramids?|Egypt;India;Japan|The pyramids were built more than four thousand years ago.
+geo|tricky|What is the capital city of Japan?|Tokyo;Beijing;Delhi|Japan is made up of thousands of islands.
+geo|tricky|Which country is shaped like a boot?|Italy;France;Spain|Italy is where pizza first became famous.
+geo|tricky|Which is the biggest country by land?|Russia;India;Japan|Russia is so wide that it has eleven different time zones.
+geo|tricky|Which ocean is to the south of India?|The Indian Ocean;The Pacific Ocean;The Arctic Ocean|It is the only ocean named after a country.
+geo|tricky|In which country is the Eiffel Tower?|France;England;Italy|The Eiffel Tower is painted again every few years so it doesn't rust.
+geo|tricky|Which is the biggest continent?|Asia;Africa;Europe|Asia has the tallest mountain and the most people.
+geo|tricky|What is the imaginary line around the middle of the Earth called?|The equator;The North Pole;The horizon|Places near the equator are warm all year round.
+geo|tricky|Which state of India is famous for its desert and camels?|Rajasthan;Kerala;Assam|Rajasthan has a famous camel fair in the town of Pushkar.
+geo|tricky|Which country is home to the Amazon rainforest?|Brazil;Egypt;India|The Amazon rainforest is home to millions of kinds of plants and animals.
+
+history|easy|What were the giant reptiles that lived long, long ago?|Dinosaurs;Dragons;Unicorns|Dinosaurs lived millions of years before the first people.
+history|easy|Who lived in castles long ago?|Kings and queens;Astronauts;Robots|Some castles had water around them called a moat.
+history|easy|What did people use for light before there was electricity?|Candles and oil lamps;Phones;Televisions|In India, people have used clay oil lamps called diyas for thousands of years.
+history|easy|How did people travel far before there were cars?|On horses and carts;In rockets;On scooters|Some people also travelled on camels and elephants.
+history|easy|What did people use to write letters before computers?|Pen and paper;Tablets;Phones|Long ago, people wrote on palm leaves and clay tablets.
+history|easy|What did the ancient Egyptians build for their kings?|Pyramids;Skyscrapers;Igloos|The biggest pyramid was the tallest building in the world for thousands of years.
+history|easy|Which dinosaur had three horns on its face?|Triceratops;Tyrannosaurus;Stegosaurus|Triceratops means three-horned face.
+history|easy|What did early people paint on cave walls?|Animals;Cars;Phones|Some cave paintings in India, at Bhimbetka, are many thousands of years old.
+history|easy|Where did early people live before houses?|In caves;In skyscrapers;In space stations|Caves kept early people safe from the rain and wild animals.
+history|easy|How did pirates sail the seas?|In ships;In airplanes;In trains|Pirate ships had big cloth sails that caught the wind.
+history|easy|What did knights wear to protect themselves?|Armor;Pajamas;Swimsuits|A full suit of armor could be as heavy as a big bag of rice.
+history|easy|Where can you see dinosaur bones today?|In a museum;In a bakery;In a swimming pool|Dinosaur bones turned into stone called fossils.
+history|easy|Which dinosaur was a huge meat-eater with tiny arms?|Tyrannosaurus;Triceratops;Brachiosaurus|Tyrannosaurus had teeth as long as bananas.
+history|easy|Which very old invention helps carts roll along?|The wheel;The television;The phone|The wheel was invented more than five thousand years ago.
+history|easy|Long ago, how did people send messages far away?|By letters and messengers;By email;By video call|Some people even used trained pigeons to carry messages.
+history|easy|What did people use to tell the time using the Sun's shadow?|A sundial;A phone;A television|In Jaipur, there is a giant sundial at a place called Jantar Mantar.
+history|tricky|Who flew the first airplane?|The Wright brothers;Thomas Edison;Isaac Newton|Their first flight in 1903 lasted only about twelve seconds.
+history|tricky|Who is famous for making the light bulb work for a long time?|Thomas Edison;Albert Einstein;Isaac Newton|Edison tried thousands of materials before he found one that worked.
+history|tricky|In which year did India become independent?|1947;1857;2000|India celebrates Independence Day every year on the fifteenth of August.
+history|tricky|Who built the Taj Mahal?|Shah Jahan;Akbar;Ashoka|He built it in memory of his wife, Mumtaz Mahal.
+history|tricky|Which very old civilization had the cities of Harappa and Mohenjo-daro?|The Indus Valley;The Egyptians;The Romans|They had covered drains and public baths thousands of years ago.
+history|tricky|What were the picture letters of ancient Egypt called?|Hieroglyphs;Emojis;Comics|Hieroglyphs were carved on walls and written on paper made from a plant called papyrus.
+history|tricky|Which emperor of India spread messages of peace on stone pillars?|Ashoka;Akbar;Babur|The lions from Ashoka's pillar are now India's national emblem.
+history|tricky|Who wrote India's national anthem, Jana Gana Mana?|Rabindranath Tagore;Mahatma Gandhi;Jawaharlal Nehru|Tagore was the first person from Asia to win a Nobel Prize.
+history|tricky|Who was the first Prime Minister of India?|Jawaharlal Nehru;Mahatma Gandhi;Indira Gandhi|Children's Day in India is on his birthday, the fourteenth of November.
+history|tricky|What did Mahatma Gandhi walk all the way to the sea to make?|Salt;Sugar;Gold|The walk was called the Salt March, and it was about 385 kilometers long.
+history|tricky|Which country built the Great Wall long ago?|China;India;Egypt|The Great Wall is thousands of kilometers long.
+history|tricky|In which country did the Olympic Games first begin?|Greece;India;America|The first Olympic winners got a crown made of olive leaves.
+history|tricky|Which brave queen of Jhansi fought for India in 1857?|Rani Lakshmibai;Razia Sultan;Mumtaz Mahal|She rode into battle on horseback.
+history|tricky|Which animals alive today are related to dinosaurs?|Birds;Cats;Fish|A chicken is a distant cousin of the Tyrannosaurus.
+history|tricky|In the famous story, what fell on Isaac Newton's head and made him think about gravity?|An apple;A coconut;A shoe|Newton wondered why the apple fell down, and not up or sideways.
+history|tricky|Who was the first woman born in India to go to space?|Kalpana Chawla;Sunita Williams;Indira Gandhi|Kalpana Chawla first flew into space in 1997.
+
+tech|easy|What do we use to talk to someone far away?|A phone;A spoon;A pillow|The first phone call was made about 150 years ago.
+tech|easy|What do you use to take a photo?|A camera;A fork;A broom|Most phones have a tiny camera inside them.
+tech|easy|Which machine keeps food cold?|A fridge;An oven;A fan|Keeping food cold stops it going bad so quickly.
+tech|easy|What do you move around to point at things on a computer?|A mouse;A carrot;A cat|A computer mouse got its name because its wire looked like a tail.
+tech|easy|What do robots need to work?|Electricity;Ice cream;Rain|Some robots have batteries, just like toys.
+tech|easy|Which machine heats up food very quickly?|A microwave;A fridge;A fan|A microwave makes the water inside food wiggle, which heats it up.
+tech|easy|What helps a car stop?|The brakes;The horn;The radio|Bicycles have brakes too.
+tech|easy|Which machine washes our clothes?|A washing machine;A toaster;A fridge|Before washing machines, people washed clothes by hand in rivers.
+tech|easy|What do we type letters on?|A keyboard;A pillow;A plate|The letters on a keyboard aren't in alphabet order.
+tech|easy|What shows us the time?|A clock;A lamp;A cup|Some clocks have hands, and some show numbers.
+tech|easy|Which of these flies in the sky?|An airplane;A train;A ship|Big airplanes can carry hundreds of people.
+tech|easy|Which vehicle runs on tracks?|A train;A car;A bicycle|India has one of the biggest train networks in the world.
+tech|easy|What do you plug in to fill up a tablet's battery?|A charger;A spoon;A sock|A full battery means you can use the tablet for hours.
+tech|easy|What do you press to turn on a light?|A switch;A pillow;A book|A switch lets electricity flow to the bulb.
+tech|easy|Which flying machine is controlled with a remote and has spinning blades?|A drone;A kite;A balloon|Drones can take photos and videos from high in the sky.
+tech|easy|What gives a phone its power?|A battery;Water;Sand|Batteries store energy so we can use it later.
+tech|tricky|Who invented the telephone?|Alexander Graham Bell;Thomas Edison;The Wright brothers|His first words on the phone were to his helper, Mr Watson.
+tech|tricky|What is a robot?|A machine that can do jobs;An animal;A kind of food|Some robots help doctors, and some even explore other planets.
+tech|tricky|What does GPS help you do?|Find your way;Take photos;Cook food|GPS uses satellites high above the Earth.
+tech|tricky|What kind of energy comes from the Sun?|Solar energy;Wind energy;Coal energy|Solar panels turn sunlight into electricity.
+tech|tricky|What do we call the instructions that tell a computer what to do?|Code;Soup;Songs|People who write code are called programmers.
+tech|tricky|What is the internet?|A huge network that connects computers;A giant fishing net;A big book|The internet lets computers all over the world share information.
+tech|tricky|Which Indian scientist and president was called the Missile Man?|APJ Abdul Kalam;CV Raman;Homi Bhabha|Doctor Kalam loved teaching and talking with children.
+tech|tricky|What does a 3D printer make?|Solid objects;Only words;Clean clothes|A 3D printer builds things layer by layer.
+tech|tricky|Which kind of car runs on electricity instead of petrol?|An electric car;A diesel truck;A steam train|Electric cars are much quieter than petrol cars.
+tech|tricky|What do satellites do?|Circle the Earth to help with phones, TV and weather;Grow food;Clean the ocean|There are thousands of satellites going around the Earth.
+tech|tricky|What do we call the parts that let a robot see and feel?|Sensors;Wheels;Batteries|Your eyes, ears and skin are like your body's sensors.
+tech|tricky|What does AI stand for?|Artificial intelligence;Apple ice cream;Animal island|AI helps computers learn from lots of examples.
+tech|tricky|Which invention lets you see and talk to family far away on a screen?|A video call;A radio;A letter|Video calls send pictures and sound through the internet.
+tech|tricky|Which vehicle can travel deep under the sea?|A submarine;A helicopter;A bus|Submarines can stay underwater for months.
+tech|tricky|Which famous Indian scientist found out why the sea looks blue?|CV Raman;APJ Abdul Kalam;Rakesh Sharma|India celebrates National Science Day on the day of his discovery.
+tech|tricky|What do we call a machine that does math and stores information?|A computer;A blender;A bicycle|The first computers were as big as a whole room.
+
+food|easy|Which fruit is yellow and curved?|A banana;An apple;A grape|Bananas grow in big bunches that point up toward the sky.
+food|easy|What do we get from cows?|Milk;Honey;Eggs|Milk is used to make butter, cheese, paneer and curd.
+food|easy|Which vegetable is orange and crunchy?|A carrot;A potato;Peas|Carrots grow under the ground.
+food|easy|What do hens give us?|Eggs;Milk;Bread|Eggs can be brown or white.
+food|easy|Which red, round fruit grows on trees?|An apple;A banana;A watermelon|There are thousands of different kinds of apples.
+food|easy|Which fruit is called the king of fruits in India?|The mango;The grape;The kiwi|India grows more mangoes than any other country.
+food|easy|What is popcorn made from?|Corn;Rice;Wheat|Each kernel has a tiny drop of water inside that turns to steam and makes it pop.
+food|easy|What are chapatis made from?|Wheat flour;Rice;Potatoes|Chapatis puff up like a balloon when they're cooked on a flame.
+food|easy|Which fruit has a hard brown shell and water inside?|A coconut;An orange;A mango|Coconut trees grow near beaches, like in Kerala and Goa.
+food|easy|What color is a ripe tomato?|Red;Blue;Purple|Tomatoes are actually fruits, because they have seeds inside.
+food|easy|What is cheese made from?|Milk;Apples;Bread|There are more than a thousand kinds of cheese.
+food|easy|Which round, flat food is topped with tomato and cheese?|Pizza;Idli;Ice cream|The biggest pizzas ever made were wider than a swimming pool.
+food|easy|Which hot drink is made from leaves and is loved in India with milk?|Chai;Lemonade;Orange juice|Most of India's tea grows on hills in Assam and Darjeeling.
+food|easy|Which of these is a vegetable?|Spinach;An apple;A mango|Spinach is called palak in Hindi.
+food|easy|Which fruit is big and green outside and red and juicy inside?|A watermelon;A kiwi;A pear|A watermelon is mostly water, which is how it got its name.
+food|easy|Which of these is a sweet treat?|Ice cream;A cucumber;An onion|Ice cream was first made a long, long time ago with snow from mountains.
+food|tricky|Idli and dosa are made from rice and what else?|Lentils;Chocolate;Apples|The batter is left overnight so it gets a little bit sour and fluffy.
+food|tricky|Which spice makes food yellow?|Turmeric;Pepper;Cinnamon|Turmeric is called haldi, and it's also used at weddings.
+food|tricky|Which fruit wears its seeds on the outside?|The strawberry;The banana;The orange|A strawberry has about two hundred tiny seeds on its skin.
+food|tricky|What is peanut butter made from?|Peanuts;Almonds;Cashews|Peanuts aren't really nuts. They grow under the ground like beans.
+food|tricky|Chocolate is made from which beans?|Cocoa beans;Coffee beans;Kidney beans|Cocoa beans grow inside big pods on cacao trees.
+food|tricky|Which vegetable can make your eyes water when you cut it?|An onion;A carrot;A cucumber|Chilling an onion before cutting it helps stop the tears.
+food|tricky|What do lentils, eggs and beans give our bodies to build strong muscles?|Protein;Sugar;Salt|Dal is a tasty way to get protein.
+food|tricky|Which vitamin does our body make from sunlight?|Vitamin D;Vitamin C;Vitamin K|Vitamin D helps us grow strong bones.
+food|tricky|Which state is famous for dhokla?|Gujarat;Kerala;Punjab|Dhokla is steamed, which makes it soft and spongy.
+food|tricky|What is paneer made from?|Milk;Rice;Peas|Paneer is made by adding lemon juice to hot milk.
+food|tricky|What is jaggery, or gur, made from?|Sugarcane;Honey;Milk|Sugarcane is a tall grass with sweet juice inside.
+food|tricky|Which sweet is made of fried balls soaked in sugar syrup?|Gulab jamun;Samosa;Pakora|Gulab means rose, because the syrup often has rose water in it.
+food|tricky|In which country did pizza become famous first?|Italy;India;Mexico|The pizza margherita has red, white and green toppings, like the Italian flag.
+food|tricky|Sushi comes from which country?|Japan;India;Italy|Sushi is often wrapped in a type of seaweed called nori.
+food|tricky|Which costly spice comes from a flower and colors food golden?|Saffron;Salt;Cumin|Saffron is called kesar, and lots of it grows in Kashmir.
+food|tricky|Which fruit is full of vitamin C and is also a color?|An orange;A banana;A grape|Vitamin C helps your body fight colds.
+
+body|easy|What do you use to see?|Your eyes;Your ears;Your nose|You blink thousands of times every day.
+body|easy|What do you use to hear?|Your ears;Your eyes;Your toes|Your ears also help you keep your balance.
+body|easy|How many fingers are on one hand?|Five;Three;Ten|Each fingertip has its own special pattern called a fingerprint.
+body|easy|What pumps blood all around your body?|Your heart;Your stomach;Your hair|Your heart is about the size of your fist.
+body|easy|What should you do before you eat?|Wash your hands;Jump up and down;Go to sleep|Washing with soap for twenty seconds washes the germs away.
+body|easy|What helps you chew your food?|Your teeth;Your ears;Your elbows|Kids have twenty baby teeth that fall out to make room for bigger ones.
+body|easy|What do you breathe with?|Your lungs;Your knees;Your toes|Your lungs are like two balloons that fill up with air.
+body|easy|What helps your body rest and grow?|Sleep;Candy;Television|Kids grow the most while they are asleep.
+body|easy|What do you smell with?|Your nose;Your hands;Your knees|Your nose can tell apart thousands of different smells.
+body|easy|What covers your whole body?|Your skin;Your socks;Leaves|Your skin keeps germs out and keeps you warm.
+body|easy|What is inside your head and helps you think?|Your brain;Your heart;Your stomach|Your brain never stops working, even when you sleep.
+body|easy|What should you brush twice a day?|Your teeth;Your toes;Your ears|Brushing for two minutes keeps your teeth healthy and strong.
+body|easy|Where does food go after you swallow it?|Your stomach;Your ears;Your nose|Your stomach squishes food into a mushy soup.
+body|easy|What helps you taste your food?|Your tongue;Your elbow;Your knee|Your tongue has thousands of tiny taste buds.
+body|easy|How many toes are on two feet?|Ten;Five;Twenty|Your big toe helps you balance when you walk.
+body|easy|Why do we drink water?|To keep our bodies healthy;To change our hair color;To grow taller right away|Your body is more than half water.
+body|tricky|How many bones does a grown-up have?|206;50;1000|Babies are born with about 300 bones, and some of them join together as they grow.
+body|tricky|What is the biggest organ of the body?|The skin;The heart;The brain|Your skin is always making new cells and shedding old ones.
+body|tricky|What carries blood around your body?|Blood vessels;Wires;Strings|If you laid out all your blood vessels in a line, they would go around the Earth more than twice.
+body|tricky|What do muscles help you do?|Move;See;Smell|You use over two hundred muscles to take one step.
+body|tricky|Which bone protects your brain?|The skull;The kneecap;The elbow|Your skull is made of many bones joined together.
+body|tricky|What protects your heart and lungs?|Your rib cage;Your skull;Your teeth|Most people have twelve pairs of ribs.
+body|tricky|What do we call the colored part of your eye?|The iris;The nail;The eyelid|Every iris has its own pattern, like a fingerprint.
+body|tricky|What do white blood cells do?|Fight germs;Carry food;Make you taller|White blood cells are your body's tiny soldiers.
+body|tricky|How many lungs do you have?|Two;One;Four|Your left lung is a little smaller, to make room for your heart.
+body|tricky|Which sense uses your skin?|Touch;Smell;Taste|Your fingertips are some of the most sensitive parts of your body.
+body|tricky|Where is the smallest bone in your body?|In your ear;In your foot;In your hand|The smallest bone is about the size of a grain of rice.
+body|tricky|Why do we sweat?|To cool down;To warm up;To grow taller|Sweat dries on your skin and takes heat away with it.
+body|tricky|What forms over a cut to protect it while it heals?|A scab;A bubble;A feather|New skin grows underneath the scab.
+body|tricky|What is the best way to cover a sneeze?|Sneeze into your elbow;Sneeze into your hands;Sneeze at a friend|Sneezing into your elbow keeps germs off your hands.
+body|tricky|What is the joint in the middle of your leg called?|The knee;The elbow;The wrist|Your kneecap protects the front of your knee joint.
+body|tricky|Which food helps build strong bones?|Milk;Chips;Candy|Milk has calcium, which bones need to be strong.

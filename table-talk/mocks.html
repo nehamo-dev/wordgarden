@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Table Talk — Mocks</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFF6EA;--ink:#3B3355;--soft:#7A7194;--line:#ECE5F3;--coral:#FF8B7B;--sun:#FFC95E;--mint:#79D2B2;--sky:#8CC4FF;--lilac:#B7A3F3;--pink:#FFB3C7}
+*{box-sizing:border-box}
+body{margin:0;background:#EDE8F2;font-family:'Outfit',system-ui,sans-serif;color:var(--ink);padding:32px 16px}
+h1.page{text-align:center;font-weight:600;margin:0 0 4px}
+p.sub{text-align:center;color:var(--soft);margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(470px,1fr));gap:32px;max-width:1060px;margin:0 auto}
+.label{font-weight:600;margin:0 0 10px;font-size:17px}.label span{color:var(--soft);font-weight:400;font-size:14px;margin-left:6px}
+.frame{background:#2E2840;border-radius:34px;padding:12px}
+.screen{position:relative;background:var(--bg);border-radius:24px;height:620px;overflow:hidden;padding:18px}
+.screen::before{content:'';position:absolute;inset:0;background:radial-gradient(300px 220px at 0 0,#FFE3D6,transparent 70%),radial-gradient(300px 240px at 100% 0,#E5E0FF,transparent 70%),radial-gradient(400px 260px at 50% 110%,#D9F3E8,transparent 70%);pointer-events:none}
+.screen>*{position:relative}
+.q,.ans b{font-family:'Lexend',sans-serif;font-weight:500;letter-spacing:-.01em}
+.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.menu{display:flex;align-items:center;gap:6px;background:#FFD8CF;border-radius:99px;padding:6px 12px 6px 8px;font-weight:600;font-size:14px;box-shadow:0 4px 0 #F4B2A4}
+.ibtn{width:38px;height:38px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 3px 0 rgba(59,51,85,.08)}
+.pill{display:inline-flex;align-items:center;gap:6px;background:#fff;padding:6px 12px;border-radius:99px;font-weight:600;font-size:14px;box-shadow:0 3px 0 rgba(59,51,85,.08)}
+h2{margin:0 0 4px;font-size:26px;font-weight:700;letter-spacing:-.02em}
+.muted{color:var(--soft);margin:0 0 14px;font-size:15px}
+.sec{font-weight:600;font-size:15px;margin:16px 0 8px}
+.players{display:flex;gap:10px;flex-wrap:wrap}
+.player{display:flex;flex-direction:column;align-items:center;gap:4px;background:#fff;border-radius:20px;padding:10px 12px 8px;min-width:86px;box-shadow:0 4px 0 rgba(59,51,85,.08)}
+.player b{font-size:15px}.player small{font-size:11px;color:var(--soft)}
+.player.add{background:transparent;border:2px dashed #DCD4EC;box-shadow:none;justify-content:center;color:var(--soft);font-weight:600}
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.cat{display:flex;align-items:center;gap:8px;background:#fff;border-radius:16px;padding:9px 10px;font-weight:600;font-size:13px;box-shadow:0 3px 0 rgba(59,51,85,.07);border:2px solid transparent}
+.cat.on{border-color:var(--ink)}
+.cat i{width:26px;height:26px;border-radius:9px;display:grid;place-items:center;flex:none}
+.cat.surprise{grid-column:span 3;background:linear-gradient(100deg,#FFD8CF,#FFE7AE 25%,#CFF1E3 50%,#CFE5FF 75%,#E4DBFF)}
+.go{display:block;text-align:center;background:var(--mint);font-weight:700;font-size:20px;padding:14px;border-radius:99px;margin-top:18px;box-shadow:0 6px 0 #4FB893}
+.turn{display:flex;flex-direction:column;align-items:center;justify-content:center;height:520px;text-align:center}
+.turn h3{font-size:46px;margin:12px 0 2px;letter-spacing:-.03em}
+.turn p{color:var(--soft);font-size:18px;margin:0 0 24px}
+.chips{display:flex;gap:6px;justify-content:center}
+.chip{font-size:13px;font-weight:600;padding:4px 10px;border-radius:99px}
+.qhead{display:flex;align-items:center;justify-content:space-between;margin:6px 0 12px}
+.who{display:flex;align-items:center;gap:8px;font-weight:600}
+.dots{display:flex;gap:5px}.dots i{width:9px;height:9px;border-radius:50%;background:rgba(59,51,85,.13)}.dots i.on{background:var(--coral)}.dots i.cur{background:var(--sun);transform:scale(1.3)}
+.qcard{background:#fff;border-radius:28px;padding:18px 20px 20px;box-shadow:0 8px 0 rgba(59,51,85,.07)}
+.qcard .catline{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.q{font-size:27px;line-height:1.25;margin:0}
+.hear{width:44px;height:44px;border-radius:50%;background:var(--sky);display:grid;place-items:center;box-shadow:0 4px 0 #6FA9E8;flex:none}
+.answers{display:grid;gap:12px;margin-top:16px}
+.ans{display:flex;align-items:center;gap:14px;background:#fff;border-radius:22px;padding:10px 14px 10px 10px;box-shadow:0 6px 0 rgba(59,51,85,.1);font-size:22px}
+.ans .pic{width:62px;height:62px;border-radius:16px;display:grid;place-items:center;flex:none}
+.ans .letter{margin-left:auto;width:30px;height:30px;border-radius:50%;background:var(--bg);display:grid;place-items:center;font-size:14px;font-weight:700;color:var(--soft)}
+.ans.right{background:#D6F5E8;box-shadow:0 6px 0 #8FD6B8}
+.ans.dim{opacity:.4}
+.ans.wrong{background:#FFE4DF;box-shadow:0 6px 0 #F4B2A4}
+.fact{display:flex;gap:12px;align-items:flex-start;background:#FFF4D6;border-radius:22px;padding:14px 16px;margin-top:16px;border:2px solid #FFE3A0}
+.fact b{display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#9A6A2E;margin-bottom:2px}
+.fact p{margin:0;font-size:17px;line-height:1.35}
+.next{display:block;text-align:center;background:var(--ink);color:#fff;font-weight:600;font-size:18px;padding:13px;border-radius:99px;margin-top:14px;box-shadow:0 5px 0 #231E33}
+.host{position:absolute;left:14px;bottom:12px;display:flex;align-items:flex-end;gap:6px}
+.say{background:#fff;padding:9px 14px;border-radius:18px 18px 18px 4px;font-weight:500;margin-bottom:40px;box-shadow:0 4px 0 rgba(59,51,85,.07);font-size:15px}
+.board{display:grid;gap:10px;margin-top:10px}
+.row{display:flex;align-items:center;gap:12px;background:#fff;border-radius:20px;padding:10px 14px;box-shadow:0 4px 0 rgba(59,51,85,.07)}
+.row b{font-size:18px;flex:1}.row .stars{display:flex;gap:1px}.row .award{font-size:12px;font-weight:600;padding:4px 10px;border-radius:99px}
+.conf{position:absolute;width:9px;height:13px;border-radius:3px}
+.btns{display:flex;gap:10px;justify-content:center;margin-top:16px}.btns span{padding:11px 20px;border-radius:99px;font-weight:600;background:#fff;box-shadow:0 4px 0 rgba(59,51,85,.1)}.btns span.p{background:var(--mint);box-shadow:0 4px 0 #4FB893}
+</style>
+</head>
+<body>
+<h1 class="page">Table Talk: mocks</h1>
+<p class="sub">Dinner trivia for ages 4–8. Pass the tablet, hear the question, tap a picture answer, chat about the fun fact.</p>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+  <g id="lan">
+    <circle cx="0" cy="34" r="46" fill="currentColor" opacity=".16"/>
+    <rect x="-13" y="0" width="26" height="9" rx="3" fill="#3B3355"/>
+    <ellipse cx="0" cy="34" rx="34" ry="27" fill="currentColor"/>
+    <ellipse cx="0" cy="34" rx="17" ry="27" fill="none" stroke="#3B3355" stroke-opacity=".14" stroke-width="2"/>
+    <ellipse cx="-15" cy="21" rx="9" ry="5" fill="#fff" opacity=".4" transform="rotate(-20 -15 21)"/>
+    <rect x="-13" y="59" width="26" height="9" rx="3" fill="#3B3355"/>
+    <path d="M0 68v9" stroke="#3B3355" stroke-width="2.5"/><path d="M-4 77h8l-1.5 12h-5z" fill="#FF8B7B"/>
+    <circle cx="-9" cy="35" r="3.3" fill="#3B3355"/><circle cx="9" cy="35" r="3.3" fill="#3B3355"/>
+    <ellipse cx="-17" cy="42" rx="4.5" ry="2.8" fill="#fff" opacity=".5"/><ellipse cx="17" cy="42" rx="4.5" ry="2.8" fill="#fff" opacity=".5"/>
+    <path d="M-5 42q5 5 10 0" stroke="#3B3355" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  </g>
+  <symbol id="star" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z" fill="#FFC95E" stroke="#E9A93A" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+  <symbol id="spk" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="#fff"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round"/></symbol>
+  <symbol id="mini" viewBox="-40 -6 80 100"><use href="#lan"/></symbol>
+</defs></svg>
+
+<div class="grid">
+
+ <!-- 1 SETUP -->
+ <div>
+  <p class="label">1 · Who's playing? <span>players + categories</span></p>
+  <div class="frame"><div class="screen">
+   <div class="topbar"><span class="ibtn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B3355" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg></span><span class="menu"><svg width="18" height="24" viewBox="-40 -14 80 106"><use href="#lan" color="#FF8B7B"/></svg>Little Lanterns</span></div>
+   <h2>Table Talk</h2>
+   <p class="muted">Dinner trivia. Pass the tablet around!</p>
+   <div class="sec">Who's playing?</div>
+   <div class="players">
+    <div class="player"><svg width="34" height="42" style="color:#FF8B7B"><use href="#mini"/></svg><b>Asha</b><small>Easy · 4–5</small></div>
+    <div class="player"><svg width="34" height="42" style="color:#8CC4FF"><use href="#mini"/></svg><b>Rohan</b><small>Tricky · 6–8</small></div>
+    <div class="player"><svg width="34" height="42" style="color:#B7A3F3"><use href="#mini"/></svg><b>Mama</b><small>Tricky · 6–8</small></div>
+    <div class="player add">+ Add</div>
+   </div>
+   <div class="sec">Pick categories</div>
+   <div class="cats">
+    <div class="cat surprise on"><i style="background:#fff"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5z" fill="#FFC95E" stroke="#3B3355" stroke-width="1.5" stroke-linejoin="round"/></svg></i>Surprise me (all categories)</div>
+    <div class="cat"><i style="background:#FFDCE6"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 3c2 3 5 4 5 9a5 5 0 0 1-10 0c0-5 3-6 5-9z" fill="#FF8B7B"/></svg></i>Indian culture</div>
+    <div class="cat"><i style="background:#CFF1E3"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L5 19a1.5 1.5 0 0 0 1.3 2h11.4a1.5 1.5 0 0 0 1.3-2L14 9V3" fill="none" stroke="#2E7D62" stroke-width="2" stroke-linejoin="round"/></svg></i>Science</div>
+    <div class="cat"><i style="background:#FFE7AE"><svg width="16" height="16" viewBox="0 0 24 24"><circle cx="7" cy="8" r="2.5" fill="#B5791F"/><circle cx="17" cy="8" r="2.5" fill="#B5791F"/><circle cx="4.5" cy="13.5" r="2.2" fill="#B5791F"/><circle cx="19.5" cy="13.5" r="2.2" fill="#B5791F"/><ellipse cx="12" cy="16" rx="4.5" ry="4" fill="#B5791F"/></svg></i>Animals</div>
+    <div class="cat"><i style="background:#E4DBFF"><svg width="16" height="16" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" fill="#7A64C9"/><ellipse cx="12" cy="12" rx="10" ry="3" fill="none" stroke="#7A64C9" stroke-width="1.6" transform="rotate(-20 12 12)"/></svg></i>Space</div>
+    <div class="cat"><i style="background:#CFE5FF"><svg width="16" height="16" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="#8CC4FF"/><path d="M7 9c2-2 4-1 4 1s-2 3 0 4 1 4-2 3-3-3-4-4 0-3 2-4zM14 6c2 0 4 2 4 4s-2 2-3 1-2-1-2-3 0-2 1-2z" fill="#79D2B2"/></svg></i>Geography</div>
+    <div class="cat"><i style="background:#FFD8CF"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M4 20h16M6 20V10M10 20V10M14 20V10M18 20V10M3 10h18L12 4z" fill="none" stroke="#B5523F" stroke-width="2" stroke-linejoin="round"/></svg></i>History</div>
+    <div class="cat"><i style="background:#E1EEFF"><svg width="16" height="16" viewBox="0 0 24 24"><rect x="5" y="7" width="14" height="11" rx="3" fill="#2F5F99"/><circle cx="9.5" cy="12.5" r="1.6" fill="#fff"/><circle cx="14.5" cy="12.5" r="1.6" fill="#fff"/><path d="M12 7V4" stroke="#2F5F99" stroke-width="2"/></svg></i>Technology</div>
+    <div class="cat"><i style="background:#FFF1DD"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 13h18a9 9 0 0 1-18 0z" fill="#E0A93E"/><path d="M8 9c0-2 2-2 2-4M13 9c0-2 2-2 2-4" stroke="#E0A93E" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></i>Food</div>
+    <div class="cat"><i style="background:#FFDCE6"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9.3-9A5 5 0 0 1 12 6a5 5 0 0 1 9.3 5C19 15.6 12 20 12 20z" fill="#FF8B7B"/></svg></i>Our body</div>
+   </div>
+   <span class="go">Let's play</span>
+  </div></div>
+ </div>
+
+ <!-- 2 TURN -->
+ <div>
+  <p class="label">2 · Pass the tablet <span>whose turn it is</span></p>
+  <div class="frame"><div class="screen">
+   <div class="topbar"><span class="ibtn"><svg width="16" height="16" viewBox="0 0 24 24" stroke="#3B3355" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><span class="menu"><svg width="18" height="24" viewBox="-40 -14 80 106"><use href="#lan" color="#FF8B7B"/></svg>Little Lanterns</span></div>
+   <div class="turn">
+    <svg width="150" height="180" viewBox="-60 -20 120 140" style="color:#FF8B7B"><path d="M0 -20V0" stroke="#B58863" stroke-width="2.5"/><use href="#lan" transform="scale(1.3)"/></svg>
+    <h3>Asha's turn!</h3>
+    <p>Question 4 of 10</p>
+    <div class="chips"><span class="chip" style="background:#FFDCE6;color:#B5523F">Indian culture</span><span class="chip" style="background:#CFF1E3;color:#2E7D62">Easy</span></div>
+    <span class="go" style="width:240px;margin-top:28px">I'm ready!</span>
+   </div>
+  </div></div>
+ </div>
+
+ <!-- 3 QUESTION -->
+ <div>
+  <p class="label">3 · The question <span>read aloud, three picture answers</span></p>
+  <div class="frame"><div class="screen">
+   <div class="topbar"><span class="ibtn"><svg width="16" height="16" viewBox="0 0 24 24" stroke="#3B3355" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><span class="menu"><svg width="18" height="24" viewBox="-40 -14 80 106"><use href="#lan" color="#FF8B7B"/></svg>Little Lanterns</span></div>
+   <div class="qhead"><span class="who"><svg width="26" height="32" viewBox="-40 -6 80 100" style="color:#FF8B7B"><use href="#lan"/></svg>Asha</span><div class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="cur"></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="pill"><svg width="16" height="16"><use href="#star"/></svg>3</span></div>
+   <div class="qcard">
+    <div class="catline"><span class="chip" style="background:#FFDCE6;color:#B5523F">Indian culture</span><span class="hear"><svg width="22" height="22"><use href="#spk"/></svg></span></div>
+    <p class="q">Which festival is called the festival of lights?</p>
+   </div>
+   <div class="answers">
+    <div class="ans"><span class="pic" style="background:#FFF1DD"><svg width="44" height="44" viewBox="0 0 48 48"><path d="M8 30h32c0 8-7 12-16 12S8 38 8 30z" fill="#E0A93E"/><path d="M24 10c4 6 6 10 6 13a6 6 0 0 1-12 0c0-3 2-7 6-13z" fill="#FF8B7B"/><path d="M24 17c2 3 3 5 3 7a3 3 0 0 1-6 0c0-2 1-4 3-7z" fill="#FFC95E"/></svg></span><b>Diwali</b><span class="letter">A</span></div>
+    <div class="ans"><span class="pic" style="background:#FFDCE6"><svg width="44" height="44" viewBox="0 0 48 48"><circle cx="16" cy="18" r="8" fill="#FF8BB0"/><circle cx="30" cy="16" r="7" fill="#79D2B2"/><circle cx="24" cy="30" r="9" fill="#FFC95E"/><circle cx="36" cy="30" r="6" fill="#B7A3F3"/></svg></span><b>Holi</b><span class="letter">B</span></div>
+    <div class="ans"><span class="pic" style="background:#CFF1E3"><svg width="44" height="44" viewBox="0 0 48 48"><path d="M10 26h28l-3 14H13z" fill="#B58863"/><ellipse cx="24" cy="26" rx="14" ry="4" fill="#fff"/><path d="M20 22c0-4 4-4 4-8M26 22c0-4 4-4 4-8" stroke="#79D2B2" stroke-width="3" fill="none" stroke-linecap="round"/></svg></span><b>Pongal</b><span class="letter">C</span></div>
+   </div>
+  </div></div>
+ </div>
+
+ <!-- 4 ANSWER + FACT -->
+ <div>
+  <p class="label">4 · Answer and fun fact <span>the dinner-conversation moment</span></p>
+  <div class="frame"><div class="screen">
+   <div class="topbar"><span class="ibtn"><svg width="16" height="16" viewBox="0 0 24 24" stroke="#3B3355" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><span class="menu"><svg width="18" height="24" viewBox="-40 -14 80 106"><use href="#lan" color="#FF8B7B"/></svg>Little Lanterns</span></div>
+   <div class="qhead"><span class="who"><svg width="26" height="32" viewBox="-40 -6 80 100" style="color:#FF8B7B"><use href="#lan"/></svg>Asha</span><div class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="cur"></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="pill"><svg width="16" height="16"><use href="#star"/></svg>4</span></div>
+   <div class="qcard" style="padding:14px 18px"><p class="q" style="font-size:21px">Which festival is called the festival of lights?</p></div>
+   <div class="answers">
+    <div class="ans right"><span class="pic" style="background:#fff"><svg width="44" height="44" viewBox="0 0 48 48"><path d="M8 30h32c0 8-7 12-16 12S8 38 8 30z" fill="#E0A93E"/><path d="M24 10c4 6 6 10 6 13a6 6 0 0 1-12 0c0-3 2-7 6-13z" fill="#FF8B7B"/><path d="M24 17c2 3 3 5 3 7a3 3 0 0 1-6 0c0-2 1-4 3-7z" fill="#FFC95E"/></svg></span><b>Diwali</b><span class="letter" style="background:#79D2B2;color:#fff">✓</span></div>
+    <div class="ans dim"><span class="pic" style="background:#FFDCE6"></span><b>Holi</b></div>
+    <div class="ans dim"><span class="pic" style="background:#CFF1E3"></span><b>Pongal</b></div>
+   </div>
+   <div class="fact"><svg width="34" height="42" viewBox="-40 -6 80 100" style="color:#FFC95E;flex:none"><use href="#lan"/></svg><div><b>Fun fact</b><p>On Diwali, families light little clay lamps called diyas to fill their homes with light.</p></div></div>
+   <span class="next">Next: Rohan's turn</span>
+   <i class="conf" style="left:60%;top:205px;background:var(--coral);transform:rotate(30deg)"></i>
+   <i class="conf" style="left:72%;top:190px;background:var(--sky)"></i>
+   <i class="conf" style="left:84%;top:214px;background:var(--sun);transform:rotate(50deg)"></i>
+   <i class="conf" style="left:66%;top:236px;background:var(--mint)"></i>
+  </div></div>
+ </div>
+
+ <!-- 5 SCOREBOARD -->
+ <div>
+  <p class="label">5 · End of game <span>everyone gets a cheer</span></p>
+  <div class="frame"><div class="screen">
+   <div class="topbar"><span></span><span class="menu"><svg width="18" height="24" viewBox="-40 -14 80 106"><use href="#lan" color="#FF8B7B"/></svg>Little Lanterns</span></div>
+   <div style="text-align:center">
+    <svg width="210" height="120" viewBox="0 0 300 170"><path d="M6 14Q150 46 294 14" stroke="#B58863" stroke-width="2.5" fill="none"/><path d="M70 25V50" stroke="#B58863" stroke-width="2"/><use href="#lan" transform="translate(70 50)" color="#FF8B7B"/><path d="M150 30V60" stroke="#B58863" stroke-width="2"/><use href="#lan" transform="translate(150 60) scale(1.2)" color="#B7A3F3"/><path d="M230 25V50" stroke="#B58863" stroke-width="2"/><use href="#lan" transform="translate(230 50)" color="#8CC4FF"/></svg>
+    <h2 style="font-size:32px">What a team!</h2>
+    <p class="muted">You answered 10 questions together</p>
+   </div>
+   <div class="board">
+    <div class="row"><svg width="28" height="34" viewBox="-40 -6 80 100" style="color:#FF8B7B"><use href="#lan"/></svg><b>Asha</b><span class="award" style="background:#FFDCE6;color:#B5523F">Festival expert</span><span class="stars"><svg width="18" height="18"><use href="#star"/></svg>×3</span></div>
+    <div class="row"><svg width="28" height="34" viewBox="-40 -6 80 100" style="color:#8CC4FF"><use href="#lan"/></svg><b>Rohan</b><span class="award" style="background:#E4DBFF;color:#5B49A8">Space ace</span><span class="stars"><svg width="18" height="18"><use href="#star"/></svg>×4</span></div>
+    <div class="row"><svg width="28" height="34" viewBox="-40 -6 80 100" style="color:#B7A3F3"><use href="#lan"/></svg><b>Mama</b><span class="award" style="background:#CFF1E3;color:#2E7D62">Super guesser</span><span class="stars"><svg width="18" height="18"><use href="#star"/></svg>×2</span></div>
+   </div>
+   <div class="btns"><span>Change players</span><span class="p">Play again</span></div>
+   <i class="conf" style="left:10%;top:60px;background:var(--coral);transform:rotate(30deg)"></i>
+   <i class="conf" style="left:88%;top:80px;background:var(--mint);transform:rotate(-30deg)"></i>
+   <i class="conf" style="left:20%;top:180px;background:var(--sun)"></i>
+   <i class="conf" style="left:80%;top:200px;background:var(--lilac)"></i>
+  </div></div>
+ </div>
+
+</div>
+<p class="sub" style="margin-top:28px">Not shown: grown-ups settings (number of questions, categories on/off, read-aloud on/off) behind the same "what's 3 + 4?" lock as Word Garden.</p>
+</body>
+</html>

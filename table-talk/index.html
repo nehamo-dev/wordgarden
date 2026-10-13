@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFF6EA">
+<title>Table Talk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFF6EA;--ink:#3B3355;--soft:#7A7194;--line:#ECE5F3;--coral:#FF8B7B;--sun:#FFC95E;--mint:#79D2B2;--sky:#8CC4FF;--lilac:#B7A3F3;--pink:#FFB3C7}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:'Outfit',system-ui,sans-serif;letter-spacing:-.005em;min-height:100dvh;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;background:
+  radial-gradient(520px 380px at 0 0,#FFE3D6,transparent 70%),radial-gradient(520px 400px at 100% 0,#E5E0FF,transparent 70%),radial-gradient(700px 420px at 50% 110%,#D9F3E8,transparent 70%)}
+#app{max-width:720px;margin:0 auto;padding:8px 16px 48px}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;padding:0}
+.q,.ans .txt{font-family:'Lexend',sans-serif;font-weight:500;letter-spacing:-.01em}
+.press{transition:transform .12s,box-shadow .12s}
+.fade{animation:fadein .35s}
+
+.intro{text-align:center;padding:12px 0}
+.intro .lanterns{width:min(300px,78vw);height:auto}
+.intro h1{font-size:clamp(44px,9vw,64px);margin:4px 0 6px;letter-spacing:-.03em}
+.intro p{color:var(--soft);font-size:19px;margin:0 auto 26px;max-width:440px;line-height:1.45}
+.big-btn{display:inline-block;background:var(--mint);font-weight:700;font-size:22px;padding:16px 46px;border-radius:99px;box-shadow:0 6px 0 #4FB893}
+.big-btn:active{transform:translateY(4px);box-shadow:0 2px 0 #4FB893}
+.dark-btn{display:block;width:100%;text-align:center;background:var(--ink);color:#fff;font-weight:600;font-size:19px;padding:15px;border-radius:99px;box-shadow:0 5px 0 #231E33;margin-top:16px}
+.dark-btn:active{transform:translateY(3px);box-shadow:0 2px 0 #231E33}
+.soft-btn{padding:13px 24px;border-radius:99px;font-weight:600;font-size:18px;background:#fff;box-shadow:0 4px 0 rgba(59,51,85,.1)}
+
+.qhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:4px 0 14px}
+.ibtn{width:44px;height:44px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 3px 0 rgba(59,51,85,.08);flex:none}
+.ibtn svg{width:18px;height:18px}
+.dots{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.dots i{width:11px;height:11px;border-radius:50%;background:rgba(59,51,85,.13);transition:all .3s}
+.dots i.on{background:var(--coral)}.dots i.cur{background:var(--sun);transform:scale(1.3)}
+.pill{display:inline-flex;align-items:center;gap:6px;background:#fff;padding:7px 14px;border-radius:99px;font-weight:600;font-size:17px;box-shadow:0 3px 0 rgba(59,51,85,.08)}
+.pill svg{width:20px;height:20px}
+.pill.bump{animation:bump .5s}
+.qcard{background:#fff;border-radius:30px;padding:20px 22px 24px;box-shadow:0 8px 0 rgba(59,51,85,.07)}
+.chip{display:inline-block;font-size:14px;font-weight:600;padding:5px 12px;border-radius:99px;margin-bottom:10px}
+.q{font-size:clamp(24px,5vw,32px);line-height:1.25;margin:0}
+.answers{display:grid;gap:14px;margin-top:18px}
+.ans{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:#fff;border-radius:24px;padding:12px 16px 12px 12px;box-shadow:0 6px 0 rgba(59,51,85,.1);font-size:clamp(20px,4.4vw,26px)}
+.ans:active{transform:translateY(4px);box-shadow:0 2px 0 rgba(59,51,85,.1)}
+.ans .badge{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-weight:700;font-size:22px;flex:none;color:var(--ink)}
+.ans .txt{flex:1}
+.ans.right{background:#D6F5E8;box-shadow:0 6px 0 #8FD6B8}
+.ans.wrong{background:#FFE4DF;box-shadow:0 6px 0 #F4B2A4}
+.ans.dim{opacity:.4}
+.ans:disabled{cursor:default}
+.ans .mark{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;flex:none}
+.shake{animation:shake .45s}
+.fact{display:flex;gap:14px;align-items:flex-start;background:#FFF4D6;border:2px solid #FFE3A0;border-radius:24px;padding:16px 18px;margin-top:18px;animation:popin .35s}
+.fact svg{width:36px;height:46px;flex:none}
+.fact b{display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#9A6A2E;margin-bottom:3px}
+.fact p{margin:0;font-size:18px;line-height:1.4}
+.result{font-weight:600;font-size:20px;margin:16px 4px 0}
+
+.end{text-align:center;padding-top:6px}
+.end h2{font-size:clamp(34px,7vw,46px);margin:6px 0 4px;letter-spacing:-.02em}
+.end p{color:var(--soft);font-size:19px;margin:0}
+.starrow{display:flex;justify-content:center;flex-wrap:wrap;gap:4px;margin:18px 0 24px}
+.starrow svg{width:36px;height:36px;animation:popin .4s backwards}
+.starrow svg.empty{opacity:.18;filter:grayscale(1)}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+.confetti{position:fixed;width:10px;height:14px;border-radius:3px;pointer-events:none;z-index:50;animation:conf .9s cubic-bezier(.2,.7,.4,1) forwards}
+.sway{transform-box:fill-box;transform-origin:50% 0;animation:sway 5s ease-in-out infinite}
+.sway.s2{animation-delay:-1.6s;animation-duration:6s}.sway.s3{animation-delay:-3.1s}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+@keyframes conf{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) rotate(var(--rot));opacity:0}}
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-10px)}40%{transform:translateX(9px)}60%{transform:translateX(-6px)}80%{transform:translateX(4px)}}
+@keyframes popin{from{transform:scale(.7);opacity:0}70%{transform:scale(1.04)}to{transform:scale(1);opacity:1}}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes bump{50%{transform:scale(1.18)}}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <g id="lan">
+    <circle cx="0" cy="34" r="46" fill="currentColor" opacity=".16"/>
+    <rect x="-13" y="0" width="26" height="9" rx="3" fill="#3B3355"/>
+    <ellipse cx="0" cy="34" rx="34" ry="27" fill="currentColor"/>
+    <ellipse cx="0" cy="34" rx="17" ry="27" fill="none" stroke="#3B3355" stroke-opacity=".14" stroke-width="2"/>
+    <ellipse cx="-15" cy="21" rx="9" ry="5" fill="#fff" opacity=".4" transform="rotate(-20 -15 21)"/>
+    <rect x="-13" y="59" width="26" height="9" rx="3" fill="#3B3355"/>
+    <path d="M0 68v9" stroke="#3B3355" stroke-width="2.5"/><path d="M-4 77h8l-1.5 12h-5z" fill="#FF8B7B"/>
+    <circle cx="-9" cy="35" r="3.3" fill="#3B3355"/><circle cx="9" cy="35" r="3.3" fill="#3B3355"/>
+    <ellipse cx="-17" cy="42" rx="4.5" ry="2.8" fill="#fff" opacity=".5"/><ellipse cx="17" cy="42" rx="4.5" ry="2.8" fill="#fff" opacity=".5"/>
+    <path d="M-5 42q5 5 10 0" stroke="#3B3355" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  </g>
+  <symbol id="star" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z" fill="#FFC95E" stroke="#E9A93A" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+</defs></svg>
+
+<div id="app"></div>
+
+<script src="questions.js"></script>
+<script>
+const ROUND = 10;
+const CATS = {
+  india:   { name: 'Indian culture', bg: '#FFDCE6', fg: '#A63E5C' },
+  science: { name: 'Science',        bg: '#CFF1E3', fg: '#2E7D62' },
+  animals: { name: 'Animals',        bg: '#FFE7AE', fg: '#8A5A12' },
+  space:   { name: 'Space',          bg: '#E4DBFF', fg: '#5B49A8' },
+  geo:     { name: 'Geography',      bg: '#CFE5FF', fg: '#2F5F99' },
+  history: { name: 'History',        bg: '#FFD8CF', fg: '#A3452F' },
+  tech:    { name: 'Technology',     bg: '#E1EEFF', fg: '#2F5F99' },
+  food:    { name: 'Food',           bg: '#FFF1DD', fg: '#8A5A12' },
+  body:    { name: 'Our body',       bg: '#FFDCE6', fg: '#A63E5C' },
+};
+const BADGES = ['#FFD8CF', '#CFE5FF', '#CFF1E3'];
+const RIGHT = ['That\'s right!', 'You got it!', 'Brilliant!', 'Super!', 'Yes!'];
+const ALL = window.TT_QUESTIONS || [];
+
+const store = {
+  get(k, d){ try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch { return d; } },
+  set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+};
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+const app = $('#app');
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pick = a => a[Math.floor(Math.random() * a.length)];
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const lantern = (color, cls = '') => `<svg class="${cls}" viewBox="-48 -6 96 104" aria-hidden="true"><use href="#lan" color="${color}"/></svg>`;
+const STAR = '<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg>';
+const CLOSE = '<svg viewBox="0 0 24 24" aria-hidden="true" stroke="#3B3355" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+const CHECK = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+
+/* ---------- sound effects (gentle chimes) ---------- */
+let ac;
+function tone(freqs, dur = .14, type = 'sine', gap = .09, vol = .15){
+  try {
+    ac = ac || new (window.AudioContext || window.webkitAudioContext)();
+    if (ac.state !== 'running') ac.resume();
+    const t0 = ac.currentTime;
+    freqs.forEach((f, i) => {
+      const o = ac.createOscillator(), g = ac.createGain(), t = t0 + i * gap;
+      o.type = type; o.frequency.value = f;
+      g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(vol, t + .02); g.gain.exponentialRampToValueAtTime(.0001, t + dur);
+      o.connect(g); g.connect(ac.destination); o.start(t); o.stop(t + dur + .05);
+    });
+  } catch {}
+}
+const sfx = { yes: () => tone([660, 880, 1175], .16), no: () => tone([330, 262], .2, 'triangle', .12, .11), win: () => tone([523, 659, 784, 1047, 1319], .22, 'sine', .11) };
+
+function burst(el, n = 18){
+  const r = el.getBoundingClientRect(), cx = r.left + r.width * .8, cy = r.top + r.height / 2;
+  const colors = ['#FF8B7B','#FFC95E','#79D2B2','#8CC4FF','#B7A3F3','#FFB3C7'];
+  for (let i = 0; i < n; i++){
+    const p = document.createElement('i'); p.className = 'confetti';
+    const a = Math.random() * Math.PI * 2, d = 60 + Math.random() * 100;
+    p.style.cssText = `left:${cx}px;top:${cy}px;background:${pick(colors)};--dx:${Math.cos(a) * d}px;--dy:${Math.sin(a) * d - 40}px;--rot:${Math.random() * 540 - 270}deg`;
+    document.body.append(p); setTimeout(() => p.remove(), 950);
+  }
+}
+function replay(el, cls){ el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); }
+
+/* ---------- picking questions ---------- */
+// Prefer questions this device hasn't seen yet; start over once they've all been used.
+function pickRound(){
+  let seen = new Set(store.get('tt-seen', []));
+  let fresh = ALL.filter(q => !seen.has(q.id));
+  if (fresh.length < ROUND){ seen = new Set(); fresh = ALL.slice(); }
+  const round = shuffle(fresh).slice(0, ROUND);
+  round.forEach(q => seen.add(q.id));
+  store.set('tt-seen', [...seen]);
+  return round;
+}
+
+/* ---------- screens ---------- */
+let game = null;
+
+function renderIntro(){
+  game = null;
+  app.innerHTML = `
+    <section class="intro fade">
+      <svg class="lanterns" viewBox="0 0 300 200" aria-hidden="true">
+        <path d="M6 14Q150 46 294 14" stroke="#B58863" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <g class="sway s1"><path d="M70 25V62" stroke="#B58863" stroke-width="2"/><use href="#lan" transform="translate(70 62)" color="#FF8B7B"/></g>
+        <g class="sway s2"><path d="M150 30V76" stroke="#B58863" stroke-width="2"/><use href="#lan" transform="translate(150 76) scale(1.25)" color="#FFC95E"/></g>
+        <g class="sway s3"><path d="M230 25V56" stroke="#B58863" stroke-width="2"/><use href="#lan" transform="translate(230 56) scale(.95)" color="#8CC4FF"/></g>
+      </svg>
+      <h1>Table Talk</h1>
+      <p>Dinner trivia for the whole family. ${ROUND} questions about India, animals, space, science and more.</p>
+      <button class="big-btn press" id="start">Let's play</button>
+    </section>`;
+  $('#start').onclick = startGame;
+}
+
+function startGame(){
+  game = { qs: pickRound(), i: 0, stars: 0 };
+  renderQuestion();
+}
+
+function renderQuestion(){
+  const q = game.qs[game.i], cat = CATS[q.cat];
+  app.innerHTML = `
+    <div class="qhead">
+      <button class="ibtn" id="quit" aria-label="Stop playing">${CLOSE}</button>
+      <div class="dots">${game.qs.map((_, i) => `<i class="${i < game.i ? 'on' : i === game.i ? 'cur' : ''}"></i>`).join('')}</div>
+      <span class="pill" id="stars">${STAR}<span>${game.stars}</span></span>
+    </div>
+    <div class="fade">
+      <div class="qcard">
+        <span class="chip" style="background:${cat.bg};color:${cat.fg}">${cat.name}</span>
+        <p class="q">${esc(q.q)}</p>
+      </div>
+      <div class="answers">${q.a.map((a, i) => `
+        <button class="ans press" data-i="${i}">
+          <span class="badge" style="background:${BADGES[i]}">${'ABC'[i]}</span><span class="txt">${esc(a)}</span>
+        </button>`).join('')}
+      </div>
+      <div id="after"></div>
+    </div>`;
+  $('#quit').onclick = renderIntro;
+  $$('.ans').forEach(b => b.onclick = () => answer(+b.dataset.i, b));
+}
+
+function answer(i, btn){
+  const q = game.qs[game.i];
+  const buttons = $$('.ans');
+  buttons.forEach(b => b.disabled = true);
+  const right = buttons[q.c];
+  right.classList.add('right');
+  right.insertAdjacentHTML('beforeend', `<span class="mark" style="background:#4FB893">${CHECK}</span>`);
+  buttons.forEach((b, j) => { if (j !== q.c && j !== i) b.classList.add('dim'); });
+  const correct = i === q.c;
+  if (correct){
+    game.stars++;
+    const pill = $('#stars'); $('span', pill).textContent = game.stars; replay(pill, 'bump');
+    sfx.yes(); burst(right);
+  } else {
+    btn.classList.add('wrong'); replay(btn, 'shake'); sfx.no();
+  }
+  const last = game.i === game.qs.length - 1;
+  $('#after').innerHTML = `
+    <p class="result">${correct ? pick(RIGHT) : `Not quite! The answer is ${esc(q.a[q.c])}.`}</p>
+    <div class="fact">${lantern('#FFC95E')}<div><b>Fun fact</b><p>${esc(q.fact)}</p></div></div>
+    <button class="dark-btn" id="next">${last ? 'See how we did' : 'Next question'}</button>`;
+  $('#next').onclick = () => { game.i++; last ? renderEnd() : renderQuestion(); };
+  $('#after').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function renderEnd(){
+  const { stars, qs } = game;
+  const title = stars >= 8 ? 'Superstars!' : stars >= 5 ? 'What a team!' : 'Great playing!';
+  sfx.win();
+  app.innerHTML = `
+    <section class="end fade">
+      <svg viewBox="0 0 300 200" style="width:min(260px,70vw)" aria-hidden="true">
+        <path d="M6 14Q150 46 294 14" stroke="#B58863" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <g class="sway"><path d="M70 25V62" stroke="#B58863" stroke-width="2"/><use href="#lan" transform="translate(70 62)" color="#FF8B7B"/></g>
+        <g class="sway s2"><path d="M150 30V76" stroke="#B58863" stroke-width="2"/><use href="#lan" transform="translate(150 76) scale(1.25)" color="#B7A3F3"/></g>
+        <g class="sway s3"><path d="M230 25V56" stroke="#B58863" stroke-width="2"/><use href="#lan" transform="translate(230 56) scale(.95)" color="#79D2B2"/></g>
+      </svg>
+      <h2>${title}</h2>
+      <p>You got ${stars} out of ${qs.length} right</p>
+      <div class="starrow">${qs.map((_, i) => `<svg viewBox="0 0 24 24" class="${i < stars ? '' : 'empty'}" style="animation-delay:${.1 + i * .07}s"><use href="#star"/></svg>`).join('')}</div>
+      <div class="btns"><button class="soft-btn press" id="home">Back</button><button class="big-btn press" id="again" style="font-size:19px;padding:13px 30px">Play again</button></div>
+    </section>`;
+  const r = $('.end h2').getBoundingClientRect();
+  burst({ getBoundingClientRect: () => r }, 40);
+  $('#again').onclick = startGame;
+  $('#home').onclick = renderIntro;
+}
+
+renderIntro();
+</script>
+<script src="../shared/nav.js" defer></script>
+</body>
+</html>

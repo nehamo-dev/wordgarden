@@ -11,6 +11,7 @@
 
   const GAMES = [
     { name: 'Word Garden', note: 'Sight words', path: 'word-garden/', color: '#79D2B2' },
+    { name: 'Table Talk', note: 'Dinner trivia', path: 'table-talk/', color: '#B7A3F3' },
     { name: 'Peekaworld', note: 'The world', href: 'https://peekaworld.vercel.app/#world', color: '#8CC4FF' },
   ];
 
