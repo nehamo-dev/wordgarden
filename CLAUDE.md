@@ -7,6 +7,7 @@ Hub site for kids' learning games made by a mom. This repo (GitHub: `nehamo-dev/
 ```
 index.html            # Little Lanterns homepage: hanging-lantern hero + one tile per game + "More on the way" tile
 word-garden/          # Word Garden: sight-word game (single-file HTML)
+table-talk/           # Table Talk: dinner trivia (index.html + generated questions.js + audio/)
   index.html
   mocks.html          # original design mocks
 shared/nav.js         # persistent "Little Lanterns" menu pill (top-right) injected on every game page
@@ -45,3 +46,12 @@ Peekaworld lives in its own repo/deploy and is linked from a tile: https://peeka
 - "a" is spoken as "uh" (recorded that way, and `sayable()` for the fallback), because a lone "a" is read as the letter name.
 - Default words: the, and, a, go, has, am, of, you. A one-time migration (`wg-added-am-of-you`) added am/of/you to lists already saved on devices.
 - Grown-ups screen is behind a simple addition question.
+
+## Table Talk notes
+
+- Question bank lives in `tools/trivia.txt` (one line per question: `category | level | question | correct;wrong;wrong | fun fact`). Never edit `table-talk/questions.js` by hand.
+- After editing questions: `python3 tools/make_trivia.py --audio` regenerates `questions.js` (answer order shuffled once with a fixed seed per question id) and records any missing clips into `table-talk/audio/` (question `q-<id>`, fact `f-<id>`, answers `o-<slug>`, phrases `p-<slug>`). It takes a while: about 1,400 clips at 6 in parallel.
+- Question ids are `<category>-<nn>` by order within the category, so insert new questions at the END of a category to keep existing ids (and their audio) stable.
+- Levels: `easy` (ages 4–5) and `tricky` (6–8). Each player gets their own level; no players means one "Our team" playing all levels.
+- localStorage: `tt-players`, `tt-cats`, `tt-prefs` (count, readAloud), `tt-seen` (question ids played on this device; a pool restarts when used up).
+- Read-aloud plays: question, "Is it", answer A, answer B, "or", answer C (each answer highlights as it's read); after answering: cheer or "Not quite! The answer is X", then "Fun fact!" + fact. Missing clips fall back to `speechSynthesis` (player names always do).

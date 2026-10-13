@@ -9,6 +9,7 @@ This repo is the home for all of them. The front page (`index.html`) is the Litt
 | Game | Folder / link | What it teaches |
 |---|---|---|
 | Word Garden | [`word-garden/`](word-garden/) | Sight words, through six mini-games. Each word grows into a flower as it's learned. |
+| Table Talk | [`table-talk/`](table-talk/) | Dinner trivia for ages 4–8: 288 questions on Indian culture, science, animals, space, geography, history, technology, food and the body, each with a fun fact |
 | Peekaworld | [peekaworld.vercel.app](https://peekaworld.vercel.app/#world) (separate repo) | The world, the USA and space, with a Find It game |
 
 ## Running it
