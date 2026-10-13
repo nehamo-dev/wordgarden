@@ -1,6 +1,6 @@
 # Table Talk question bank.
 # Format: category | level | question | correct answer ; wrong ; wrong | fun fact
-# category: india science animals space geo history tech food body
+# category: india science animals space geo history tech food body words
 # level: easy (ages 4-5) or tricky (ages 6-8)
 # After editing, run: python3 tools/make_trivia.py
 
@@ -300,3 +300,34 @@ body|tricky|What forms over a cut to protect it while it heals?|A scab;A bubble;
 body|tricky|What is the best way to cover a sneeze?|Sneeze into your elbow;Sneeze into your hands;Sneeze at a friend|Sneezing into your elbow keeps germs off your hands.
 body|tricky|What is the joint in the middle of your leg called?|The knee;The elbow;The wrist|Your kneecap protects the front of your knee joint.
 body|tricky|Which food helps build strong bones?|Milk;Chips;Candy|Milk has calcium, which bones need to be strong.
+
+# Sight words (easy only). Answers are NOT read aloud for this category, so kids read them.
+# "display text>>spoken text" shows one thing and says another.
+words|easy|Tap the word you hear>>Tap the word: the.|the;and;go|The is the word used most often in the English language.
+words|easy|Tap the word you hear>>Tap the word: and.|and;am;has|And joins things together, like peanut butter and jelly.
+words|easy|Tap the word you hear>>Tap the word: a. As in, a cat.|a;am;go|A is a word all by itself, with just one letter.
+words|easy|Tap the word you hear>>Tap the word: am.|am;and;the|We say I am to tell people about ourselves, like I am five.
+words|easy|Tap the word you hear>>Tap the word: has.|has;go;a|Has tells us someone owns something, like the cat has a tail.
+words|easy|Tap the word you hear>>Tap the word: go.|go;the;has|Green traffic lights mean go.
+words|easy|Tap the word you hear>>Tap the word: the.|the;has;am|Look for the word the in your next bedtime story. It's everywhere.
+words|easy|Tap the word you hear>>Tap the word: and.|and;go;a|And starts with the letter a.
+words|easy|Tap the word you hear>>Tap the word: am.|am;a;and|Am and and both start with the letter a.
+words|easy|Tap the word you hear>>Tap the word: has.|has;the;and|Has and hat start with the same sound.
+words|easy|Tap the word you hear>>Tap the word: go.|go;and;am|Go is spelled g, o. Just two letters.
+words|easy|Tap the word you hear>>Tap the word: a. As in, a dog.|a;the;has|When you see the word a, it sounds like uh.
+words|easy|I ___ happy.>>I, blank, happy. Which word fits?|am;has;go|I am happy is a happy sentence to say every day.
+words|easy|The dog ___ a ball.>>The dog, blank, a ball. Which word fits?|has;am;go|Dogs love to chase balls because it feels like hunting.
+words|easy|Let's ___ to the park!>>Let's, blank, to the park! Which word fits?|go;has;and|Ready, set, go!
+words|easy|Mom ___ Dad>>Mom, blank, Dad. Which word fits?|and;go;am|And is a joining word. It puts two things together.
+words|easy|I see ___ cat.>>I see, blank, cat. Which word fits?|a;go;am|We use a when there's just one, like a cat or a dog.
+words|easy|___ sun is hot.>>Blank, sun is hot. Which word fits?|The;Go;Has|When the starts a sentence, it begins with a big capital T.
+words|easy|She ___ a red hat.>>She, blank, a red hat. Which word fits?|has;am;go|Has and hat sound almost the same at the start.
+words|easy|I ___ a big kid!>>I, blank, a big kid! Which word fits?|am;and;the|You are growing bigger every day.
+words|easy|Which word starts with the letter g?|go;the;am|G makes the sound g, like in go and goat.
+words|easy|Which word starts with the letter h?|has;and;go|H makes a breathy sound, like when you fog up a window.
+words|easy|Which word starts with the letter t?|the;am;a|The letter t is in the and in tiger.
+words|easy|Which word rhymes with no?|go;has;the|Go, no, so and toe all rhyme.
+words|easy|Which word rhymes with jam?|am;and;go|Am, jam, ham and Sam all rhyme.
+words|easy|Which word rhymes with hand?|and;has;go|And, hand, sand and band all rhyme.
+words|easy|Which word has just one letter?|a;the;has|A and I are the only words in English with one letter.
+words|easy|Which word has three letters?|has;am;a|The, and and has all have three letters.

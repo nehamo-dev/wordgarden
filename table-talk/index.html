@@ -66,6 +66,7 @@ h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.02em}
 .cat i{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;flex:none}
 .cat i svg{width:18px;height:18px}
 .cat.on{border-color:var(--ink)}
+.catnote{display:block;font-size:12px;font-weight:500;color:var(--soft)}
 .cat:not(.on){opacity:.55}
 .cat.surprise{grid-column:1/-1;background:linear-gradient(100deg,#FFD8CF,#FFE7AE 25%,#CFF1E3 50%,#CFE5FF 75%,#E4DBFF);opacity:1}
 .setup-go{margin-top:24px}
@@ -97,6 +98,7 @@ h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.02em}
 .ans:active{transform:translateY(4px);box-shadow:0 2px 0 rgba(59,51,85,.1)}
 .ans .badge{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-weight:700;font-size:22px;flex:none}
 .ans .txt{flex:1}
+.answers.words .ans{font-size:clamp(32px,7vw,44px);padding-top:16px;padding-bottom:16px}
 .ans.reading{transform:scale(1.03);box-shadow:0 6px 0 #6FA9E8,0 0 0 3px var(--sky)}
 .ans.right{background:#D6F5E8;box-shadow:0 6px 0 #8FD6B8}
 .ans.wrong{background:#FFE4DF;box-shadow:0 6px 0 #F4B2A4}
@@ -190,6 +192,7 @@ const CAT_ICON = {
   tech:    '<rect x="5" y="7" width="14" height="11" rx="3" fill="#2F5F99"/><circle cx="9.5" cy="12.5" r="1.6" fill="#fff"/><circle cx="14.5" cy="12.5" r="1.6" fill="#fff"/><path d="M12 7V4" stroke="#2F5F99" stroke-width="2"/><circle cx="12" cy="3.5" r="1.4" fill="#2F5F99"/>',
   food:    '<path d="M3 13h18a9 9 0 0 1-18 0z" fill="#E0A93E"/><path d="M8 9c0-2 2-2 2-4M13 9c0-2 2-2 2-4" stroke="#E0A93E" stroke-width="1.8" fill="none" stroke-linecap="round"/>',
   body:    '<path d="M12 20s-7-4.4-9.3-9A5 5 0 0 1 12 6a5 5 0 0 1 9.3 5C19 15.6 12 20 12 20z" fill="#FF8B7B"/>',
+  words:   '<text x="12" y="17" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="600" font-size="13" fill="#2E7D62">Aa</text>',
 };
 const CATS = {
   india:   { name: 'Indian culture', bg: '#FFDCE6', fg: '#A63E5C', award: 'Culture star' },
@@ -201,7 +204,10 @@ const CATS = {
   tech:    { name: 'Technology',     bg: '#E1EEFF', fg: '#2F5F99', award: 'Tech whiz' },
   food:    { name: 'Food',           bg: '#FFF1DD', fg: '#8A5A12', award: 'Food expert' },
   body:    { name: 'Our body',       bg: '#FFDCE6', fg: '#A63E5C', award: 'Body boss' },
+  words:   { name: 'Sight words',    bg: '#D9F3E8', fg: '#2E7D62', award: 'Word wizard', note: 'Easy only' },
 };
+// Sight-word answers are never read aloud: hearing them would give the answer away.
+const READ_ANSWERS = q => q.cat !== 'words';
 const CAT_IDS = Object.keys(CATS);
 const PLAYER_COLORS = ['#FF8B7B', '#8CC4FF', '#B7A3F3', '#79D2B2', '#FFC95E', '#FFB3C7'];
 const BADGES = ['#FFD8CF', '#CFE5FF', '#CFF1E3'];
@@ -215,6 +221,8 @@ const prefs = Object.assign({ count: 10, readAloud: true }, store.get('tt-prefs'
 let players = store.get('tt-players', []);
 let cats = store.get('tt-cats', CAT_IDS.slice()).filter(c => CATS[c]);
 if (!cats.length) cats = CAT_IDS.slice();
+// One-time update: switch on the new Sight words category for devices that saved a category choice before it existed.
+if (!store.get('tt-added-words', false)){ if (!cats.includes('words')) cats.push('words'); store.set('tt-added-words', true); store.set('tt-cats', cats); }
 const savePlayers = () => store.set('tt-players', players);
 const saveCats = () => store.set('tt-cats', cats);
 const savePrefs = () => store.set('tt-prefs', prefs);
@@ -402,7 +410,7 @@ function renderSetup(){
       <div class="sec">Pick categories</div>
       <div class="cats">
         <button class="cat surprise ${allOn ? 'on' : ''}" id="allCats"><i style="background:#fff">${SPARK}</i>Surprise me (all categories)</button>
-        ${CAT_IDS.map(id => `<button class="cat ${cats.includes(id) ? 'on' : ''}" data-cat="${id}"><i style="background:${CATS[id].bg}">${catIcon(id)}</i>${CATS[id].name}</button>`).join('')}
+        ${CAT_IDS.map(id => `<button class="cat ${cats.includes(id) ? 'on' : ''}" data-cat="${id}"><i style="background:${CATS[id].bg}">${catIcon(id)}</i><span>${CATS[id].name}${CATS[id].note ? `<small class="catnote">${CATS[id].note}</small>` : ''}</span></button>`).join('')}
       </div>
       <button class="big-btn press setup-go" id="go">Let's play</button>
     </div>`;
@@ -474,8 +482,9 @@ function renderTurn(p, q){
 function readQuestion(){
   const q = game.q, hear = $('.hear'), opts = $$('.ans');
   hear && hear.classList.add('playing');
-  const items = [{ key: q.qa, text: q.q, gap: 350 }, phrase('Is it')];
-  q.a.forEach((a, i) => {
+  const items = [{ key: q.qa, text: q.say || q.q, gap: 350 }];
+  if (READ_ANSWERS(q)) items.push(phrase('Is it'));
+  if (READ_ANSWERS(q)) q.a.forEach((a, i) => {
     if (i === 2) items.push(phrase('or'));
     items.push({ key: q.oa && q.oa[i], text: a, gap: 250,
       onstart: () => { opts.forEach(o => o.classList.remove('reading')); opts[i] && opts[i].classList.add('reading'); },
@@ -500,7 +509,7 @@ function renderQuestion(){
           ${prefs.readAloud ? `<button class="hear" id="hear" aria-label="Read the question aloud">${SPEAKER}</button>` : ''}</div>
         <p class="q">${esc(q.q)}</p>
       </div>
-      <div class="answers">${q.a.map((a, i) => `
+      <div class="answers ${READ_ANSWERS(q) ? '' : 'words'}">${q.a.map((a, i) => `
         <button class="ans" data-i="${i}">
           <span class="badge" style="background:${BADGES[i]}">${'ABC'[i]}</span><span class="txt">${esc(a)}</span>
         </button>`).join('')}

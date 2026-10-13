@@ -16,7 +16,7 @@ AUDIO = os.path.join(HERE, '..', 'table-talk', 'audio')
 VOICE, RATE = 'Samantha', '165'
 PHRASES = ["That's right!", 'You got it!', 'Brilliant!', 'Super!', 'Yes!', 'Not quite!', 'The answer is',
            'Fun fact!', 'Is it', 'or', "It's your turn!", 'What a team!', 'Superstars!', 'Great playing!']
-CATS = ['india', 'science', 'animals', 'space', 'geo', 'history', 'tech', 'food', 'body']
+CATS = ['india', 'science', 'animals', 'space', 'geo', 'history', 'tech', 'food', 'body', 'words']
 
 def load():
     qs, counts = [], {}
@@ -34,7 +34,9 @@ def load():
         qid = f'{cat}-{counts[cat]:02d}'
         rng = random.Random(qid)
         order = [0, 1, 2]; rng.shuffle(order)
-        qs.append({'id': qid, 'cat': cat, 'level': level, 'q': q,
+        say = None
+        if '>>' in q: q, say = [x.strip() for x in q.split('>>', 1)]  # show one thing, say another
+        qs.append({'id': qid, 'cat': cat, 'level': level, 'q': q, **({'say': say} if say else {}),
                    'a': [opts[i] for i in order], 'c': order.index(0), 'fact': fact})
     return qs
 
@@ -56,7 +58,7 @@ def record(job):
 def add_audio(qs):
     jobs, opts = {}, {}
     for q in qs:
-        q['qa'] = 'q-' + q['id']; jobs[q['qa']] = q['q']
+        q['qa'] = 'q-' + q['id']; jobs[q['qa']] = q.get('say', q['q'])
         q['fa'] = 'f-' + q['id']; jobs[q['fa']] = q['fact']
         q['oa'] = []
         for a in q['a']:
