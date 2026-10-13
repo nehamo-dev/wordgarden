@@ -11,7 +11,14 @@ window.TT_QUESTIONS = [
 "Holi"
 ],
 "c": 0,
-"fact": "On Diwali, families light little clay lamps called diyas to fill their homes with light."
+"fact": "On Diwali, families light little clay lamps called diyas to fill their homes with light.",
+"qa": "q-india-01",
+"fa": "f-india-01",
+"oa": [
+"o-diwali",
+"o-pongal",
+"o-holi"
+]
 },
 {
 "id": "india-02",
@@ -24,7 +31,14 @@ window.TT_QUESTIONS = [
 "Onam"
 ],
 "c": 0,
-"fact": "Holi celebrates the end of winter and the arrival of spring."
+"fact": "Holi celebrates the end of winter and the arrival of spring.",
+"qa": "q-india-02",
+"fa": "f-india-02",
+"oa": [
+"o-holi",
+"o-diwali",
+"o-onam"
+]
 },
 {
 "id": "india-03",
@@ -37,7 +51,14 @@ window.TT_QUESTIONS = [
 "The tiger"
 ],
 "c": 2,
-"fact": "No two tigers have the same stripes, just like no two people have the same fingerprints."
+"fact": "No two tigers have the same stripes, just like no two people have the same fingerprints.",
+"qa": "q-india-03",
+"fa": "f-india-03",
+"oa": [
+"o-the-lion",
+"o-the-elephant",
+"o-the-tiger"
+]
 },
 {
 "id": "india-04",
@@ -50,7 +71,14 @@ window.TT_QUESTIONS = [
 "The crow"
 ],
 "c": 0,
-"fact": "A peacock spreads its long tail feathers like a giant shimmering fan."
+"fact": "A peacock spreads its long tail feathers like a giant shimmering fan.",
+"qa": "q-india-04",
+"fa": "f-india-04",
+"oa": [
+"o-the-peacock",
+"o-the-parrot",
+"o-the-crow"
+]
 },
 {
 "id": "india-05",
@@ -63,7 +91,14 @@ window.TT_QUESTIONS = [
 "Hanuman"
 ],
 "c": 0,
-"fact": "Many people pray to Ganesha before starting something new."
+"fact": "Many people pray to Ganesha before starting something new.",
+"qa": "q-india-05",
+"fa": "f-india-05",
+"oa": [
+"o-ganesha",
+"o-krishna",
+"o-hanuman"
+]
 },
 {
 "id": "india-06",
@@ -76,7 +111,14 @@ window.TT_QUESTIONS = [
 "Ganesha"
 ],
 "c": 1,
-"fact": "In the Ramayana, Hanuman leaps all the way across the ocean to find Sita."
+"fact": "In the Ramayana, Hanuman leaps all the way across the ocean to find Sita.",
+"qa": "q-india-06",
+"fa": "f-india-06",
+"oa": [
+"o-garuda",
+"o-hanuman",
+"o-ganesha"
+]
 },
 {
 "id": "india-07",
@@ -89,7 +131,14 @@ window.TT_QUESTIONS = [
 "Kites"
 ],
 "c": 0,
-"fact": "People make rangoli at their doors to welcome guests during festivals."
+"fact": "People make rangoli at their doors to welcome guests during festivals.",
+"qa": "q-india-07",
+"fa": "f-india-07",
+"oa": [
+"o-rangoli",
+"o-mehndi",
+"o-kites"
+]
 },
 {
 "id": "india-08",
@@ -102,7 +151,14 @@ window.TT_QUESTIONS = [
 "Paper planes"
 ],
 "c": 0,
-"fact": "On Makar Sankranti the sky fills with thousands of colorful kites."
+"fact": "On Makar Sankranti the sky fills with thousands of colorful kites.",
+"qa": "q-india-08",
+"fa": "f-india-08",
+"oa": [
+"o-kites",
+"o-balloons",
+"o-paper-planes"
+]
 },
 {
 "id": "india-09",
@@ -115,7 +171,14 @@ window.TT_QUESTIONS = [
 "The lotus"
 ],
 "c": 2,
-"fact": "The lotus grows in ponds, and its flower floats on top of the water."
+"fact": "The lotus grows in ponds, and its flower floats on top of the water.",
+"qa": "q-india-09",
+"fa": "f-india-09",
+"oa": [
+"o-the-sunflower",
+"o-the-rose",
+"o-the-lotus"
+]
 },
 {
 "id": "india-10",
@@ -128,7 +191,14 @@ window.TT_QUESTIONS = [
 "Three"
 ],
 "c": 2,
-"fact": "The flag is saffron, white and green, with a blue wheel called the Ashoka Chakra in the middle."
+"fact": "The flag is saffron, white and green, with a blue wheel called the Ashoka Chakra in the middle.",
+"qa": "q-india-10",
+"fa": "f-india-10",
+"oa": [
+"o-two",
+"o-five",
+"o-three"
+]
 },
 {
 "id": "india-11",
@@ -141,7 +211,14 @@ window.TT_QUESTIONS = [
 "Raksha Bandhan"
 ],
 "c": 2,
-"fact": "Raksha Bandhan celebrates the love between brothers and sisters."
+"fact": "Raksha Bandhan celebrates the love between brothers and sisters.",
+"qa": "q-india-11",
+"fa": "f-india-11",
+"oa": [
+"o-holi",
+"o-diwali",
+"o-raksha-bandhan"
+]
 },
 {
 "id": "india-12",
@@ -154,7 +231,14 @@ window.TT_QUESTIONS = [
 "The Red Fort"
 ],
 "c": 0,
-"fact": "The Taj Mahal seems to change color, looking pink in the morning and golden in the evening."
+"fact": "The Taj Mahal seems to change color, looking pink in the morning and golden in the evening.",
+"qa": "q-india-12",
+"fa": "f-india-12",
+"oa": [
+"o-the-taj-mahal",
+"o-the-gateway-of-india",
+"o-the-red-fort"
+]
 },
 {
 "id": "india-13",
@@ -167,7 +251,14 @@ window.TT_QUESTIONS = [
 "A horse"
 ],
 "c": 0,
-"fact": "Ganesha's tiny mouse friend is called Mushika."
+"fact": "Ganesha's tiny mouse friend is called Mushika.",
+"qa": "q-india-13",
+"fa": "f-india-13",
+"oa": [
+"o-a-mouse",
+"o-a-peacock",
+"o-a-horse"
+]
 },
 {
 "id": "india-14",
@@ -180,7 +271,14 @@ window.TT_QUESTIONS = [
 "Krishna"
 ],
 "c": 2,
-"fact": "In the stories, little Krishna loved butter so much that he would sneak some from the pot."
+"fact": "In the stories, little Krishna loved butter so much that he would sneak some from the pot.",
+"qa": "q-india-14",
+"fa": "f-india-14",
+"oa": [
+"o-brahma",
+"o-shiva",
+"o-krishna"
+]
 },
 {
 "id": "india-15",
@@ -193,7 +291,14 @@ window.TT_QUESTIONS = [
 "Jalebi"
 ],
 "c": 0,
-"fact": "Samosas are often eaten with green mint chutney or sweet tamarind chutney."
+"fact": "Samosas are often eaten with green mint chutney or sweet tamarind chutney.",
+"qa": "q-india-15",
+"fa": "f-india-15",
+"oa": [
+"o-samosa",
+"o-idli",
+"o-jalebi"
+]
 },
 {
 "id": "india-16",
@@ -206,7 +311,14 @@ window.TT_QUESTIONS = [
 "Laddoo"
 ],
 "c": 2,
-"fact": "Ganesha is often shown holding a sweet treat, because he loves sweets."
+"fact": "Ganesha is often shown holding a sweet treat, because he loves sweets.",
+"qa": "q-india-16",
+"fa": "f-india-16",
+"oa": [
+"o-dosa",
+"o-paratha",
+"o-laddoo"
+]
 },
 {
 "id": "india-17",
@@ -219,7 +331,14 @@ window.TT_QUESTIONS = [
 "Kolkata"
 ],
 "c": 0,
-"fact": "India's parliament, where laws are made, is in New Delhi."
+"fact": "India's parliament, where laws are made, is in New Delhi.",
+"qa": "q-india-17",
+"fa": "f-india-17",
+"oa": [
+"o-new-delhi",
+"o-mumbai",
+"o-kolkata"
+]
 },
 {
 "id": "india-18",
@@ -232,7 +351,14 @@ window.TT_QUESTIONS = [
 "The Amazon"
 ],
 "c": 0,
-"fact": "The Ganga begins high up in the Himalaya mountains, from a glacier."
+"fact": "The Ganga begins high up in the Himalaya mountains, from a glacier.",
+"qa": "q-india-18",
+"fa": "f-india-18",
+"oa": [
+"o-the-ganga",
+"o-the-nile",
+"o-the-amazon"
+]
 },
 {
 "id": "india-19",
@@ -245,7 +371,14 @@ window.TT_QUESTIONS = [
 "Durga Puja"
 ],
 "c": 1,
-"fact": "Onam welcomes the kind king Mahabali, who visits his people once a year in the story."
+"fact": "Onam welcomes the kind king Mahabali, who visits his people once a year in the story.",
+"qa": "q-india-19",
+"fa": "f-india-19",
+"oa": [
+"o-lohri",
+"o-onam",
+"o-durga-puja"
+]
 },
 {
 "id": "india-20",
@@ -258,7 +391,14 @@ window.TT_QUESTIONS = [
 "Gujarat"
 ],
 "c": 0,
-"fact": "Pongal is also a sweet rice dish, cooked in a pot until it bubbles over for good luck."
+"fact": "Pongal is also a sweet rice dish, cooked in a pot until it bubbles over for good luck.",
+"qa": "q-india-20",
+"fa": "f-india-20",
+"oa": [
+"o-tamil-nadu",
+"o-punjab",
+"o-gujarat"
+]
 },
 {
 "id": "india-21",
@@ -271,7 +411,14 @@ window.TT_QUESTIONS = [
 "The Alps"
 ],
 "c": 0,
-"fact": "Himalaya means home of snow."
+"fact": "Himalaya means home of snow.",
+"qa": "q-india-21",
+"fa": "f-india-21",
+"oa": [
+"o-the-himalayas",
+"o-the-andes",
+"o-the-alps"
+]
 },
 {
 "id": "india-22",
@@ -284,7 +431,14 @@ window.TT_QUESTIONS = [
 "Ludo"
 ],
 "c": 1,
-"fact": "An early form of chess from India was called chaturanga."
+"fact": "An early form of chess from India was called chaturanga.",
+"qa": "q-india-22",
+"fa": "f-india-22",
+"oa": [
+"o-carrom",
+"o-chess",
+"o-ludo"
+]
 },
 {
 "id": "india-23",
@@ -297,7 +451,14 @@ window.TT_QUESTIONS = [
 "Basketball"
 ],
 "c": 1,
-"fact": "Some cricket matches last for five whole days."
+"fact": "Some cricket matches last for five whole days.",
+"qa": "q-india-23",
+"fa": "f-india-23",
+"oa": [
+"o-tennis",
+"o-cricket",
+"o-basketball"
+]
 },
 {
 "id": "india-24",
@@ -310,7 +471,14 @@ window.TT_QUESTIONS = [
 "The Ramayana"
 ],
 "c": 2,
-"fact": "Diwali celebrates Rama coming home to Ayodhya, when people lit lamps to welcome him."
+"fact": "Diwali celebrates Rama coming home to Ayodhya, when people lit lamps to welcome him.",
+"qa": "q-india-24",
+"fa": "f-india-24",
+"oa": [
+"o-the-panchatantra",
+"o-the-jungle-book",
+"o-the-ramayana"
+]
 },
 {
 "id": "india-25",
@@ -323,7 +491,14 @@ window.TT_QUESTIONS = [
 "Jawaharlal Nehru"
 ],
 "c": 0,
-"fact": "Gandhi believed in changing the world peacefully, without fighting."
+"fact": "Gandhi believed in changing the world peacefully, without fighting.",
+"qa": "q-india-25",
+"fa": "f-india-25",
+"oa": [
+"o-mahatma-gandhi",
+"o-subhas-chandra-bose",
+"o-jawaharlal-nehru"
+]
 },
 {
 "id": "india-26",
@@ -336,7 +511,14 @@ window.TT_QUESTIONS = [
 "Bindi"
 ],
 "c": 1,
-"fact": "Mehndi is made from crushed henna leaves, and the pattern slowly fades after a couple of weeks."
+"fact": "Mehndi is made from crushed henna leaves, and the pattern slowly fades after a couple of weeks.",
+"qa": "q-india-26",
+"fa": "f-india-26",
+"oa": [
+"o-rangoli",
+"o-mehndi",
+"o-bindi"
+]
 },
 {
 "id": "india-27",
@@ -349,7 +531,14 @@ window.TT_QUESTIONS = [
 "Durga Puja"
 ],
 "c": 2,
-"fact": "During Durga Puja, families visit many pandals, each decorated in its own special way."
+"fact": "During Durga Puja, families visit many pandals, each decorated in its own special way.",
+"qa": "q-india-27",
+"fa": "f-india-27",
+"oa": [
+"o-baisakhi",
+"o-onam",
+"o-durga-puja"
+]
 },
 {
 "id": "india-28",
@@ -362,7 +551,14 @@ window.TT_QUESTIONS = [
 "Onam"
 ],
 "c": 0,
-"fact": "Baisakhi is also a very special day for Sikhs."
+"fact": "Baisakhi is also a very special day for Sikhs.",
+"qa": "q-india-28",
+"fa": "f-india-28",
+"oa": [
+"o-baisakhi",
+"o-pongal",
+"o-onam"
+]
 },
 {
 "id": "india-29",
@@ -375,7 +571,14 @@ window.TT_QUESTIONS = [
 "Animals"
 ],
 "c": 2,
-"fact": "The Panchatantra teaches lessons with clever animals, like the monkey and the crocodile."
+"fact": "The Panchatantra teaches lessons with clever animals, like the monkey and the crocodile.",
+"qa": "q-india-29",
+"fa": "f-india-29",
+"oa": [
+"o-robots",
+"o-pirates",
+"o-animals"
+]
 },
 {
 "id": "india-30",
@@ -388,7 +591,14 @@ window.TT_QUESTIONS = [
 "The dollar"
 ],
 "c": 0,
-"fact": "The rupee has its own special symbol, which was chosen in 2010."
+"fact": "The rupee has its own special symbol, which was chosen in 2010.",
+"qa": "q-india-30",
+"fa": "f-india-30",
+"oa": [
+"o-the-rupee",
+"o-the-yen",
+"o-the-dollar"
+]
 },
 {
 "id": "india-31",
@@ -401,7 +611,14 @@ window.TT_QUESTIONS = [
 "Holi"
 ],
 "c": 0,
-"fact": "People greet each other by saying Eid Mubarak, which means blessed celebration."
+"fact": "People greet each other by saying Eid Mubarak, which means blessed celebration.",
+"qa": "q-india-31",
+"fa": "f-india-31",
+"oa": [
+"o-eid",
+"o-christmas",
+"o-holi"
+]
 },
 {
 "id": "india-32",
@@ -414,7 +631,14 @@ window.TT_QUESTIONS = [
 "Ballet"
 ],
 "c": 0,
-"fact": "Bharatanatyam dancers wear ankle bells called ghungroo that jingle as they dance."
+"fact": "Bharatanatyam dancers wear ankle bells called ghungroo that jingle as they dance.",
+"qa": "q-india-32",
+"fa": "f-india-32",
+"oa": [
+"o-bharatanatyam",
+"o-salsa",
+"o-ballet"
+]
 },
 {
 "id": "science-01",
@@ -427,7 +651,14 @@ window.TT_QUESTIONS = [
 "Thunder"
 ],
 "c": 0,
-"fact": "Plants make their own food using sunlight, water and air."
+"fact": "Plants make their own food using sunlight, water and air.",
+"qa": "q-science-01",
+"fa": "f-science-01",
+"oa": [
+"o-sunlight",
+"o-moonlight",
+"o-thunder"
+]
 },
 {
 "id": "science-02",
@@ -440,7 +671,14 @@ window.TT_QUESTIONS = [
 "It melts"
 ],
 "c": 2,
-"fact": "When ice melts, it turns back into water."
+"fact": "When ice melts, it turns back into water.",
+"qa": "q-science-02",
+"fa": "f-science-02",
+"oa": [
+"o-it-turns-to-stone",
+"o-it-gets-bigger",
+"o-it-melts"
+]
 },
 {
 "id": "science-03",
@@ -453,7 +691,14 @@ window.TT_QUESTIONS = [
 "Green"
 ],
 "c": 2,
-"fact": "Mixing two colors to make a new one is like a little bit of magic."
+"fact": "Mixing two colors to make a new one is like a little bit of magic.",
+"qa": "q-science-03",
+"fa": "f-science-03",
+"oa": [
+"o-purple",
+"o-orange",
+"o-green"
+]
 },
 {
 "id": "science-04",
@@ -466,7 +711,14 @@ window.TT_QUESTIONS = [
 "Blue"
 ],
 "c": 0,
-"fact": "Adding white to any color makes it lighter."
+"fact": "Adding white to any color makes it lighter.",
+"qa": "q-science-04",
+"fa": "f-science-04",
+"oa": [
+"o-pink",
+"o-green",
+"o-blue"
+]
 },
 {
 "id": "science-05",
@@ -479,7 +731,14 @@ window.TT_QUESTIONS = [
 "Clouds and thunder"
 ],
 "c": 1,
-"fact": "You can see a rainbow when the sun is behind you and the rain is in front of you."
+"fact": "You can see a rainbow when the sun is behind you and the rain is in front of you.",
+"qa": "q-science-05",
+"fa": "f-science-05",
+"oa": [
+"o-snow-and-wind",
+"o-sunlight-and-rain",
+"o-clouds-and-thunder"
+]
 },
 {
 "id": "science-06",
@@ -492,7 +751,14 @@ window.TT_QUESTIONS = [
 "A paper clip"
 ],
 "c": 2,
-"fact": "Magnets pull things made of iron and steel."
+"fact": "Magnets pull things made of iron and steel.",
+"qa": "q-science-06",
+"fa": "f-science-06",
+"oa": [
+"o-a-leaf",
+"o-a-crayon",
+"o-a-paper-clip"
+]
 },
 {
 "id": "science-07",
@@ -505,7 +771,14 @@ window.TT_QUESTIONS = [
 "Dust"
 ],
 "c": 0,
-"fact": "Every raindrop started as water that floated up into the sky."
+"fact": "Every raindrop started as water that floated up into the sky.",
+"qa": "q-science-07",
+"fa": "f-science-07",
+"oa": [
+"o-rain",
+"o-fog",
+"o-dust"
+]
 },
 {
 "id": "science-08",
@@ -518,7 +791,14 @@ window.TT_QUESTIONS = [
 "Ice"
 ],
 "c": 2,
-"fact": "Ice floats, which is why ice cubes bob on top of your drink."
+"fact": "Ice floats, which is why ice cubes bob on top of your drink.",
+"qa": "q-science-08",
+"fa": "f-science-08",
+"oa": [
+"o-steam",
+"o-sand",
+"o-ice"
+]
 },
 {
 "id": "science-09",
@@ -531,7 +811,14 @@ window.TT_QUESTIONS = [
 "Ice"
 ],
 "c": 0,
-"fact": "Steam is water floating in the air as a gas."
+"fact": "Steam is water floating in the air as a gas.",
+"qa": "q-science-09",
+"fa": "f-science-09",
+"oa": [
+"o-steam",
+"o-juice",
+"o-ice"
+]
 },
 {
 "id": "science-10",
@@ -544,7 +831,14 @@ window.TT_QUESTIONS = [
 "A rock"
 ],
 "c": 0,
-"fact": "Things float when they are lighter than the water they push away."
+"fact": "Things float when they are lighter than the water they push away.",
+"qa": "q-science-10",
+"fa": "f-science-10",
+"oa": [
+"o-a-rubber-duck",
+"o-a-coin",
+"o-a-rock"
+]
 },
 {
 "id": "science-11",
@@ -557,7 +851,14 @@ window.TT_QUESTIONS = [
 "A pillow"
 ],
 "c": 1,
-"fact": "A magnifying glass has a curved piece of glass called a lens."
+"fact": "A magnifying glass has a curved piece of glass called a lens.",
+"qa": "q-science-11",
+"fa": "f-science-11",
+"oa": [
+"o-a-spoon",
+"o-a-magnifying-glass",
+"o-a-pillow"
+]
 },
 {
 "id": "science-12",
@@ -570,7 +871,14 @@ window.TT_QUESTIONS = [
 "A plant"
 ],
 "c": 2,
-"fact": "A giant tree started as a tiny little seed."
+"fact": "A giant tree started as a tiny little seed.",
+"qa": "q-science-12",
+"fa": "f-science-12",
+"oa": [
+"o-a-toy",
+"o-a-rock",
+"o-a-plant"
+]
 },
 {
 "id": "science-13",
@@ -583,7 +891,14 @@ window.TT_QUESTIONS = [
 "A big rock"
 ],
 "c": 2,
-"fact": "A feather is so light it can float on the air."
+"fact": "A feather is so light it can float on the air.",
+"qa": "q-science-13",
+"fa": "f-science-13",
+"oa": [
+"o-a-feather",
+"o-a-bubble",
+"o-a-big-rock"
+]
 },
 {
 "id": "science-14",
@@ -596,7 +911,14 @@ window.TT_QUESTIONS = [
 "Sound"
 ],
 "c": 1,
-"fact": "Our eyes need light to see anything at all."
+"fact": "Our eyes need light to see anything at all.",
+"qa": "q-science-14",
+"fa": "f-science-14",
+"oa": [
+"o-wind",
+"o-light",
+"o-sound"
+]
 },
 {
 "id": "science-15",
@@ -609,7 +931,14 @@ window.TT_QUESTIONS = [
 "A pencil"
 ],
 "c": 0,
-"fact": "Liquids flow and take the shape of whatever cup you pour them into."
+"fact": "Liquids flow and take the shape of whatever cup you pour them into.",
+"qa": "q-science-15",
+"fa": "f-science-15",
+"oa": [
+"o-water",
+"o-a-stone",
+"o-a-pencil"
+]
 },
 {
 "id": "science-16",
@@ -622,7 +951,14 @@ window.TT_QUESTIONS = [
 "Your body blocking the light"
 ],
 "c": 2,
-"fact": "Your shadow is longest in the early morning and late afternoon."
+"fact": "Your shadow is longest in the early morning and late afternoon.",
+"qa": "q-science-16",
+"fa": "f-science-16",
+"oa": [
+"o-the-wind",
+"o-the-rain",
+"o-your-body-blocking-the-light"
+]
 },
 {
 "id": "science-17",
@@ -635,7 +971,14 @@ window.TT_QUESTIONS = [
 "Smoke"
 ],
 "c": 1,
-"fact": "Trees and plants give off the oxygen that we breathe."
+"fact": "Trees and plants give off the oxygen that we breathe.",
+"qa": "q-science-17",
+"fa": "f-science-17",
+"oa": [
+"o-helium",
+"o-oxygen",
+"o-smoke"
+]
 },
 {
 "id": "science-18",
@@ -648,7 +991,14 @@ window.TT_QUESTIONS = [
 "Helium"
 ],
 "c": 0,
-"fact": "We breathe out carbon dioxide, and plants breathe it in. We help each other."
+"fact": "We breathe out carbon dioxide, and plants breathe it in. We help each other.",
+"qa": "q-science-18",
+"fa": "f-science-18",
+"oa": [
+"o-carbon-dioxide",
+"o-oxygen",
+"o-helium"
+]
 },
 {
 "id": "science-19",
@@ -661,7 +1011,14 @@ window.TT_QUESTIONS = [
 "Magnetism"
 ],
 "c": 1,
-"fact": "Gravity is what keeps our feet on the ground and the Moon going around the Earth."
+"fact": "Gravity is what keeps our feet on the ground and the Moon going around the Earth.",
+"qa": "q-science-19",
+"fa": "f-science-19",
+"oa": [
+"o-wind",
+"o-gravity",
+"o-magnetism"
+]
 },
 {
 "id": "science-20",
@@ -674,7 +1031,14 @@ window.TT_QUESTIONS = [
 "Ten"
 ],
 "c": 0,
-"fact": "The colors are red, orange, yellow, green, blue, indigo and violet."
+"fact": "The colors are red, orange, yellow, green, blue, indigo and violet.",
+"qa": "q-science-20",
+"fa": "f-science-20",
+"oa": [
+"o-seven",
+"o-five",
+"o-ten"
+]
 },
 {
 "id": "science-21",
@@ -687,7 +1051,14 @@ window.TT_QUESTIONS = [
 "10 degrees Celsius"
 ],
 "c": 0,
-"fact": "Water freezes at zero degrees Celsius."
+"fact": "Water freezes at zero degrees Celsius.",
+"qa": "q-science-21",
+"fa": "f-science-21",
+"oa": [
+"o-100-degrees-celsius",
+"o-50-degrees-celsius",
+"o-10-degrees-celsius"
+]
 },
 {
 "id": "science-22",
@@ -700,7 +1071,14 @@ window.TT_QUESTIONS = [
 "Metal"
 ],
 "c": 2,
-"fact": "Wires are made of metal on the inside and covered in plastic to keep us safe."
+"fact": "Wires are made of metal on the inside and covered in plastic to keep us safe.",
+"qa": "q-science-22",
+"fa": "f-science-22",
+"oa": [
+"o-wood",
+"o-plastic",
+"o-metal"
+]
 },
 {
 "id": "science-23",
@@ -713,7 +1091,14 @@ window.TT_QUESTIONS = [
 "Vibrations"
 ],
 "c": 2,
-"fact": "Put your hand on your throat and hum. You can feel the vibrations."
+"fact": "Put your hand on your throat and hum. You can feel the vibrations.",
+"qa": "q-science-23",
+"fa": "f-science-23",
+"oa": [
+"o-shadows",
+"o-colors",
+"o-vibrations"
+]
 },
 {
 "id": "science-24",
@@ -726,7 +1111,14 @@ window.TT_QUESTIONS = [
 "A chef"
 ],
 "c": 1,
-"fact": "Fossils are the remains of plants and animals turned to stone over millions of years."
+"fact": "Fossils are the remains of plants and animals turned to stone over millions of years.",
+"qa": "q-science-24",
+"fa": "f-science-24",
+"oa": [
+"o-an-astronaut",
+"o-a-paleontologist",
+"o-a-chef"
+]
 },
 {
 "id": "science-25",
@@ -739,7 +1131,14 @@ window.TT_QUESTIONS = [
 "A stethoscope"
 ],
 "c": 0,
-"fact": "Telescopes collect lots of light so we can see faraway stars."
+"fact": "Telescopes collect lots of light so we can see faraway stars.",
+"qa": "q-science-25",
+"fa": "f-science-25",
+"oa": [
+"o-a-telescope",
+"o-a-microscope",
+"o-a-stethoscope"
+]
 },
 {
 "id": "science-26",
@@ -752,7 +1151,14 @@ window.TT_QUESTIONS = [
 "A microscope"
 ],
 "c": 2,
-"fact": "A microscope can make things look hundreds of times bigger."
+"fact": "A microscope can make things look hundreds of times bigger.",
+"qa": "q-science-26",
+"fa": "f-science-26",
+"oa": [
+"o-a-periscope",
+"o-a-telescope",
+"o-a-microscope"
+]
 },
 {
 "id": "science-27",
@@ -765,7 +1171,14 @@ window.TT_QUESTIONS = [
 "It turns to ice"
 ],
 "c": 0,
-"fact": "The water evaporates, which means it turns into a gas and floats into the air."
+"fact": "The water evaporates, which means it turns into a gas and floats into the air.",
+"qa": "q-science-27",
+"fa": "f-science-27",
+"oa": [
+"o-it-dries-up",
+"o-it-gets-bigger",
+"o-it-turns-to-ice"
+]
 },
 {
 "id": "science-28",
@@ -778,7 +1191,14 @@ window.TT_QUESTIONS = [
 "A lamp"
 ],
 "c": 0,
-"fact": "Wind turbines can be taller than a twenty-story building."
+"fact": "Wind turbines can be taller than a twenty-story building.",
+"qa": "q-science-28",
+"fa": "f-science-28",
+"oa": [
+"o-a-wind-turbine",
+"o-a-fridge",
+"o-a-lamp"
+]
 },
 {
 "id": "science-29",
@@ -791,7 +1211,14 @@ window.TT_QUESTIONS = [
 "The flowers"
 ],
 "c": 1,
-"fact": "Roots also hold the plant firmly in the ground."
+"fact": "Roots also hold the plant firmly in the ground.",
+"qa": "q-science-29",
+"fa": "f-science-29",
+"oa": [
+"o-the-petals",
+"o-the-roots",
+"o-the-flowers"
+]
 },
 {
 "id": "science-30",
@@ -804,7 +1231,14 @@ window.TT_QUESTIONS = [
 "The crust"
 ],
 "c": 0,
-"fact": "The atmosphere protects us from the Sun's strongest rays, like a blanket."
+"fact": "The atmosphere protects us from the Sun's strongest rays, like a blanket.",
+"qa": "q-science-30",
+"fa": "f-science-30",
+"oa": [
+"o-the-atmosphere",
+"o-the-ocean",
+"o-the-crust"
+]
 },
 {
 "id": "science-31",
@@ -817,7 +1251,14 @@ window.TT_QUESTIONS = [
 "A fruit"
 ],
 "c": 1,
-"fact": "A seedling's first leaves are often a different shape from its grown-up leaves."
+"fact": "A seedling's first leaves are often a different shape from its grown-up leaves.",
+"qa": "q-science-31",
+"fa": "f-science-31",
+"oa": [
+"o-a-root",
+"o-a-seedling",
+"o-a-fruit"
+]
 },
 {
 "id": "science-32",
@@ -830,7 +1271,14 @@ window.TT_QUESTIONS = [
 "Big, small and medium"
 ],
 "c": 0,
-"fact": "Ice is solid, water is liquid, and steam is gas."
+"fact": "Ice is solid, water is liquid, and steam is gas.",
+"qa": "q-science-32",
+"fa": "f-science-32",
+"oa": [
+"o-solid-liquid-and-gas",
+"o-hot-cold-and-warm",
+"o-big-small-and-medium"
+]
 },
 {
 "id": "animals-01",
@@ -843,7 +1291,14 @@ window.TT_QUESTIONS = [
 "The horse"
 ],
 "c": 1,
-"fact": "Elephants are the only mammals that cannot jump."
+"fact": "Elephants are the only mammals that cannot jump.",
+"qa": "q-animals-01",
+"fa": "f-animals-01",
+"oa": [
+"o-the-giraffe",
+"o-the-elephant",
+"o-the-horse"
+]
 },
 {
 "id": "animals-02",
@@ -856,7 +1311,14 @@ window.TT_QUESTIONS = [
 "The camel"
 ],
 "c": 0,
-"fact": "A giraffe's tongue is dark blue and about as long as your arm."
+"fact": "A giraffe's tongue is dark blue and about as long as your arm.",
+"qa": "q-animals-02",
+"fa": "f-animals-02",
+"oa": [
+"o-the-giraffe",
+"o-the-zebra",
+"o-the-camel"
+]
 },
 {
 "id": "animals-03",
@@ -869,7 +1331,14 @@ window.TT_QUESTIONS = [
 "Milk"
 ],
 "c": 1,
-"fact": "Bees visit thousands of flowers to make one small jar of honey."
+"fact": "Bees visit thousands of flowers to make one small jar of honey.",
+"qa": "q-animals-03",
+"fa": "f-animals-03",
+"oa": [
+"o-butter",
+"o-honey",
+"o-milk"
+]
 },
 {
 "id": "animals-04",
@@ -882,7 +1351,14 @@ window.TT_QUESTIONS = [
 "A cow"
 ],
 "c": 2,
-"fact": "Cows have best friends and feel happier when they are together."
+"fact": "Cows have best friends and feel happier when they are together.",
+"qa": "q-animals-04",
+"fa": "f-animals-04",
+"oa": [
+"o-a-duck",
+"o-a-dog",
+"o-a-cow"
+]
 },
 {
 "id": "animals-05",
@@ -895,7 +1371,14 @@ window.TT_QUESTIONS = [
 "In trees"
 ],
 "c": 1,
-"fact": "Some fish live in salty seas, and some live in rivers and lakes."
+"fact": "Some fish live in salty seas, and some live in rivers and lakes.",
+"qa": "q-animals-05",
+"fa": "f-animals-05",
+"oa": [
+"o-in-the-sand",
+"o-in-water",
+"o-in-trees"
+]
 },
 {
 "id": "animals-06",
@@ -908,7 +1391,14 @@ window.TT_QUESTIONS = [
 "A kitten"
 ],
 "c": 0,
-"fact": "Puppies are born with their eyes closed."
+"fact": "Puppies are born with their eyes closed.",
+"qa": "q-animals-06",
+"fa": "f-animals-06",
+"oa": [
+"o-a-puppy",
+"o-a-calf",
+"o-a-kitten"
+]
 },
 {
 "id": "animals-07",
@@ -921,7 +1411,14 @@ window.TT_QUESTIONS = [
 "A kitten"
 ],
 "c": 2,
-"fact": "Cats spend about two thirds of the day sleeping."
+"fact": "Cats spend about two thirds of the day sleeping.",
+"qa": "q-animals-07",
+"fa": "f-animals-07",
+"oa": [
+"o-a-puppy",
+"o-a-cub",
+"o-a-kitten"
+]
 },
 {
 "id": "animals-08",
@@ -934,7 +1431,14 @@ window.TT_QUESTIONS = [
 "The eagle"
 ],
 "c": 1,
-"fact": "Penguins use their wings like flippers to zoom through the water."
+"fact": "Penguins use their wings like flippers to zoom through the water.",
+"qa": "q-animals-08",
+"fa": "f-animals-08",
+"oa": [
+"o-the-parrot",
+"o-the-penguin",
+"o-the-eagle"
+]
 },
 {
 "id": "animals-09",
@@ -947,7 +1451,14 @@ window.TT_QUESTIONS = [
 "The leopard"
 ],
 "c": 1,
-"fact": "No two zebras have exactly the same stripes."
+"fact": "No two zebras have exactly the same stripes.",
+"qa": "q-animals-09",
+"fa": "f-animals-09",
+"oa": [
+"o-the-tiger",
+"o-the-zebra",
+"o-the-leopard"
+]
 },
 {
 "id": "animals-10",
@@ -960,7 +1471,14 @@ window.TT_QUESTIONS = [
 "A frog"
 ],
 "c": 1,
-"fact": "A snail's shell grows bigger as the snail grows."
+"fact": "A snail's shell grows bigger as the snail grows.",
+"qa": "q-animals-10",
+"fa": "f-animals-10",
+"oa": [
+"o-a-rabbit",
+"o-a-snail",
+"o-a-frog"
+]
 },
 {
 "id": "animals-11",
@@ -973,7 +1491,14 @@ window.TT_QUESTIONS = [
 "Eight"
 ],
 "c": 2,
-"fact": "Insects have six legs, but spiders have eight, so spiders are not insects."
+"fact": "Insects have six legs, but spiders have eight, so spiders are not insects.",
+"qa": "q-animals-11",
+"fa": "f-animals-11",
+"oa": [
+"o-six",
+"o-four",
+"o-eight"
+]
 },
 {
 "id": "animals-12",
@@ -986,7 +1511,14 @@ window.TT_QUESTIONS = [
 "A butterfly"
 ],
 "c": 2,
-"fact": "A caterpillar builds a case called a chrysalis and changes inside it."
+"fact": "A caterpillar builds a case called a chrysalis and changes inside it.",
+"qa": "q-animals-12",
+"fa": "f-animals-12",
+"oa": [
+"o-a-spider",
+"o-a-bird",
+"o-a-butterfly"
+]
 },
 {
 "id": "animals-13",
@@ -999,7 +1531,14 @@ window.TT_QUESTIONS = [
 "The monkey"
 ],
 "c": 1,
-"fact": "Lions actually live on grassy plains called savannas, not in jungles."
+"fact": "Lions actually live on grassy plains called savannas, not in jungles.",
+"qa": "q-animals-13",
+"fa": "f-animals-13",
+"oa": [
+"o-the-mouse",
+"o-the-lion",
+"o-the-monkey"
+]
 },
 {
 "id": "animals-14",
@@ -1012,7 +1551,14 @@ window.TT_QUESTIONS = [
 "Bamboo"
 ],
 "c": 2,
-"fact": "A panda can spend up to fourteen hours a day eating bamboo."
+"fact": "A panda can spend up to fourteen hours a day eating bamboo.",
+"qa": "q-animals-14",
+"fa": "f-animals-14",
+"oa": [
+"o-bananas",
+"o-fish",
+"o-bamboo"
+]
 },
 {
 "id": "animals-15",
@@ -1025,7 +1571,14 @@ window.TT_QUESTIONS = [
 "The deer"
 ],
 "c": 0,
-"fact": "A baby kangaroo is called a joey."
+"fact": "A baby kangaroo is called a joey.",
+"qa": "q-animals-15",
+"fa": "f-animals-15",
+"oa": [
+"o-the-kangaroo",
+"o-the-bear",
+"o-the-deer"
+]
 },
 {
 "id": "animals-16",
@@ -1038,7 +1591,14 @@ window.TT_QUESTIONS = [
 "A hen"
 ],
 "c": 2,
-"fact": "A hen can lay almost one egg every day."
+"fact": "A hen can lay almost one egg every day.",
+"qa": "q-animals-16",
+"fa": "f-animals-16",
+"oa": [
+"o-a-cow",
+"o-a-dog",
+"o-a-hen"
+]
 },
 {
 "id": "animals-17",
@@ -1051,7 +1611,14 @@ window.TT_QUESTIONS = [
 "The shark"
 ],
 "c": 1,
-"fact": "A blue whale's heart is about as big as a small car."
+"fact": "A blue whale's heart is about as big as a small car.",
+"qa": "q-animals-17",
+"fa": "f-animals-17",
+"oa": [
+"o-the-elephant",
+"o-the-blue-whale",
+"o-the-shark"
+]
 },
 {
 "id": "animals-18",
@@ -1064,7 +1631,14 @@ window.TT_QUESTIONS = [
 "The lion"
 ],
 "c": 1,
-"fact": "A cheetah can run as fast as a car on a highway."
+"fact": "A cheetah can run as fast as a car on a highway.",
+"qa": "q-animals-18",
+"fa": "f-animals-18",
+"oa": [
+"o-the-horse",
+"o-the-cheetah",
+"o-the-lion"
+]
 },
 {
 "id": "animals-19",
@@ -1077,7 +1651,14 @@ window.TT_QUESTIONS = [
 "The goldfish"
 ],
 "c": 0,
-"fact": "Dolphins breathe air through a blowhole on top of their heads."
+"fact": "Dolphins breathe air through a blowhole on top of their heads.",
+"qa": "q-animals-19",
+"fa": "f-animals-19",
+"oa": [
+"o-the-dolphin",
+"o-the-shark",
+"o-the-goldfish"
+]
 },
 {
 "id": "animals-20",
@@ -1090,7 +1671,14 @@ window.TT_QUESTIONS = [
 "Eight"
 ],
 "c": 0,
-"fact": "Ants, bees and beetles are all insects with six legs."
+"fact": "Ants, bees and beetles are all insects with six legs.",
+"qa": "q-animals-20",
+"fa": "f-animals-20",
+"oa": [
+"o-six",
+"o-ten",
+"o-eight"
+]
 },
 {
 "id": "animals-21",
@@ -1103,7 +1691,14 @@ window.TT_QUESTIONS = [
 "Carnivores"
 ],
 "c": 1,
-"fact": "Cows, elephants and rabbits are all herbivores."
+"fact": "Cows, elephants and rabbits are all herbivores.",
+"qa": "q-animals-21",
+"fa": "f-animals-21",
+"oa": [
+"o-omnivores",
+"o-herbivores",
+"o-carnivores"
+]
 },
 {
 "id": "animals-22",
@@ -1116,7 +1711,14 @@ window.TT_QUESTIONS = [
 "The parrot"
 ],
 "c": 0,
-"fact": "Bats find their way in the dark by listening to echoes."
+"fact": "Bats find their way in the dark by listening to echoes.",
+"qa": "q-animals-22",
+"fa": "f-animals-22",
+"oa": [
+"o-the-bat",
+"o-the-owl",
+"o-the-parrot"
+]
 },
 {
 "id": "animals-23",
@@ -1129,7 +1731,14 @@ window.TT_QUESTIONS = [
 "A flock"
 ],
 "c": 0,
-"fact": "In a pride, the lionesses do most of the hunting."
+"fact": "In a pride, the lionesses do most of the hunting.",
+"qa": "q-animals-23",
+"fa": "f-animals-23",
+"oa": [
+"o-a-pride",
+"o-a-herd",
+"o-a-flock"
+]
 },
 {
 "id": "animals-24",
@@ -1142,7 +1751,14 @@ window.TT_QUESTIONS = [
 "The owl"
 ],
 "c": 2,
-"fact": "An owl can turn its head about three quarters of the way around."
+"fact": "An owl can turn its head about three quarters of the way around.",
+"qa": "q-animals-24",
+"fa": "f-animals-24",
+"oa": [
+"o-the-pigeon",
+"o-the-sparrow",
+"o-the-owl"
+]
 },
 {
 "id": "animals-25",
@@ -1155,7 +1771,14 @@ window.TT_QUESTIONS = [
 "In water"
 ],
 "c": 2,
-"fact": "Frog eggs hatch into tadpoles, which have tails and live in water."
+"fact": "Frog eggs hatch into tadpoles, which have tails and live in water.",
+"qa": "q-animals-25",
+"fa": "f-animals-25",
+"oa": [
+"o-in-a-tree-nest",
+"o-in-the-sand",
+"o-in-water"
+]
 },
 {
 "id": "animals-26",
@@ -1168,7 +1791,14 @@ window.TT_QUESTIONS = [
 "The chameleon"
 ],
 "c": 2,
-"fact": "A chameleon can also move each eye in a different direction."
+"fact": "A chameleon can also move each eye in a different direction.",
+"qa": "q-animals-26",
+"fa": "f-animals-26",
+"oa": [
+"o-the-elephant",
+"o-the-rabbit",
+"o-the-chameleon"
+]
 },
 {
 "id": "animals-27",
@@ -1181,7 +1811,14 @@ window.TT_QUESTIONS = [
 "With lungs"
 ],
 "c": 0,
-"fact": "Gills take oxygen out of the water."
+"fact": "Gills take oxygen out of the water.",
+"qa": "q-animals-27",
+"fa": "f-animals-27",
+"oa": [
+"o-with-gills",
+"o-through-their-tails",
+"o-with-lungs"
+]
 },
 {
 "id": "animals-28",
@@ -1194,7 +1831,14 @@ window.TT_QUESTIONS = [
 "The flying squirrel"
 ],
 "c": 1,
-"fact": "Flying squirrels don't really fly. They glide from tree to tree."
+"fact": "Flying squirrels don't really fly. They glide from tree to tree.",
+"qa": "q-animals-28",
+"fa": "f-animals-28",
+"oa": [
+"o-the-ostrich",
+"o-the-bat",
+"o-the-flying-squirrel"
+]
 },
 {
 "id": "animals-29",
@@ -1207,7 +1851,14 @@ window.TT_QUESTIONS = [
 "A tadpole"
 ],
 "c": 2,
-"fact": "Tadpoles slowly grow legs and lose their tails as they turn into frogs."
+"fact": "Tadpoles slowly grow legs and lose their tails as they turn into frogs.",
+"qa": "q-animals-29",
+"fa": "f-animals-29",
+"oa": [
+"o-a-chick",
+"o-a-cub",
+"o-a-tadpole"
+]
 },
 {
 "id": "animals-30",
@@ -1220,7 +1871,14 @@ window.TT_QUESTIONS = [
 "Sand"
 ],
 "c": 0,
-"fact": "Many people think it is water, but the hump is full of fat for energy."
+"fact": "Many people think it is water, but the hump is full of fat for energy.",
+"qa": "q-animals-30",
+"fa": "f-animals-30",
+"oa": [
+"o-fat",
+"o-water",
+"o-sand"
+]
 },
 {
 "id": "animals-31",
@@ -1233,7 +1891,14 @@ window.TT_QUESTIONS = [
 "The octopus"
 ],
 "c": 2,
-"fact": "An octopus can squirt ink to hide from danger."
+"fact": "An octopus can squirt ink to hide from danger.",
+"qa": "q-animals-31",
+"fa": "f-animals-31",
+"oa": [
+"o-the-jellyfish",
+"o-the-starfish",
+"o-the-octopus"
+]
 },
 {
 "id": "animals-32",
@@ -1246,7 +1911,14 @@ window.TT_QUESTIONS = [
 "The duck"
 ],
 "c": 0,
-"fact": "Beavers' front teeth never stop growing, so chewing wood keeps them short."
+"fact": "Beavers' front teeth never stop growing, so chewing wood keeps them short.",
+"qa": "q-animals-32",
+"fa": "f-animals-32",
+"oa": [
+"o-the-beaver",
+"o-the-otter",
+"o-the-duck"
+]
 },
 {
 "id": "space-01",
@@ -1259,7 +1931,14 @@ window.TT_QUESTIONS = [
 "The Sun"
 ],
 "c": 2,
-"fact": "The Sun is so big that about a million Earths could fit inside it."
+"fact": "The Sun is so big that about a million Earths could fit inside it.",
+"qa": "q-space-01",
+"fa": "f-space-01",
+"oa": [
+"o-the-moon",
+"o-mars",
+"o-the-sun"
+]
 },
 {
 "id": "space-02",
@@ -1272,7 +1951,14 @@ window.TT_QUESTIONS = [
 "Mars"
 ],
 "c": 0,
-"fact": "Earth is the only planet we know of with living things."
+"fact": "Earth is the only planet we know of with living things.",
+"qa": "q-space-02",
+"fa": "f-space-02",
+"oa": [
+"o-earth",
+"o-jupiter",
+"o-mars"
+]
 },
 {
 "id": "space-03",
@@ -1285,7 +1971,14 @@ window.TT_QUESTIONS = [
 "A spacesuit"
 ],
 "c": 2,
-"fact": "A spacesuit gives astronauts air to breathe and keeps them warm."
+"fact": "A spacesuit gives astronauts air to breathe and keeps them warm.",
+"qa": "q-space-03",
+"fa": "f-space-03",
+"oa": [
+"o-pajamas",
+"o-a-raincoat",
+"o-a-spacesuit"
+]
 },
 {
 "id": "space-04",
@@ -1298,7 +1991,14 @@ window.TT_QUESTIONS = [
 "The Moon"
 ],
 "c": 2,
-"fact": "The Moon doesn't make its own light. It shines with light from the Sun."
+"fact": "The Moon doesn't make its own light. It shines with light from the Sun.",
+"qa": "q-space-04",
+"fa": "f-space-04",
+"oa": [
+"o-the-sun",
+"o-a-cloud",
+"o-the-moon"
+]
 },
 {
 "id": "space-05",
@@ -1311,7 +2011,14 @@ window.TT_QUESTIONS = [
 "A sailor"
 ],
 "c": 0,
-"fact": "Astronauts float inside their space station."
+"fact": "Astronauts float inside their space station.",
+"qa": "q-space-05",
+"fa": "f-space-05",
+"oa": [
+"o-an-astronaut",
+"o-a-pilot",
+"o-a-sailor"
+]
 },
 {
 "id": "space-06",
@@ -1324,7 +2031,14 @@ window.TT_QUESTIONS = [
 "A boat"
 ],
 "c": 0,
-"fact": "Rockets need lots of fuel to push away from the Earth."
+"fact": "Rockets need lots of fuel to push away from the Earth.",
+"qa": "q-space-06",
+"fa": "f-space-06",
+"oa": [
+"o-a-rocket",
+"o-a-bus",
+"o-a-boat"
+]
 },
 {
 "id": "space-07",
@@ -1337,7 +2051,14 @@ window.TT_QUESTIONS = [
 "Stars"
 ],
 "c": 2,
-"fact": "Stars are giant balls of fire, very far away."
+"fact": "Stars are giant balls of fire, very far away.",
+"qa": "q-space-07",
+"fa": "f-space-07",
+"oa": [
+"o-lamps",
+"o-bubbles",
+"o-stars"
+]
 },
 {
 "id": "space-08",
@@ -1350,7 +2071,14 @@ window.TT_QUESTIONS = [
 "Mars"
 ],
 "c": 2,
-"fact": "Mars looks red because its ground is covered in rusty dust."
+"fact": "Mars looks red because its ground is covered in rusty dust.",
+"qa": "q-space-08",
+"fa": "f-space-08",
+"oa": [
+"o-venus",
+"o-neptune",
+"o-mars"
+]
 },
 {
 "id": "space-09",
@@ -1363,7 +2091,14 @@ window.TT_QUESTIONS = [
 "Mars"
 ],
 "c": 0,
-"fact": "Saturn's rings are made of chunks of ice and rock."
+"fact": "Saturn's rings are made of chunks of ice and rock.",
+"qa": "q-space-09",
+"fa": "f-space-09",
+"oa": [
+"o-saturn",
+"o-mercury",
+"o-mars"
+]
 },
 {
 "id": "space-10",
@@ -1376,7 +2111,14 @@ window.TT_QUESTIONS = [
 "A planet"
 ],
 "c": 1,
-"fact": "The Sun is the closest star to Earth."
+"fact": "The Sun is the closest star to Earth.",
+"qa": "q-space-10",
+"fa": "f-space-10",
+"oa": [
+"o-a-moon",
+"o-a-star",
+"o-a-planet"
+]
 },
 {
 "id": "space-11",
@@ -1389,7 +2131,14 @@ window.TT_QUESTIONS = [
 "On Mars"
 ],
 "c": 1,
-"fact": "Footprints on the Moon can stay for millions of years because there is no wind."
+"fact": "Footprints on the Moon can stay for millions of years because there is no wind.",
+"qa": "q-space-11",
+"fa": "f-space-11",
+"oa": [
+"o-on-the-sun",
+"o-on-the-moon",
+"o-on-mars"
+]
 },
 {
 "id": "space-12",
@@ -1402,7 +2151,14 @@ window.TT_QUESTIONS = [
 "The Sun"
 ],
 "c": 2,
-"fact": "The Sun looks small only because it is so far away."
+"fact": "The Sun looks small only because it is so far away.",
+"qa": "q-space-12",
+"fa": "f-space-12",
+"oa": [
+"o-they-are-the-same-size",
+"o-the-earth",
+"o-the-sun"
+]
 },
 {
 "id": "space-13",
@@ -1415,7 +2171,14 @@ window.TT_QUESTIONS = [
 "A rainbow"
 ],
 "c": 1,
-"fact": "One famous constellation looks like a big spoon, called the Big Dipper."
+"fact": "One famous constellation looks like a big spoon, called the Big Dipper.",
+"qa": "q-space-13",
+"fa": "f-space-13",
+"oa": [
+"o-a-comet",
+"o-a-constellation",
+"o-a-rainbow"
+]
 },
 {
 "id": "space-14",
@@ -1428,7 +2191,14 @@ window.TT_QUESTIONS = [
 "The Moon"
 ],
 "c": 1,
-"fact": "One whole trip around the Sun takes one year."
+"fact": "One whole trip around the Sun takes one year.",
+"qa": "q-space-14",
+"fa": "f-space-14",
+"oa": [
+"o-mars",
+"o-the-sun",
+"o-the-moon"
+]
 },
 {
 "id": "space-15",
@@ -1441,7 +2211,14 @@ window.TT_QUESTIONS = [
 "Our side of Earth turns away from the Sun"
 ],
 "c": 2,
-"fact": "The Earth spins like a top, so the Sun seems to rise and set."
+"fact": "The Earth spins like a top, so the Sun seems to rise and set.",
+"qa": "q-space-15",
+"fa": "f-space-15",
+"oa": [
+"o-clouds-cover-the-sun",
+"o-the-sun-goes-to-sleep",
+"o-our-side-of-earth-turns-away-from-the-sun"
+]
 },
 {
 "id": "space-16",
@@ -1454,7 +2231,14 @@ window.TT_QUESTIONS = [
 "Ice cream"
 ],
 "c": 1,
-"fact": "The Moon has big round holes called craters, made by space rocks crashing into it."
+"fact": "The Moon has big round holes called craters, made by space rocks crashing into it.",
+"qa": "q-space-16",
+"fa": "f-space-16",
+"oa": [
+"o-cheese",
+"o-rock",
+"o-ice-cream"
+]
 },
 {
 "id": "space-17",
@@ -1467,7 +2251,14 @@ window.TT_QUESTIONS = [
 "Nine"
 ],
 "c": 0,
-"fact": "Pluto used to be called a planet, but now it is called a dwarf planet."
+"fact": "Pluto used to be called a planet, but now it is called a dwarf planet.",
+"qa": "q-space-17",
+"fa": "f-space-17",
+"oa": [
+"o-eight",
+"o-twelve",
+"o-nine"
+]
 },
 {
 "id": "space-18",
@@ -1480,7 +2271,14 @@ window.TT_QUESTIONS = [
 "Earth"
 ],
 "c": 1,
-"fact": "Jupiter has a giant storm called the Great Red Spot that is bigger than the Earth."
+"fact": "Jupiter has a giant storm called the Great Red Spot that is bigger than the Earth.",
+"qa": "q-space-18",
+"fa": "f-space-18",
+"oa": [
+"o-mars",
+"o-jupiter",
+"o-earth"
+]
 },
 {
 "id": "space-19",
@@ -1493,7 +2291,14 @@ window.TT_QUESTIONS = [
 "Venus"
 ],
 "c": 0,
-"fact": "A year on Mercury is only 88 days long."
+"fact": "A year on Mercury is only 88 days long.",
+"qa": "q-space-19",
+"fa": "f-space-19",
+"oa": [
+"o-mercury",
+"o-earth",
+"o-venus"
+]
 },
 {
 "id": "space-20",
@@ -1506,7 +2311,14 @@ window.TT_QUESTIONS = [
 "Mercury"
 ],
 "c": 0,
-"fact": "Venus is covered in thick clouds that trap the heat like a blanket."
+"fact": "Venus is covered in thick clouds that trap the heat like a blanket.",
+"qa": "q-space-20",
+"fa": "f-space-20",
+"oa": [
+"o-venus",
+"o-mars",
+"o-mercury"
+]
 },
 {
 "id": "space-21",
@@ -1519,7 +2331,14 @@ window.TT_QUESTIONS = [
 "ISRO"
 ],
 "c": 2,
-"fact": "ISRO launched a mission to Mars called Mangalyaan."
+"fact": "ISRO launched a mission to Mars called Mangalyaan.",
+"qa": "q-space-21",
+"fa": "f-space-21",
+"oa": [
+"o-nasa",
+"o-a-rocket-club",
+"o-isro"
+]
 },
 {
 "id": "space-22",
@@ -1532,7 +2351,14 @@ window.TT_QUESTIONS = [
 "Mangalyaan"
 ],
 "c": 0,
-"fact": "Chandra means moon. It landed near the Moon's south pole."
+"fact": "Chandra means moon. It landed near the Moon's south pole.",
+"qa": "q-space-22",
+"fa": "f-space-22",
+"oa": [
+"o-chandrayaan-3",
+"o-gaganyaan",
+"o-mangalyaan"
+]
 },
 {
 "id": "space-23",
@@ -1545,7 +2371,14 @@ window.TT_QUESTIONS = [
 "Rakesh Sharma"
 ],
 "c": 1,
-"fact": "He said, that's one small step for man, one giant leap for mankind."
+"fact": "He said, that's one small step for man, one giant leap for mankind.",
+"qa": "q-space-23",
+"fa": "f-space-23",
+"oa": [
+"o-yuri-gagarin",
+"o-neil-armstrong",
+"o-rakesh-sharma"
+]
 },
 {
 "id": "space-24",
@@ -1558,7 +2391,14 @@ window.TT_QUESTIONS = [
 "Kalpana Chawla"
 ],
 "c": 0,
-"fact": "In 1984, he said India looked saare jahan se achha, better than the whole world."
+"fact": "In 1984, he said India looked saare jahan se achha, better than the whole world.",
+"qa": "q-space-24",
+"fa": "f-space-24",
+"oa": [
+"o-rakesh-sharma",
+"o-neil-armstrong",
+"o-kalpana-chawla"
+]
 },
 {
 "id": "space-25",
@@ -1571,7 +2411,14 @@ window.TT_QUESTIONS = [
 "One week"
 ],
 "c": 1,
-"fact": "That is why we have a birthday once every year."
+"fact": "That is why we have a birthday once every year.",
+"qa": "q-space-25",
+"fa": "f-space-25",
+"oa": [
+"o-one-day",
+"o-one-year",
+"o-one-week"
+]
 },
 {
 "id": "space-26",
@@ -1584,7 +2431,14 @@ window.TT_QUESTIONS = [
 "One day"
 ],
 "c": 2,
-"fact": "One spin gives us one day and one night."
+"fact": "One spin gives us one day and one night.",
+"qa": "q-space-26",
+"fa": "f-space-26",
+"oa": [
+"o-one-year",
+"o-one-hour",
+"o-one-day"
+]
 },
 {
 "id": "space-27",
@@ -1597,7 +2451,14 @@ window.TT_QUESTIONS = [
 "A space rock burning up"
 ],
 "c": 2,
-"fact": "Shooting stars are called meteors."
+"fact": "Shooting stars are called meteors.",
+"qa": "q-space-27",
+"fa": "f-space-27",
+"oa": [
+"o-a-firework",
+"o-a-falling-star",
+"o-a-space-rock-burning-up"
+]
 },
 {
 "id": "space-28",
@@ -1610,7 +2471,14 @@ window.TT_QUESTIONS = [
 "The Milky Way"
 ],
 "c": 2,
-"fact": "Our galaxy has hundreds of billions of stars."
+"fact": "Our galaxy has hundreds of billions of stars.",
+"qa": "q-space-28",
+"fa": "f-space-28",
+"oa": [
+"o-the-chocolate-way",
+"o-the-big-dipper",
+"o-the-milky-way"
+]
 },
 {
 "id": "space-29",
@@ -1623,7 +2491,14 @@ window.TT_QUESTIONS = [
 "Earth"
 ],
 "c": 1,
-"fact": "Neptune is so far away that one trip around the Sun takes 165 years."
+"fact": "Neptune is so far away that one trip around the Sun takes 165 years.",
+"qa": "q-space-29",
+"fa": "f-space-29",
+"oa": [
+"o-saturn",
+"o-neptune",
+"o-earth"
+]
 },
 {
 "id": "space-30",
@@ -1636,7 +2511,14 @@ window.TT_QUESTIONS = [
 "About 8 seconds"
 ],
 "c": 1,
-"fact": "Light is the fastest thing there is."
+"fact": "Light is the fastest thing there is.",
+"qa": "q-space-30",
+"fa": "f-space-30",
+"oa": [
+"o-about-8-days",
+"o-about-8-minutes",
+"o-about-8-seconds"
+]
 },
 {
 "id": "space-31",
@@ -1649,7 +2531,14 @@ window.TT_QUESTIONS = [
 "A comet"
 ],
 "c": 1,
-"fact": "Jupiter and Saturn each have dozens of moons."
+"fact": "Jupiter and Saturn each have dozens of moons.",
+"qa": "q-space-31",
+"fa": "f-space-31",
+"oa": [
+"o-a-star",
+"o-a-moon",
+"o-a-comet"
+]
 },
 {
 "id": "space-32",
@@ -1662,7 +2551,14 @@ window.TT_QUESTIONS = [
 "Wind"
 ],
 "c": 0,
-"fact": "The Sun's gravity pulls on the planets and keeps them on their paths."
+"fact": "The Sun's gravity pulls on the planets and keeps them on their paths.",
+"qa": "q-space-32",
+"fa": "f-space-32",
+"oa": [
+"o-gravity",
+"o-magnets",
+"o-wind"
+]
 },
 {
 "id": "geo-01",
@@ -1675,7 +2571,14 @@ window.TT_QUESTIONS = [
 "The Atlantic Ocean"
 ],
 "c": 1,
-"fact": "The Pacific Ocean is bigger than all the land on Earth put together."
+"fact": "The Pacific Ocean is bigger than all the land on Earth put together.",
+"qa": "q-geo-01",
+"fa": "f-geo-01",
+"oa": [
+"o-the-indian-ocean",
+"o-the-pacific-ocean",
+"o-the-atlantic-ocean"
+]
 },
 {
 "id": "geo-02",
@@ -1688,7 +2591,14 @@ window.TT_QUESTIONS = [
 "Africa"
 ],
 "c": 1,
-"fact": "Antarctica is the coldest place on Earth, and penguins live there."
+"fact": "Antarctica is the coldest place on Earth, and penguins live there.",
+"qa": "q-geo-02",
+"fa": "f-geo-02",
+"oa": [
+"o-asia",
+"o-antarctica",
+"o-africa"
+]
 },
 {
 "id": "geo-03",
@@ -1701,7 +2611,14 @@ window.TT_QUESTIONS = [
 "A jungle"
 ],
 "c": 0,
-"fact": "Some deserts are cold, like the ones in Antarctica."
+"fact": "Some deserts are cold, like the ones in Antarctica.",
+"qa": "q-geo-03",
+"fa": "f-geo-03",
+"oa": [
+"o-a-desert",
+"o-a-lake",
+"o-a-jungle"
+]
 },
 {
 "id": "geo-04",
@@ -1714,7 +2631,14 @@ window.TT_QUESTIONS = [
 "A volcano"
 ],
 "c": 2,
-"fact": "The hot melted rock inside a volcano is called magma."
+"fact": "The hot melted rock inside a volcano is called magma.",
+"qa": "q-geo-04",
+"fa": "f-geo-04",
+"oa": [
+"o-a-cave",
+"o-a-hill",
+"o-a-volcano"
+]
 },
 {
 "id": "geo-05",
@@ -1727,7 +2651,14 @@ window.TT_QUESTIONS = [
 "Asia"
 ],
 "c": 2,
-"fact": "Asia is the biggest continent, with the most people."
+"fact": "Asia is the biggest continent, with the most people.",
+"qa": "q-geo-05",
+"fa": "f-geo-05",
+"oa": [
+"o-europe",
+"o-africa",
+"o-asia"
+]
 },
 {
 "id": "geo-06",
@@ -1740,7 +2671,14 @@ window.TT_QUESTIONS = [
 "A desert"
 ],
 "c": 1,
-"fact": "Sri Lanka, near India, is an island."
+"fact": "Sri Lanka, near India, is an island.",
+"qa": "q-geo-06",
+"fa": "f-geo-06",
+"oa": [
+"o-a-valley",
+"o-an-island",
+"o-a-desert"
+]
 },
 {
 "id": "geo-07",
@@ -1753,7 +2691,14 @@ window.TT_QUESTIONS = [
 "North"
 ],
 "c": 1,
-"fact": "The Sun rises in the east and sets in the west."
+"fact": "The Sun rises in the east and sets in the west.",
+"qa": "q-geo-07",
+"fa": "f-geo-07",
+"oa": [
+"o-west",
+"o-east",
+"o-north"
+]
 },
 {
 "id": "geo-08",
@@ -1766,7 +2711,14 @@ window.TT_QUESTIONS = [
 "A calendar"
 ],
 "c": 0,
-"fact": "A globe is a map shaped like a ball, just like the Earth."
+"fact": "A globe is a map shaped like a ball, just like the Earth.",
+"qa": "q-geo-08",
+"fa": "f-geo-08",
+"oa": [
+"o-a-map",
+"o-a-clock",
+"o-a-calendar"
+]
 },
 {
 "id": "geo-09",
@@ -1779,7 +2731,14 @@ window.TT_QUESTIONS = [
 "A beach"
 ],
 "c": 0,
-"fact": "Forests are home to lots of animals and birds."
+"fact": "Forests are home to lots of animals and birds.",
+"qa": "q-geo-09",
+"fa": "f-geo-09",
+"oa": [
+"o-a-forest",
+"o-a-desert",
+"o-a-beach"
+]
 },
 {
 "id": "geo-10",
@@ -1792,7 +2751,14 @@ window.TT_QUESTIONS = [
 "The jungle"
 ],
 "c": 0,
-"fact": "Under their white fur, polar bears have black skin to soak up warmth."
+"fact": "Under their white fur, polar bears have black skin to soak up warmth.",
+"qa": "q-geo-10",
+"fa": "f-geo-10",
+"oa": [
+"o-the-arctic",
+"o-the-desert",
+"o-the-jungle"
+]
 },
 {
 "id": "geo-11",
@@ -1805,7 +2771,14 @@ window.TT_QUESTIONS = [
 "A waterfall"
 ],
 "c": 2,
-"fact": "The tallest waterfall in the world is Angel Falls in Venezuela."
+"fact": "The tallest waterfall in the world is Angel Falls in Venezuela.",
+"qa": "q-geo-11",
+"fa": "f-geo-11",
+"oa": [
+"o-a-puddle",
+"o-a-well",
+"o-a-waterfall"
+]
 },
 {
 "id": "geo-12",
@@ -1818,7 +2791,14 @@ window.TT_QUESTIONS = [
 "The North Pole"
 ],
 "c": 2,
-"fact": "At the North Pole, there are months when the Sun never sets."
+"fact": "At the North Pole, there are months when the Sun never sets.",
+"qa": "q-geo-12",
+"fa": "f-geo-12",
+"oa": [
+"o-a-beach",
+"o-a-desert",
+"o-the-north-pole"
+]
 },
 {
 "id": "geo-13",
@@ -1831,7 +2811,14 @@ window.TT_QUESTIONS = [
 "A river"
 ],
 "c": 0,
-"fact": "The tallest mountain in the world is Mount Everest."
+"fact": "The tallest mountain in the world is Mount Everest.",
+"qa": "q-geo-13",
+"fa": "f-geo-13",
+"oa": [
+"o-a-mountain",
+"o-a-valley",
+"o-a-river"
+]
 },
 {
 "id": "geo-14",
@@ -1844,7 +2831,14 @@ window.TT_QUESTIONS = [
 "The coast"
 ],
 "c": 2,
-"fact": "Waves wash sand onto the coast to make beaches."
+"fact": "Waves wash sand onto the coast to make beaches.",
+"qa": "q-geo-14",
+"fa": "f-geo-14",
+"oa": [
+"o-the-sky",
+"o-the-forest",
+"o-the-coast"
+]
 },
 {
 "id": "geo-15",
@@ -1857,7 +2851,14 @@ window.TT_QUESTIONS = [
 "A pond"
 ],
 "c": 1,
-"fact": "Oceans cover most of our planet."
+"fact": "Oceans cover most of our planet.",
+"qa": "q-geo-15",
+"fa": "f-geo-15",
+"oa": [
+"o-a-bathtub",
+"o-an-ocean",
+"o-a-pond"
+]
 },
 {
 "id": "geo-16",
@@ -1870,7 +2871,14 @@ window.TT_QUESTIONS = [
 "A river"
 ],
 "c": 2,
-"fact": "Rivers start up in hills and mountains and flow downhill."
+"fact": "Rivers start up in hills and mountains and flow downhill.",
+"qa": "q-geo-16",
+"fa": "f-geo-16",
+"oa": [
+"o-a-road",
+"o-a-tunnel",
+"o-a-river"
+]
 },
 {
 "id": "geo-17",
@@ -1883,7 +2891,14 @@ window.TT_QUESTIONS = [
 "Seven"
 ],
 "c": 2,
-"fact": "They are Asia, Africa, North America, South America, Antarctica, Europe and Australia."
+"fact": "They are Asia, Africa, North America, South America, Antarctica, Europe and Australia.",
+"qa": "q-geo-17",
+"fa": "f-geo-17",
+"oa": [
+"o-five",
+"o-ten",
+"o-seven"
+]
 },
 {
 "id": "geo-18",
@@ -1896,7 +2911,14 @@ window.TT_QUESTIONS = [
 "The Thames"
 ],
 "c": 1,
-"fact": "The Nile flows through Africa to the sea in Egypt."
+"fact": "The Nile flows through Africa to the sea in Egypt.",
+"qa": "q-geo-18",
+"fa": "f-geo-18",
+"oa": [
+"o-the-ganga",
+"o-the-nile",
+"o-the-thames"
+]
 },
 {
 "id": "geo-19",
@@ -1909,7 +2931,14 @@ window.TT_QUESTIONS = [
 "Mount Everest"
 ],
 "c": 2,
-"fact": "Mount Everest is on the border of Nepal and China."
+"fact": "Mount Everest is on the border of Nepal and China.",
+"qa": "q-geo-19",
+"fa": "f-geo-19",
+"oa": [
+"o-mount-kilimanjaro",
+"o-mount-fuji",
+"o-mount-everest"
+]
 },
 {
 "id": "geo-20",
@@ -1922,7 +2951,14 @@ window.TT_QUESTIONS = [
 "The Gobi"
 ],
 "c": 0,
-"fact": "India has a desert too, called the Thar Desert, in Rajasthan."
+"fact": "India has a desert too, called the Thar Desert, in Rajasthan.",
+"qa": "q-geo-20",
+"fa": "f-geo-20",
+"oa": [
+"o-the-sahara",
+"o-the-thar",
+"o-the-gobi"
+]
 },
 {
 "id": "geo-21",
@@ -1935,7 +2971,14 @@ window.TT_QUESTIONS = [
 "Russia"
 ],
 "c": 0,
-"fact": "More than one billion people live in India."
+"fact": "More than one billion people live in India.",
+"qa": "q-geo-21",
+"fa": "f-geo-21",
+"oa": [
+"o-india",
+"o-canada",
+"o-russia"
+]
 },
 {
 "id": "geo-22",
@@ -1948,7 +2991,14 @@ window.TT_QUESTIONS = [
 "Australia"
 ],
 "c": 2,
-"fact": "Australia is a country and a continent at the same time."
+"fact": "Australia is a country and a continent at the same time.",
+"qa": "q-geo-22",
+"fa": "f-geo-22",
+"oa": [
+"o-brazil",
+"o-canada",
+"o-australia"
+]
 },
 {
 "id": "geo-23",
@@ -1961,7 +3011,14 @@ window.TT_QUESTIONS = [
 "India"
 ],
 "c": 1,
-"fact": "The pyramids were built more than four thousand years ago."
+"fact": "The pyramids were built more than four thousand years ago.",
+"qa": "q-geo-23",
+"fa": "f-geo-23",
+"oa": [
+"o-japan",
+"o-egypt",
+"o-india"
+]
 },
 {
 "id": "geo-24",
@@ -1974,7 +3031,14 @@ window.TT_QUESTIONS = [
 "Beijing"
 ],
 "c": 1,
-"fact": "Japan is made up of thousands of islands."
+"fact": "Japan is made up of thousands of islands.",
+"qa": "q-geo-24",
+"fa": "f-geo-24",
+"oa": [
+"o-delhi",
+"o-tokyo",
+"o-beijing"
+]
 },
 {
 "id": "geo-25",
@@ -1987,7 +3051,14 @@ window.TT_QUESTIONS = [
 "Spain"
 ],
 "c": 0,
-"fact": "Italy is where pizza first became famous."
+"fact": "Italy is where pizza first became famous.",
+"qa": "q-geo-25",
+"fa": "f-geo-25",
+"oa": [
+"o-italy",
+"o-france",
+"o-spain"
+]
 },
 {
 "id": "geo-26",
@@ -2000,7 +3071,14 @@ window.TT_QUESTIONS = [
 "Russia"
 ],
 "c": 2,
-"fact": "Russia is so wide that it has eleven different time zones."
+"fact": "Russia is so wide that it has eleven different time zones.",
+"qa": "q-geo-26",
+"fa": "f-geo-26",
+"oa": [
+"o-japan",
+"o-india",
+"o-russia"
+]
 },
 {
 "id": "geo-27",
@@ -2013,7 +3091,14 @@ window.TT_QUESTIONS = [
 "The Arctic Ocean"
 ],
 "c": 1,
-"fact": "It is the only ocean named after a country."
+"fact": "It is the only ocean named after a country.",
+"qa": "q-geo-27",
+"fa": "f-geo-27",
+"oa": [
+"o-the-pacific-ocean",
+"o-the-indian-ocean",
+"o-the-arctic-ocean"
+]
 },
 {
 "id": "geo-28",
@@ -2026,7 +3111,14 @@ window.TT_QUESTIONS = [
 "Italy"
 ],
 "c": 0,
-"fact": "The Eiffel Tower is painted again every few years so it doesn't rust."
+"fact": "The Eiffel Tower is painted again every few years so it doesn't rust.",
+"qa": "q-geo-28",
+"fa": "f-geo-28",
+"oa": [
+"o-france",
+"o-england",
+"o-italy"
+]
 },
 {
 "id": "geo-29",
@@ -2039,7 +3131,14 @@ window.TT_QUESTIONS = [
 "Asia"
 ],
 "c": 2,
-"fact": "Asia has the tallest mountain and the most people."
+"fact": "Asia has the tallest mountain and the most people.",
+"qa": "q-geo-29",
+"fa": "f-geo-29",
+"oa": [
+"o-africa",
+"o-europe",
+"o-asia"
+]
 },
 {
 "id": "geo-30",
@@ -2052,7 +3151,14 @@ window.TT_QUESTIONS = [
 "The North Pole"
 ],
 "c": 1,
-"fact": "Places near the equator are warm all year round."
+"fact": "Places near the equator are warm all year round.",
+"qa": "q-geo-30",
+"fa": "f-geo-30",
+"oa": [
+"o-the-horizon",
+"o-the-equator",
+"o-the-north-pole"
+]
 },
 {
 "id": "geo-31",
@@ -2065,7 +3171,14 @@ window.TT_QUESTIONS = [
 "Assam"
 ],
 "c": 0,
-"fact": "Rajasthan has a famous camel fair in the town of Pushkar."
+"fact": "Rajasthan has a famous camel fair in the town of Pushkar.",
+"qa": "q-geo-31",
+"fa": "f-geo-31",
+"oa": [
+"o-rajasthan",
+"o-kerala",
+"o-assam"
+]
 },
 {
 "id": "geo-32",
@@ -2078,7 +3191,14 @@ window.TT_QUESTIONS = [
 "Brazil"
 ],
 "c": 2,
-"fact": "The Amazon rainforest is home to millions of kinds of plants and animals."
+"fact": "The Amazon rainforest is home to millions of kinds of plants and animals.",
+"qa": "q-geo-32",
+"fa": "f-geo-32",
+"oa": [
+"o-egypt",
+"o-india",
+"o-brazil"
+]
 },
 {
 "id": "history-01",
@@ -2091,7 +3211,14 @@ window.TT_QUESTIONS = [
 "Dinosaurs"
 ],
 "c": 2,
-"fact": "Dinosaurs lived millions of years before the first people."
+"fact": "Dinosaurs lived millions of years before the first people.",
+"qa": "q-history-01",
+"fa": "f-history-01",
+"oa": [
+"o-dragons",
+"o-unicorns",
+"o-dinosaurs"
+]
 },
 {
 "id": "history-02",
@@ -2104,7 +3231,14 @@ window.TT_QUESTIONS = [
 "Kings and queens"
 ],
 "c": 2,
-"fact": "Some castles had water around them called a moat."
+"fact": "Some castles had water around them called a moat.",
+"qa": "q-history-02",
+"fa": "f-history-02",
+"oa": [
+"o-astronauts",
+"o-robots",
+"o-kings-and-queens"
+]
 },
 {
 "id": "history-03",
@@ -2117,7 +3251,14 @@ window.TT_QUESTIONS = [
 "Phones"
 ],
 "c": 0,
-"fact": "In India, people have used clay oil lamps called diyas for thousands of years."
+"fact": "In India, people have used clay oil lamps called diyas for thousands of years.",
+"qa": "q-history-03",
+"fa": "f-history-03",
+"oa": [
+"o-candles-and-oil-lamps",
+"o-televisions",
+"o-phones"
+]
 },
 {
 "id": "history-04",
@@ -2130,7 +3271,14 @@ window.TT_QUESTIONS = [
 "On horses and carts"
 ],
 "c": 2,
-"fact": "Some people also travelled on camels and elephants."
+"fact": "Some people also travelled on camels and elephants.",
+"qa": "q-history-04",
+"fa": "f-history-04",
+"oa": [
+"o-on-scooters",
+"o-in-rockets",
+"o-on-horses-and-carts"
+]
 },
 {
 "id": "history-05",
@@ -2143,7 +3291,14 @@ window.TT_QUESTIONS = [
 "Pen and paper"
 ],
 "c": 2,
-"fact": "Long ago, people wrote on palm leaves and clay tablets."
+"fact": "Long ago, people wrote on palm leaves and clay tablets.",
+"qa": "q-history-05",
+"fa": "f-history-05",
+"oa": [
+"o-tablets",
+"o-phones",
+"o-pen-and-paper"
+]
 },
 {
 "id": "history-06",
@@ -2156,7 +3311,14 @@ window.TT_QUESTIONS = [
 "Igloos"
 ],
 "c": 0,
-"fact": "The biggest pyramid was the tallest building in the world for thousands of years."
+"fact": "The biggest pyramid was the tallest building in the world for thousands of years.",
+"qa": "q-history-06",
+"fa": "f-history-06",
+"oa": [
+"o-pyramids",
+"o-skyscrapers",
+"o-igloos"
+]
 },
 {
 "id": "history-07",
@@ -2169,7 +3331,14 @@ window.TT_QUESTIONS = [
 "Tyrannosaurus"
 ],
 "c": 0,
-"fact": "Triceratops means three-horned face."
+"fact": "Triceratops means three-horned face.",
+"qa": "q-history-07",
+"fa": "f-history-07",
+"oa": [
+"o-triceratops",
+"o-stegosaurus",
+"o-tyrannosaurus"
+]
 },
 {
 "id": "history-08",
@@ -2182,7 +3351,14 @@ window.TT_QUESTIONS = [
 "Animals"
 ],
 "c": 2,
-"fact": "Some cave paintings in India, at Bhimbetka, are many thousands of years old."
+"fact": "Some cave paintings in India, at Bhimbetka, are many thousands of years old.",
+"qa": "q-history-08",
+"fa": "f-history-08",
+"oa": [
+"o-phones",
+"o-cars",
+"o-animals"
+]
 },
 {
 "id": "history-09",
@@ -2195,7 +3371,14 @@ window.TT_QUESTIONS = [
 "In caves"
 ],
 "c": 2,
-"fact": "Caves kept early people safe from the rain and wild animals."
+"fact": "Caves kept early people safe from the rain and wild animals.",
+"qa": "q-history-09",
+"fa": "f-history-09",
+"oa": [
+"o-in-space-stations",
+"o-in-skyscrapers",
+"o-in-caves"
+]
 },
 {
 "id": "history-10",
@@ -2208,7 +3391,14 @@ window.TT_QUESTIONS = [
 "In ships"
 ],
 "c": 2,
-"fact": "Pirate ships had big cloth sails that caught the wind."
+"fact": "Pirate ships had big cloth sails that caught the wind.",
+"qa": "q-history-10",
+"fa": "f-history-10",
+"oa": [
+"o-in-airplanes",
+"o-in-trains",
+"o-in-ships"
+]
 },
 {
 "id": "history-11",
@@ -2221,7 +3411,14 @@ window.TT_QUESTIONS = [
 "Pajamas"
 ],
 "c": 1,
-"fact": "A full suit of armor could be as heavy as a big bag of rice."
+"fact": "A full suit of armor could be as heavy as a big bag of rice.",
+"qa": "q-history-11",
+"fa": "f-history-11",
+"oa": [
+"o-swimsuits",
+"o-armor",
+"o-pajamas"
+]
 },
 {
 "id": "history-12",
@@ -2234,7 +3431,14 @@ window.TT_QUESTIONS = [
 "In a swimming pool"
 ],
 "c": 1,
-"fact": "Dinosaur bones turned into stone called fossils."
+"fact": "Dinosaur bones turned into stone called fossils.",
+"qa": "q-history-12",
+"fa": "f-history-12",
+"oa": [
+"o-in-a-bakery",
+"o-in-a-museum",
+"o-in-a-swimming-pool"
+]
 },
 {
 "id": "history-13",
@@ -2247,7 +3451,14 @@ window.TT_QUESTIONS = [
 "Triceratops"
 ],
 "c": 0,
-"fact": "Tyrannosaurus had teeth as long as bananas."
+"fact": "Tyrannosaurus had teeth as long as bananas.",
+"qa": "q-history-13",
+"fa": "f-history-13",
+"oa": [
+"o-tyrannosaurus",
+"o-brachiosaurus",
+"o-triceratops"
+]
 },
 {
 "id": "history-14",
@@ -2260,7 +3471,14 @@ window.TT_QUESTIONS = [
 "The phone"
 ],
 "c": 1,
-"fact": "The wheel was invented more than five thousand years ago."
+"fact": "The wheel was invented more than five thousand years ago.",
+"qa": "q-history-14",
+"fa": "f-history-14",
+"oa": [
+"o-the-television",
+"o-the-wheel",
+"o-the-phone"
+]
 },
 {
 "id": "history-15",
@@ -2273,7 +3491,14 @@ window.TT_QUESTIONS = [
 "By email"
 ],
 "c": 1,
-"fact": "Some people even used trained pigeons to carry messages."
+"fact": "Some people even used trained pigeons to carry messages.",
+"qa": "q-history-15",
+"fa": "f-history-15",
+"oa": [
+"o-by-video-call",
+"o-by-letters-and-messengers",
+"o-by-email"
+]
 },
 {
 "id": "history-16",
@@ -2286,7 +3511,14 @@ window.TT_QUESTIONS = [
 "A sundial"
 ],
 "c": 2,
-"fact": "In Jaipur, there is a giant sundial at a place called Jantar Mantar."
+"fact": "In Jaipur, there is a giant sundial at a place called Jantar Mantar.",
+"qa": "q-history-16",
+"fa": "f-history-16",
+"oa": [
+"o-a-phone",
+"o-a-television",
+"o-a-sundial"
+]
 },
 {
 "id": "history-17",
@@ -2299,7 +3531,14 @@ window.TT_QUESTIONS = [
 "Isaac Newton"
 ],
 "c": 1,
-"fact": "Their first flight in 1903 lasted only about twelve seconds."
+"fact": "Their first flight in 1903 lasted only about twelve seconds.",
+"qa": "q-history-17",
+"fa": "f-history-17",
+"oa": [
+"o-thomas-edison",
+"o-the-wright-brothers",
+"o-isaac-newton"
+]
 },
 {
 "id": "history-18",
@@ -2312,7 +3551,14 @@ window.TT_QUESTIONS = [
 "Thomas Edison"
 ],
 "c": 2,
-"fact": "Edison tried thousands of materials before he found one that worked."
+"fact": "Edison tried thousands of materials before he found one that worked.",
+"qa": "q-history-18",
+"fa": "f-history-18",
+"oa": [
+"o-albert-einstein",
+"o-isaac-newton",
+"o-thomas-edison"
+]
 },
 {
 "id": "history-19",
@@ -2325,7 +3571,14 @@ window.TT_QUESTIONS = [
 "2000"
 ],
 "c": 0,
-"fact": "India celebrates Independence Day every year on the fifteenth of August."
+"fact": "India celebrates Independence Day every year on the fifteenth of August.",
+"qa": "q-history-19",
+"fa": "f-history-19",
+"oa": [
+"o-1947",
+"o-1857",
+"o-2000"
+]
 },
 {
 "id": "history-20",
@@ -2338,7 +3591,14 @@ window.TT_QUESTIONS = [
 "Akbar"
 ],
 "c": 1,
-"fact": "He built it in memory of his wife, Mumtaz Mahal."
+"fact": "He built it in memory of his wife, Mumtaz Mahal.",
+"qa": "q-history-20",
+"fa": "f-history-20",
+"oa": [
+"o-ashoka",
+"o-shah-jahan",
+"o-akbar"
+]
 },
 {
 "id": "history-21",
@@ -2351,7 +3611,14 @@ window.TT_QUESTIONS = [
 "The Egyptians"
 ],
 "c": 0,
-"fact": "They had covered drains and public baths thousands of years ago."
+"fact": "They had covered drains and public baths thousands of years ago.",
+"qa": "q-history-21",
+"fa": "f-history-21",
+"oa": [
+"o-the-indus-valley",
+"o-the-romans",
+"o-the-egyptians"
+]
 },
 {
 "id": "history-22",
@@ -2364,7 +3631,14 @@ window.TT_QUESTIONS = [
 "Emojis"
 ],
 "c": 0,
-"fact": "Hieroglyphs were carved on walls and written on paper made from a plant called papyrus."
+"fact": "Hieroglyphs were carved on walls and written on paper made from a plant called papyrus.",
+"qa": "q-history-22",
+"fa": "f-history-22",
+"oa": [
+"o-hieroglyphs",
+"o-comics",
+"o-emojis"
+]
 },
 {
 "id": "history-23",
@@ -2377,7 +3651,14 @@ window.TT_QUESTIONS = [
 "Ashoka"
 ],
 "c": 2,
-"fact": "The lions from Ashoka's pillar are now India's national emblem."
+"fact": "The lions from Ashoka's pillar are now India's national emblem.",
+"qa": "q-history-23",
+"fa": "f-history-23",
+"oa": [
+"o-babur",
+"o-akbar",
+"o-ashoka"
+]
 },
 {
 "id": "history-24",
@@ -2390,7 +3671,14 @@ window.TT_QUESTIONS = [
 "Jawaharlal Nehru"
 ],
 "c": 0,
-"fact": "Tagore was the first person from Asia to win a Nobel Prize."
+"fact": "Tagore was the first person from Asia to win a Nobel Prize.",
+"qa": "q-history-24",
+"fa": "f-history-24",
+"oa": [
+"o-rabindranath-tagore",
+"o-mahatma-gandhi",
+"o-jawaharlal-nehru"
+]
 },
 {
 "id": "history-25",
@@ -2403,7 +3691,14 @@ window.TT_QUESTIONS = [
 "Indira Gandhi"
 ],
 "c": 0,
-"fact": "Children's Day in India is on his birthday, the fourteenth of November."
+"fact": "Children's Day in India is on his birthday, the fourteenth of November.",
+"qa": "q-history-25",
+"fa": "f-history-25",
+"oa": [
+"o-jawaharlal-nehru",
+"o-mahatma-gandhi",
+"o-indira-gandhi"
+]
 },
 {
 "id": "history-26",
@@ -2416,7 +3711,14 @@ window.TT_QUESTIONS = [
 "Salt"
 ],
 "c": 2,
-"fact": "The walk was called the Salt March, and it was about 385 kilometers long."
+"fact": "The walk was called the Salt March, and it was about 385 kilometers long.",
+"qa": "q-history-26",
+"fa": "f-history-26",
+"oa": [
+"o-gold",
+"o-sugar",
+"o-salt"
+]
 },
 {
 "id": "history-27",
@@ -2429,7 +3731,14 @@ window.TT_QUESTIONS = [
 "Egypt"
 ],
 "c": 0,
-"fact": "The Great Wall is thousands of kilometers long."
+"fact": "The Great Wall is thousands of kilometers long.",
+"qa": "q-history-27",
+"fa": "f-history-27",
+"oa": [
+"o-china",
+"o-india",
+"o-egypt"
+]
 },
 {
 "id": "history-28",
@@ -2442,7 +3751,14 @@ window.TT_QUESTIONS = [
 "India"
 ],
 "c": 1,
-"fact": "The first Olympic winners got a crown made of olive leaves."
+"fact": "The first Olympic winners got a crown made of olive leaves.",
+"qa": "q-history-28",
+"fa": "f-history-28",
+"oa": [
+"o-america",
+"o-greece",
+"o-india"
+]
 },
 {
 "id": "history-29",
@@ -2455,7 +3771,14 @@ window.TT_QUESTIONS = [
 "Rani Lakshmibai"
 ],
 "c": 2,
-"fact": "She rode into battle on horseback."
+"fact": "She rode into battle on horseback.",
+"qa": "q-history-29",
+"fa": "f-history-29",
+"oa": [
+"o-mumtaz-mahal",
+"o-razia-sultan",
+"o-rani-lakshmibai"
+]
 },
 {
 "id": "history-30",
@@ -2468,7 +3791,14 @@ window.TT_QUESTIONS = [
 "Cats"
 ],
 "c": 1,
-"fact": "A chicken is a distant cousin of the Tyrannosaurus."
+"fact": "A chicken is a distant cousin of the Tyrannosaurus.",
+"qa": "q-history-30",
+"fa": "f-history-30",
+"oa": [
+"o-fish",
+"o-birds",
+"o-cats"
+]
 },
 {
 "id": "history-31",
@@ -2481,7 +3811,14 @@ window.TT_QUESTIONS = [
 "A coconut"
 ],
 "c": 0,
-"fact": "Newton wondered why the apple fell down, and not up or sideways."
+"fact": "Newton wondered why the apple fell down, and not up or sideways.",
+"qa": "q-history-31",
+"fa": "f-history-31",
+"oa": [
+"o-an-apple",
+"o-a-shoe",
+"o-a-coconut"
+]
 },
 {
 "id": "history-32",
@@ -2494,7 +3831,14 @@ window.TT_QUESTIONS = [
 "Indira Gandhi"
 ],
 "c": 0,
-"fact": "Kalpana Chawla first flew into space in 1997."
+"fact": "Kalpana Chawla first flew into space in 1997.",
+"qa": "q-history-32",
+"fa": "f-history-32",
+"oa": [
+"o-kalpana-chawla",
+"o-sunita-williams",
+"o-indira-gandhi"
+]
 },
 {
 "id": "tech-01",
@@ -2507,7 +3851,14 @@ window.TT_QUESTIONS = [
 "A phone"
 ],
 "c": 2,
-"fact": "The first phone call was made about 150 years ago."
+"fact": "The first phone call was made about 150 years ago.",
+"qa": "q-tech-01",
+"fa": "f-tech-01",
+"oa": [
+"o-a-spoon",
+"o-a-pillow",
+"o-a-phone"
+]
 },
 {
 "id": "tech-02",
@@ -2520,7 +3871,14 @@ window.TT_QUESTIONS = [
 "A camera"
 ],
 "c": 2,
-"fact": "Most phones have a tiny camera inside them."
+"fact": "Most phones have a tiny camera inside them.",
+"qa": "q-tech-02",
+"fa": "f-tech-02",
+"oa": [
+"o-a-fork",
+"o-a-broom",
+"o-a-camera"
+]
 },
 {
 "id": "tech-03",
@@ -2533,7 +3891,14 @@ window.TT_QUESTIONS = [
 "A fan"
 ],
 "c": 0,
-"fact": "Keeping food cold stops it going bad so quickly."
+"fact": "Keeping food cold stops it going bad so quickly.",
+"qa": "q-tech-03",
+"fa": "f-tech-03",
+"oa": [
+"o-a-fridge",
+"o-an-oven",
+"o-a-fan"
+]
 },
 {
 "id": "tech-04",
@@ -2546,7 +3911,14 @@ window.TT_QUESTIONS = [
 "A cat"
 ],
 "c": 0,
-"fact": "A computer mouse got its name because its wire looked like a tail."
+"fact": "A computer mouse got its name because its wire looked like a tail.",
+"qa": "q-tech-04",
+"fa": "f-tech-04",
+"oa": [
+"o-a-mouse",
+"o-a-carrot",
+"o-a-cat"
+]
 },
 {
 "id": "tech-05",
@@ -2559,7 +3931,14 @@ window.TT_QUESTIONS = [
 "Rain"
 ],
 "c": 1,
-"fact": "Some robots have batteries, just like toys."
+"fact": "Some robots have batteries, just like toys.",
+"qa": "q-tech-05",
+"fa": "f-tech-05",
+"oa": [
+"o-ice-cream",
+"o-electricity",
+"o-rain"
+]
 },
 {
 "id": "tech-06",
@@ -2572,7 +3951,14 @@ window.TT_QUESTIONS = [
 "A fridge"
 ],
 "c": 1,
-"fact": "A microwave makes the water inside food wiggle, which heats it up."
+"fact": "A microwave makes the water inside food wiggle, which heats it up.",
+"qa": "q-tech-06",
+"fa": "f-tech-06",
+"oa": [
+"o-a-fan",
+"o-a-microwave",
+"o-a-fridge"
+]
 },
 {
 "id": "tech-07",
@@ -2585,7 +3971,14 @@ window.TT_QUESTIONS = [
 "The horn"
 ],
 "c": 0,
-"fact": "Bicycles have brakes too."
+"fact": "Bicycles have brakes too.",
+"qa": "q-tech-07",
+"fa": "f-tech-07",
+"oa": [
+"o-the-brakes",
+"o-the-radio",
+"o-the-horn"
+]
 },
 {
 "id": "tech-08",
@@ -2598,7 +3991,14 @@ window.TT_QUESTIONS = [
 "A toaster"
 ],
 "c": 0,
-"fact": "Before washing machines, people washed clothes by hand in rivers."
+"fact": "Before washing machines, people washed clothes by hand in rivers.",
+"qa": "q-tech-08",
+"fa": "f-tech-08",
+"oa": [
+"o-a-washing-machine",
+"o-a-fridge",
+"o-a-toaster"
+]
 },
 {
 "id": "tech-09",
@@ -2611,7 +4011,14 @@ window.TT_QUESTIONS = [
 "A keyboard"
 ],
 "c": 2,
-"fact": "The letters on a keyboard aren't in alphabet order."
+"fact": "The letters on a keyboard aren't in alphabet order.",
+"qa": "q-tech-09",
+"fa": "f-tech-09",
+"oa": [
+"o-a-pillow",
+"o-a-plate",
+"o-a-keyboard"
+]
 },
 {
 "id": "tech-10",
@@ -2624,7 +4031,14 @@ window.TT_QUESTIONS = [
 "A lamp"
 ],
 "c": 0,
-"fact": "Some clocks have hands, and some show numbers."
+"fact": "Some clocks have hands, and some show numbers.",
+"qa": "q-tech-10",
+"fa": "f-tech-10",
+"oa": [
+"o-a-clock",
+"o-a-cup",
+"o-a-lamp"
+]
 },
 {
 "id": "tech-11",
@@ -2637,7 +4051,14 @@ window.TT_QUESTIONS = [
 "A ship"
 ],
 "c": 1,
-"fact": "Big airplanes can carry hundreds of people."
+"fact": "Big airplanes can carry hundreds of people.",
+"qa": "q-tech-11",
+"fa": "f-tech-11",
+"oa": [
+"o-a-train",
+"o-an-airplane",
+"o-a-ship"
+]
 },
 {
 "id": "tech-12",
@@ -2650,7 +4071,14 @@ window.TT_QUESTIONS = [
 "A car"
 ],
 "c": 0,
-"fact": "India has one of the biggest train networks in the world."
+"fact": "India has one of the biggest train networks in the world.",
+"qa": "q-tech-12",
+"fa": "f-tech-12",
+"oa": [
+"o-a-train",
+"o-a-bicycle",
+"o-a-car"
+]
 },
 {
 "id": "tech-13",
@@ -2663,7 +4091,14 @@ window.TT_QUESTIONS = [
 "A sock"
 ],
 "c": 0,
-"fact": "A full battery means you can use the tablet for hours."
+"fact": "A full battery means you can use the tablet for hours.",
+"qa": "q-tech-13",
+"fa": "f-tech-13",
+"oa": [
+"o-a-charger",
+"o-a-spoon",
+"o-a-sock"
+]
 },
 {
 "id": "tech-14",
@@ -2676,7 +4111,14 @@ window.TT_QUESTIONS = [
 "A pillow"
 ],
 "c": 1,
-"fact": "A switch lets electricity flow to the bulb."
+"fact": "A switch lets electricity flow to the bulb.",
+"qa": "q-tech-14",
+"fa": "f-tech-14",
+"oa": [
+"o-a-book",
+"o-a-switch",
+"o-a-pillow"
+]
 },
 {
 "id": "tech-15",
@@ -2689,7 +4131,14 @@ window.TT_QUESTIONS = [
 "A drone"
 ],
 "c": 2,
-"fact": "Drones can take photos and videos from high in the sky."
+"fact": "Drones can take photos and videos from high in the sky.",
+"qa": "q-tech-15",
+"fa": "f-tech-15",
+"oa": [
+"o-a-balloon",
+"o-a-kite",
+"o-a-drone"
+]
 },
 {
 "id": "tech-16",
@@ -2702,7 +4151,14 @@ window.TT_QUESTIONS = [
 "Water"
 ],
 "c": 0,
-"fact": "Batteries store energy so we can use it later."
+"fact": "Batteries store energy so we can use it later.",
+"qa": "q-tech-16",
+"fa": "f-tech-16",
+"oa": [
+"o-a-battery",
+"o-sand",
+"o-water"
+]
 },
 {
 "id": "tech-17",
@@ -2715,7 +4171,14 @@ window.TT_QUESTIONS = [
 "The Wright brothers"
 ],
 "c": 0,
-"fact": "His first words on the phone were to his helper, Mr Watson."
+"fact": "His first words on the phone were to his helper, Mr Watson.",
+"qa": "q-tech-17",
+"fa": "f-tech-17",
+"oa": [
+"o-alexander-graham-bell",
+"o-thomas-edison",
+"o-the-wright-brothers"
+]
 },
 {
 "id": "tech-18",
@@ -2728,7 +4191,14 @@ window.TT_QUESTIONS = [
 "An animal"
 ],
 "c": 0,
-"fact": "Some robots help doctors, and some even explore other planets."
+"fact": "Some robots help doctors, and some even explore other planets.",
+"qa": "q-tech-18",
+"fa": "f-tech-18",
+"oa": [
+"o-a-machine-that-can-do-jobs",
+"o-a-kind-of-food",
+"o-an-animal"
+]
 },
 {
 "id": "tech-19",
@@ -2741,7 +4211,14 @@ window.TT_QUESTIONS = [
 "Take photos"
 ],
 "c": 0,
-"fact": "GPS uses satellites high above the Earth."
+"fact": "GPS uses satellites high above the Earth.",
+"qa": "q-tech-19",
+"fa": "f-tech-19",
+"oa": [
+"o-find-your-way",
+"o-cook-food",
+"o-take-photos"
+]
 },
 {
 "id": "tech-20",
@@ -2754,7 +4231,14 @@ window.TT_QUESTIONS = [
 "Wind energy"
 ],
 "c": 1,
-"fact": "Solar panels turn sunlight into electricity."
+"fact": "Solar panels turn sunlight into electricity.",
+"qa": "q-tech-20",
+"fa": "f-tech-20",
+"oa": [
+"o-coal-energy",
+"o-solar-energy",
+"o-wind-energy"
+]
 },
 {
 "id": "tech-21",
@@ -2767,7 +4251,14 @@ window.TT_QUESTIONS = [
 "Code"
 ],
 "c": 2,
-"fact": "People who write code are called programmers."
+"fact": "People who write code are called programmers.",
+"qa": "q-tech-21",
+"fa": "f-tech-21",
+"oa": [
+"o-songs",
+"o-soup",
+"o-code"
+]
 },
 {
 "id": "tech-22",
@@ -2780,7 +4271,14 @@ window.TT_QUESTIONS = [
 "A giant fishing net"
 ],
 "c": 0,
-"fact": "The internet lets computers all over the world share information."
+"fact": "The internet lets computers all over the world share information.",
+"qa": "q-tech-22",
+"fa": "f-tech-22",
+"oa": [
+"o-a-huge-network-that-connects-computers",
+"o-a-big-book",
+"o-a-giant-fishing-net"
+]
 },
 {
 "id": "tech-23",
@@ -2793,7 +4291,14 @@ window.TT_QUESTIONS = [
 "CV Raman"
 ],
 "c": 1,
-"fact": "Doctor Kalam loved teaching and talking with children."
+"fact": "Doctor Kalam loved teaching and talking with children.",
+"qa": "q-tech-23",
+"fa": "f-tech-23",
+"oa": [
+"o-homi-bhabha",
+"o-apj-abdul-kalam",
+"o-cv-raman"
+]
 },
 {
 "id": "tech-24",
@@ -2806,7 +4311,14 @@ window.TT_QUESTIONS = [
 "Only words"
 ],
 "c": 1,
-"fact": "A 3D printer builds things layer by layer."
+"fact": "A 3D printer builds things layer by layer.",
+"qa": "q-tech-24",
+"fa": "f-tech-24",
+"oa": [
+"o-clean-clothes",
+"o-solid-objects",
+"o-only-words"
+]
 },
 {
 "id": "tech-25",
@@ -2819,7 +4331,14 @@ window.TT_QUESTIONS = [
 "A diesel truck"
 ],
 "c": 0,
-"fact": "Electric cars are much quieter than petrol cars."
+"fact": "Electric cars are much quieter than petrol cars.",
+"qa": "q-tech-25",
+"fa": "f-tech-25",
+"oa": [
+"o-an-electric-car",
+"o-a-steam-train",
+"o-a-diesel-truck"
+]
 },
 {
 "id": "tech-26",
@@ -2832,7 +4351,14 @@ window.TT_QUESTIONS = [
 "Clean the ocean"
 ],
 "c": 1,
-"fact": "There are thousands of satellites going around the Earth."
+"fact": "There are thousands of satellites going around the Earth.",
+"qa": "q-tech-26",
+"fa": "f-tech-26",
+"oa": [
+"o-grow-food",
+"o-circle-the-earth-to-help-with-phones-tv-and-weather",
+"o-clean-the-ocean"
+]
 },
 {
 "id": "tech-27",
@@ -2845,7 +4371,14 @@ window.TT_QUESTIONS = [
 "Batteries"
 ],
 "c": 0,
-"fact": "Your eyes, ears and skin are like your body's sensors."
+"fact": "Your eyes, ears and skin are like your body's sensors.",
+"qa": "q-tech-27",
+"fa": "f-tech-27",
+"oa": [
+"o-sensors",
+"o-wheels",
+"o-batteries"
+]
 },
 {
 "id": "tech-28",
@@ -2858,7 +4391,14 @@ window.TT_QUESTIONS = [
 "Apple ice cream"
 ],
 "c": 0,
-"fact": "AI helps computers learn from lots of examples."
+"fact": "AI helps computers learn from lots of examples.",
+"qa": "q-tech-28",
+"fa": "f-tech-28",
+"oa": [
+"o-artificial-intelligence",
+"o-animal-island",
+"o-apple-ice-cream"
+]
 },
 {
 "id": "tech-29",
@@ -2871,7 +4411,14 @@ window.TT_QUESTIONS = [
 "A radio"
 ],
 "c": 1,
-"fact": "Video calls send pictures and sound through the internet."
+"fact": "Video calls send pictures and sound through the internet.",
+"qa": "q-tech-29",
+"fa": "f-tech-29",
+"oa": [
+"o-a-letter",
+"o-a-video-call",
+"o-a-radio"
+]
 },
 {
 "id": "tech-30",
@@ -2884,7 +4431,14 @@ window.TT_QUESTIONS = [
 "A bus"
 ],
 "c": 1,
-"fact": "Submarines can stay underwater for months."
+"fact": "Submarines can stay underwater for months.",
+"qa": "q-tech-30",
+"fa": "f-tech-30",
+"oa": [
+"o-a-helicopter",
+"o-a-submarine",
+"o-a-bus"
+]
 },
 {
 "id": "tech-31",
@@ -2897,7 +4451,14 @@ window.TT_QUESTIONS = [
 "Rakesh Sharma"
 ],
 "c": 0,
-"fact": "India celebrates National Science Day on the day of his discovery."
+"fact": "India celebrates National Science Day on the day of his discovery.",
+"qa": "q-tech-31",
+"fa": "f-tech-31",
+"oa": [
+"o-cv-raman",
+"o-apj-abdul-kalam",
+"o-rakesh-sharma"
+]
 },
 {
 "id": "tech-32",
@@ -2910,7 +4471,14 @@ window.TT_QUESTIONS = [
 "A blender"
 ],
 "c": 0,
-"fact": "The first computers were as big as a whole room."
+"fact": "The first computers were as big as a whole room.",
+"qa": "q-tech-32",
+"fa": "f-tech-32",
+"oa": [
+"o-a-computer",
+"o-a-bicycle",
+"o-a-blender"
+]
 },
 {
 "id": "food-01",
@@ -2923,7 +4491,14 @@ window.TT_QUESTIONS = [
 "A grape"
 ],
 "c": 0,
-"fact": "Bananas grow in big bunches that point up toward the sky."
+"fact": "Bananas grow in big bunches that point up toward the sky.",
+"qa": "q-food-01",
+"fa": "f-food-01",
+"oa": [
+"o-a-banana",
+"o-an-apple",
+"o-a-grape"
+]
 },
 {
 "id": "food-02",
@@ -2936,7 +4511,14 @@ window.TT_QUESTIONS = [
 "Honey"
 ],
 "c": 1,
-"fact": "Milk is used to make butter, cheese, paneer and curd."
+"fact": "Milk is used to make butter, cheese, paneer and curd.",
+"qa": "q-food-02",
+"fa": "f-food-02",
+"oa": [
+"o-eggs",
+"o-milk",
+"o-honey"
+]
 },
 {
 "id": "food-03",
@@ -2949,7 +4531,14 @@ window.TT_QUESTIONS = [
 "Peas"
 ],
 "c": 1,
-"fact": "Carrots grow under the ground."
+"fact": "Carrots grow under the ground.",
+"qa": "q-food-03",
+"fa": "f-food-03",
+"oa": [
+"o-a-potato",
+"o-a-carrot",
+"o-peas"
+]
 },
 {
 "id": "food-04",
@@ -2962,7 +4551,14 @@ window.TT_QUESTIONS = [
 "Eggs"
 ],
 "c": 2,
-"fact": "Eggs can be brown or white."
+"fact": "Eggs can be brown or white.",
+"qa": "q-food-04",
+"fa": "f-food-04",
+"oa": [
+"o-bread",
+"o-milk",
+"o-eggs"
+]
 },
 {
 "id": "food-05",
@@ -2975,7 +4571,14 @@ window.TT_QUESTIONS = [
 "An apple"
 ],
 "c": 2,
-"fact": "There are thousands of different kinds of apples."
+"fact": "There are thousands of different kinds of apples.",
+"qa": "q-food-05",
+"fa": "f-food-05",
+"oa": [
+"o-a-watermelon",
+"o-a-banana",
+"o-an-apple"
+]
 },
 {
 "id": "food-06",
@@ -2988,7 +4591,14 @@ window.TT_QUESTIONS = [
 "The mango"
 ],
 "c": 2,
-"fact": "India grows more mangoes than any other country."
+"fact": "India grows more mangoes than any other country.",
+"qa": "q-food-06",
+"fa": "f-food-06",
+"oa": [
+"o-the-kiwi",
+"o-the-grape",
+"o-the-mango"
+]
 },
 {
 "id": "food-07",
@@ -3001,7 +4611,14 @@ window.TT_QUESTIONS = [
 "Rice"
 ],
 "c": 1,
-"fact": "Each kernel has a tiny drop of water inside that turns to steam and makes it pop."
+"fact": "Each kernel has a tiny drop of water inside that turns to steam and makes it pop.",
+"qa": "q-food-07",
+"fa": "f-food-07",
+"oa": [
+"o-wheat",
+"o-corn",
+"o-rice"
+]
 },
 {
 "id": "food-08",
@@ -3014,7 +4631,14 @@ window.TT_QUESTIONS = [
 "Wheat flour"
 ],
 "c": 2,
-"fact": "Chapatis puff up like a balloon when they're cooked on a flame."
+"fact": "Chapatis puff up like a balloon when they're cooked on a flame.",
+"qa": "q-food-08",
+"fa": "f-food-08",
+"oa": [
+"o-potatoes",
+"o-rice",
+"o-wheat-flour"
+]
 },
 {
 "id": "food-09",
@@ -3027,7 +4651,14 @@ window.TT_QUESTIONS = [
 "An orange"
 ],
 "c": 0,
-"fact": "Coconut trees grow near beaches, like in Kerala and Goa."
+"fact": "Coconut trees grow near beaches, like in Kerala and Goa.",
+"qa": "q-food-09",
+"fa": "f-food-09",
+"oa": [
+"o-a-coconut",
+"o-a-mango",
+"o-an-orange"
+]
 },
 {
 "id": "food-10",
@@ -3040,7 +4671,14 @@ window.TT_QUESTIONS = [
 "Blue"
 ],
 "c": 0,
-"fact": "Tomatoes are actually fruits, because they have seeds inside."
+"fact": "Tomatoes are actually fruits, because they have seeds inside.",
+"qa": "q-food-10",
+"fa": "f-food-10",
+"oa": [
+"o-red",
+"o-purple",
+"o-blue"
+]
 },
 {
 "id": "food-11",
@@ -3053,7 +4691,14 @@ window.TT_QUESTIONS = [
 "Milk"
 ],
 "c": 2,
-"fact": "There are more than a thousand kinds of cheese."
+"fact": "There are more than a thousand kinds of cheese.",
+"qa": "q-food-11",
+"fa": "f-food-11",
+"oa": [
+"o-bread",
+"o-apples",
+"o-milk"
+]
 },
 {
 "id": "food-12",
@@ -3066,7 +4711,14 @@ window.TT_QUESTIONS = [
 "Idli"
 ],
 "c": 0,
-"fact": "The biggest pizzas ever made were wider than a swimming pool."
+"fact": "The biggest pizzas ever made were wider than a swimming pool.",
+"qa": "q-food-12",
+"fa": "f-food-12",
+"oa": [
+"o-pizza",
+"o-ice-cream",
+"o-idli"
+]
 },
 {
 "id": "food-13",
@@ -3079,7 +4731,14 @@ window.TT_QUESTIONS = [
 "Orange juice"
 ],
 "c": 1,
-"fact": "Most of India's tea grows on hills in Assam and Darjeeling."
+"fact": "Most of India's tea grows on hills in Assam and Darjeeling.",
+"qa": "q-food-13",
+"fa": "f-food-13",
+"oa": [
+"o-lemonade",
+"o-chai",
+"o-orange-juice"
+]
 },
 {
 "id": "food-14",
@@ -3092,7 +4751,14 @@ window.TT_QUESTIONS = [
 "A mango"
 ],
 "c": 0,
-"fact": "Spinach is called palak in Hindi."
+"fact": "Spinach is called palak in Hindi.",
+"qa": "q-food-14",
+"fa": "f-food-14",
+"oa": [
+"o-spinach",
+"o-an-apple",
+"o-a-mango"
+]
 },
 {
 "id": "food-15",
@@ -3105,7 +4771,14 @@ window.TT_QUESTIONS = [
 "A pear"
 ],
 "c": 1,
-"fact": "A watermelon is mostly water, which is how it got its name."
+"fact": "A watermelon is mostly water, which is how it got its name.",
+"qa": "q-food-15",
+"fa": "f-food-15",
+"oa": [
+"o-a-kiwi",
+"o-a-watermelon",
+"o-a-pear"
+]
 },
 {
 "id": "food-16",
@@ -3118,7 +4791,14 @@ window.TT_QUESTIONS = [
 "A cucumber"
 ],
 "c": 1,
-"fact": "Ice cream was first made a long, long time ago with snow from mountains."
+"fact": "Ice cream was first made a long, long time ago with snow from mountains.",
+"qa": "q-food-16",
+"fa": "f-food-16",
+"oa": [
+"o-an-onion",
+"o-ice-cream",
+"o-a-cucumber"
+]
 },
 {
 "id": "food-17",
@@ -3131,7 +4811,14 @@ window.TT_QUESTIONS = [
 "Apples"
 ],
 "c": 1,
-"fact": "The batter is left overnight so it gets a little bit sour and fluffy."
+"fact": "The batter is left overnight so it gets a little bit sour and fluffy.",
+"qa": "q-food-17",
+"fa": "f-food-17",
+"oa": [
+"o-chocolate",
+"o-lentils",
+"o-apples"
+]
 },
 {
 "id": "food-18",
@@ -3144,7 +4831,14 @@ window.TT_QUESTIONS = [
 "Cinnamon"
 ],
 "c": 0,
-"fact": "Turmeric is called haldi, and it's also used at weddings."
+"fact": "Turmeric is called haldi, and it's also used at weddings.",
+"qa": "q-food-18",
+"fa": "f-food-18",
+"oa": [
+"o-turmeric",
+"o-pepper",
+"o-cinnamon"
+]
 },
 {
 "id": "food-19",
@@ -3157,7 +4851,14 @@ window.TT_QUESTIONS = [
 "The strawberry"
 ],
 "c": 2,
-"fact": "A strawberry has about two hundred tiny seeds on its skin."
+"fact": "A strawberry has about two hundred tiny seeds on its skin.",
+"qa": "q-food-19",
+"fa": "f-food-19",
+"oa": [
+"o-the-orange",
+"o-the-banana",
+"o-the-strawberry"
+]
 },
 {
 "id": "food-20",
@@ -3170,7 +4871,14 @@ window.TT_QUESTIONS = [
 "Almonds"
 ],
 "c": 1,
-"fact": "Peanuts aren't really nuts. They grow under the ground like beans."
+"fact": "Peanuts aren't really nuts. They grow under the ground like beans.",
+"qa": "q-food-20",
+"fa": "f-food-20",
+"oa": [
+"o-cashews",
+"o-peanuts",
+"o-almonds"
+]
 },
 {
 "id": "food-21",
@@ -3183,7 +4891,14 @@ window.TT_QUESTIONS = [
 "Coffee beans"
 ],
 "c": 1,
-"fact": "Cocoa beans grow inside big pods on cacao trees."
+"fact": "Cocoa beans grow inside big pods on cacao trees.",
+"qa": "q-food-21",
+"fa": "f-food-21",
+"oa": [
+"o-kidney-beans",
+"o-cocoa-beans",
+"o-coffee-beans"
+]
 },
 {
 "id": "food-22",
@@ -3196,7 +4911,14 @@ window.TT_QUESTIONS = [
 "An onion"
 ],
 "c": 2,
-"fact": "Chilling an onion before cutting it helps stop the tears."
+"fact": "Chilling an onion before cutting it helps stop the tears.",
+"qa": "q-food-22",
+"fa": "f-food-22",
+"oa": [
+"o-a-carrot",
+"o-a-cucumber",
+"o-an-onion"
+]
 },
 {
 "id": "food-23",
@@ -3209,7 +4931,14 @@ window.TT_QUESTIONS = [
 "Sugar"
 ],
 "c": 0,
-"fact": "Dal is a tasty way to get protein."
+"fact": "Dal is a tasty way to get protein.",
+"qa": "q-food-23",
+"fa": "f-food-23",
+"oa": [
+"o-protein",
+"o-salt",
+"o-sugar"
+]
 },
 {
 "id": "food-24",
@@ -3222,7 +4951,14 @@ window.TT_QUESTIONS = [
 "Vitamin C"
 ],
 "c": 1,
-"fact": "Vitamin D helps us grow strong bones."
+"fact": "Vitamin D helps us grow strong bones.",
+"qa": "q-food-24",
+"fa": "f-food-24",
+"oa": [
+"o-vitamin-k",
+"o-vitamin-d",
+"o-vitamin-c"
+]
 },
 {
 "id": "food-25",
@@ -3235,7 +4971,14 @@ window.TT_QUESTIONS = [
 "Gujarat"
 ],
 "c": 2,
-"fact": "Dhokla is steamed, which makes it soft and spongy."
+"fact": "Dhokla is steamed, which makes it soft and spongy.",
+"qa": "q-food-25",
+"fa": "f-food-25",
+"oa": [
+"o-punjab",
+"o-kerala",
+"o-gujarat"
+]
 },
 {
 "id": "food-26",
@@ -3248,7 +4991,14 @@ window.TT_QUESTIONS = [
 "Milk"
 ],
 "c": 2,
-"fact": "Paneer is made by adding lemon juice to hot milk."
+"fact": "Paneer is made by adding lemon juice to hot milk.",
+"qa": "q-food-26",
+"fa": "f-food-26",
+"oa": [
+"o-peas",
+"o-rice",
+"o-milk"
+]
 },
 {
 "id": "food-27",
@@ -3261,7 +5011,14 @@ window.TT_QUESTIONS = [
 "Honey"
 ],
 "c": 1,
-"fact": "Sugarcane is a tall grass with sweet juice inside."
+"fact": "Sugarcane is a tall grass with sweet juice inside.",
+"qa": "q-food-27",
+"fa": "f-food-27",
+"oa": [
+"o-milk",
+"o-sugarcane",
+"o-honey"
+]
 },
 {
 "id": "food-28",
@@ -3274,7 +5031,14 @@ window.TT_QUESTIONS = [
 "Pakora"
 ],
 "c": 1,
-"fact": "Gulab means rose, because the syrup often has rose water in it."
+"fact": "Gulab means rose, because the syrup often has rose water in it.",
+"qa": "q-food-28",
+"fa": "f-food-28",
+"oa": [
+"o-samosa",
+"o-gulab-jamun",
+"o-pakora"
+]
 },
 {
 "id": "food-29",
@@ -3287,7 +5051,14 @@ window.TT_QUESTIONS = [
 "Italy"
 ],
 "c": 2,
-"fact": "The pizza margherita has red, white and green toppings, like the Italian flag."
+"fact": "The pizza margherita has red, white and green toppings, like the Italian flag.",
+"qa": "q-food-29",
+"fa": "f-food-29",
+"oa": [
+"o-mexico",
+"o-india",
+"o-italy"
+]
 },
 {
 "id": "food-30",
@@ -3300,7 +5071,14 @@ window.TT_QUESTIONS = [
 "Japan"
 ],
 "c": 2,
-"fact": "Sushi is often wrapped in a type of seaweed called nori."
+"fact": "Sushi is often wrapped in a type of seaweed called nori.",
+"qa": "q-food-30",
+"fa": "f-food-30",
+"oa": [
+"o-italy",
+"o-india",
+"o-japan"
+]
 },
 {
 "id": "food-31",
@@ -3313,7 +5091,14 @@ window.TT_QUESTIONS = [
 "Cumin"
 ],
 "c": 0,
-"fact": "Saffron is called kesar, and lots of it grows in Kashmir."
+"fact": "Saffron is called kesar, and lots of it grows in Kashmir.",
+"qa": "q-food-31",
+"fa": "f-food-31",
+"oa": [
+"o-saffron",
+"o-salt",
+"o-cumin"
+]
 },
 {
 "id": "food-32",
@@ -3326,7 +5111,14 @@ window.TT_QUESTIONS = [
 "An orange"
 ],
 "c": 2,
-"fact": "Vitamin C helps your body fight colds."
+"fact": "Vitamin C helps your body fight colds.",
+"qa": "q-food-32",
+"fa": "f-food-32",
+"oa": [
+"o-a-grape",
+"o-a-banana",
+"o-an-orange"
+]
 },
 {
 "id": "body-01",
@@ -3339,7 +5131,14 @@ window.TT_QUESTIONS = [
 "Your nose"
 ],
 "c": 0,
-"fact": "You blink thousands of times every day."
+"fact": "You blink thousands of times every day.",
+"qa": "q-body-01",
+"fa": "f-body-01",
+"oa": [
+"o-your-eyes",
+"o-your-ears",
+"o-your-nose"
+]
 },
 {
 "id": "body-02",
@@ -3352,7 +5151,14 @@ window.TT_QUESTIONS = [
 "Your eyes"
 ],
 "c": 0,
-"fact": "Your ears also help you keep your balance."
+"fact": "Your ears also help you keep your balance.",
+"qa": "q-body-02",
+"fa": "f-body-02",
+"oa": [
+"o-your-ears",
+"o-your-toes",
+"o-your-eyes"
+]
 },
 {
 "id": "body-03",
@@ -3365,7 +5171,14 @@ window.TT_QUESTIONS = [
 "Ten"
 ],
 "c": 1,
-"fact": "Each fingertip has its own special pattern called a fingerprint."
+"fact": "Each fingertip has its own special pattern called a fingerprint.",
+"qa": "q-body-03",
+"fa": "f-body-03",
+"oa": [
+"o-three",
+"o-five",
+"o-ten"
+]
 },
 {
 "id": "body-04",
@@ -3378,7 +5191,14 @@ window.TT_QUESTIONS = [
 "Your stomach"
 ],
 "c": 0,
-"fact": "Your heart is about the size of your fist."
+"fact": "Your heart is about the size of your fist.",
+"qa": "q-body-04",
+"fa": "f-body-04",
+"oa": [
+"o-your-heart",
+"o-your-hair",
+"o-your-stomach"
+]
 },
 {
 "id": "body-05",
@@ -3391,7 +5211,14 @@ window.TT_QUESTIONS = [
 "Jump up and down"
 ],
 "c": 0,
-"fact": "Washing with soap for twenty seconds washes the germs away."
+"fact": "Washing with soap for twenty seconds washes the germs away.",
+"qa": "q-body-05",
+"fa": "f-body-05",
+"oa": [
+"o-wash-your-hands",
+"o-go-to-sleep",
+"o-jump-up-and-down"
+]
 },
 {
 "id": "body-06",
@@ -3404,7 +5231,14 @@ window.TT_QUESTIONS = [
 "Your ears"
 ],
 "c": 1,
-"fact": "Kids have twenty baby teeth that fall out to make room for bigger ones."
+"fact": "Kids have twenty baby teeth that fall out to make room for bigger ones.",
+"qa": "q-body-06",
+"fa": "f-body-06",
+"oa": [
+"o-your-elbows",
+"o-your-teeth",
+"o-your-ears"
+]
 },
 {
 "id": "body-07",
@@ -3417,7 +5251,14 @@ window.TT_QUESTIONS = [
 "Your knees"
 ],
 "c": 0,
-"fact": "Your lungs are like two balloons that fill up with air."
+"fact": "Your lungs are like two balloons that fill up with air.",
+"qa": "q-body-07",
+"fa": "f-body-07",
+"oa": [
+"o-your-lungs",
+"o-your-toes",
+"o-your-knees"
+]
 },
 {
 "id": "body-08",
@@ -3430,7 +5271,14 @@ window.TT_QUESTIONS = [
 "Television"
 ],
 "c": 0,
-"fact": "Kids grow the most while they are asleep."
+"fact": "Kids grow the most while they are asleep.",
+"qa": "q-body-08",
+"fa": "f-body-08",
+"oa": [
+"o-sleep",
+"o-candy",
+"o-television"
+]
 },
 {
 "id": "body-09",
@@ -3443,7 +5291,14 @@ window.TT_QUESTIONS = [
 "Your knees"
 ],
 "c": 1,
-"fact": "Your nose can tell apart thousands of different smells."
+"fact": "Your nose can tell apart thousands of different smells.",
+"qa": "q-body-09",
+"fa": "f-body-09",
+"oa": [
+"o-your-hands",
+"o-your-nose",
+"o-your-knees"
+]
 },
 {
 "id": "body-10",
@@ -3456,7 +5311,14 @@ window.TT_QUESTIONS = [
 "Leaves"
 ],
 "c": 0,
-"fact": "Your skin keeps germs out and keeps you warm."
+"fact": "Your skin keeps germs out and keeps you warm.",
+"qa": "q-body-10",
+"fa": "f-body-10",
+"oa": [
+"o-your-skin",
+"o-your-socks",
+"o-leaves"
+]
 },
 {
 "id": "body-11",
@@ -3469,7 +5331,14 @@ window.TT_QUESTIONS = [
 "Your heart"
 ],
 "c": 0,
-"fact": "Your brain never stops working, even when you sleep."
+"fact": "Your brain never stops working, even when you sleep.",
+"qa": "q-body-11",
+"fa": "f-body-11",
+"oa": [
+"o-your-brain",
+"o-your-stomach",
+"o-your-heart"
+]
 },
 {
 "id": "body-12",
@@ -3482,7 +5351,14 @@ window.TT_QUESTIONS = [
 "Your ears"
 ],
 "c": 0,
-"fact": "Brushing for two minutes keeps your teeth healthy and strong."
+"fact": "Brushing for two minutes keeps your teeth healthy and strong.",
+"qa": "q-body-12",
+"fa": "f-body-12",
+"oa": [
+"o-your-teeth",
+"o-your-toes",
+"o-your-ears"
+]
 },
 {
 "id": "body-13",
@@ -3495,7 +5371,14 @@ window.TT_QUESTIONS = [
 "Your stomach"
 ],
 "c": 2,
-"fact": "Your stomach squishes food into a mushy soup."
+"fact": "Your stomach squishes food into a mushy soup.",
+"qa": "q-body-13",
+"fa": "f-body-13",
+"oa": [
+"o-your-nose",
+"o-your-ears",
+"o-your-stomach"
+]
 },
 {
 "id": "body-14",
@@ -3508,7 +5391,14 @@ window.TT_QUESTIONS = [
 "Your knee"
 ],
 "c": 0,
-"fact": "Your tongue has thousands of tiny taste buds."
+"fact": "Your tongue has thousands of tiny taste buds.",
+"qa": "q-body-14",
+"fa": "f-body-14",
+"oa": [
+"o-your-tongue",
+"o-your-elbow",
+"o-your-knee"
+]
 },
 {
 "id": "body-15",
@@ -3521,7 +5411,14 @@ window.TT_QUESTIONS = [
 "Five"
 ],
 "c": 1,
-"fact": "Your big toe helps you balance when you walk."
+"fact": "Your big toe helps you balance when you walk.",
+"qa": "q-body-15",
+"fa": "f-body-15",
+"oa": [
+"o-twenty",
+"o-ten",
+"o-five"
+]
 },
 {
 "id": "body-16",
@@ -3534,7 +5431,14 @@ window.TT_QUESTIONS = [
 "To keep our bodies healthy"
 ],
 "c": 2,
-"fact": "Your body is more than half water."
+"fact": "Your body is more than half water.",
+"qa": "q-body-16",
+"fa": "f-body-16",
+"oa": [
+"o-to-grow-taller-right-away",
+"o-to-change-our-hair-color",
+"o-to-keep-our-bodies-healthy"
+]
 },
 {
 "id": "body-17",
@@ -3547,7 +5451,14 @@ window.TT_QUESTIONS = [
 "50"
 ],
 "c": 0,
-"fact": "Babies are born with about 300 bones, and some of them join together as they grow."
+"fact": "Babies are born with about 300 bones, and some of them join together as they grow.",
+"qa": "q-body-17",
+"fa": "f-body-17",
+"oa": [
+"o-206",
+"o-1000",
+"o-50"
+]
 },
 {
 "id": "body-18",
@@ -3560,7 +5471,14 @@ window.TT_QUESTIONS = [
 "The skin"
 ],
 "c": 2,
-"fact": "Your skin is always making new cells and shedding old ones."
+"fact": "Your skin is always making new cells and shedding old ones.",
+"qa": "q-body-18",
+"fa": "f-body-18",
+"oa": [
+"o-the-heart",
+"o-the-brain",
+"o-the-skin"
+]
 },
 {
 "id": "body-19",
@@ -3573,7 +5491,14 @@ window.TT_QUESTIONS = [
 "Strings"
 ],
 "c": 1,
-"fact": "If you laid out all your blood vessels in a line, they would go around the Earth more than twice."
+"fact": "If you laid out all your blood vessels in a line, they would go around the Earth more than twice.",
+"qa": "q-body-19",
+"fa": "f-body-19",
+"oa": [
+"o-wires",
+"o-blood-vessels",
+"o-strings"
+]
 },
 {
 "id": "body-20",
@@ -3586,7 +5511,14 @@ window.TT_QUESTIONS = [
 "See"
 ],
 "c": 1,
-"fact": "You use over two hundred muscles to take one step."
+"fact": "You use over two hundred muscles to take one step.",
+"qa": "q-body-20",
+"fa": "f-body-20",
+"oa": [
+"o-smell",
+"o-move",
+"o-see"
+]
 },
 {
 "id": "body-21",
@@ -3599,7 +5531,14 @@ window.TT_QUESTIONS = [
 "The elbow"
 ],
 "c": 0,
-"fact": "Your skull is made of many bones joined together."
+"fact": "Your skull is made of many bones joined together.",
+"qa": "q-body-21",
+"fa": "f-body-21",
+"oa": [
+"o-the-skull",
+"o-the-kneecap",
+"o-the-elbow"
+]
 },
 {
 "id": "body-22",
@@ -3612,7 +5551,14 @@ window.TT_QUESTIONS = [
 "Your skull"
 ],
 "c": 1,
-"fact": "Most people have twelve pairs of ribs."
+"fact": "Most people have twelve pairs of ribs.",
+"qa": "q-body-22",
+"fa": "f-body-22",
+"oa": [
+"o-your-teeth",
+"o-your-rib-cage",
+"o-your-skull"
+]
 },
 {
 "id": "body-23",
@@ -3625,7 +5571,14 @@ window.TT_QUESTIONS = [
 "The nail"
 ],
 "c": 1,
-"fact": "Every iris has its own pattern, like a fingerprint."
+"fact": "Every iris has its own pattern, like a fingerprint.",
+"qa": "q-body-23",
+"fa": "f-body-23",
+"oa": [
+"o-the-eyelid",
+"o-the-iris",
+"o-the-nail"
+]
 },
 {
 "id": "body-24",
@@ -3638,7 +5591,14 @@ window.TT_QUESTIONS = [
 "Carry food"
 ],
 "c": 1,
-"fact": "White blood cells are your body's tiny soldiers."
+"fact": "White blood cells are your body's tiny soldiers.",
+"qa": "q-body-24",
+"fa": "f-body-24",
+"oa": [
+"o-make-you-taller",
+"o-fight-germs",
+"o-carry-food"
+]
 },
 {
 "id": "body-25",
@@ -3651,7 +5611,14 @@ window.TT_QUESTIONS = [
 "One"
 ],
 "c": 1,
-"fact": "Your left lung is a little smaller, to make room for your heart."
+"fact": "Your left lung is a little smaller, to make room for your heart.",
+"qa": "q-body-25",
+"fa": "f-body-25",
+"oa": [
+"o-four",
+"o-two",
+"o-one"
+]
 },
 {
 "id": "body-26",
@@ -3664,7 +5631,14 @@ window.TT_QUESTIONS = [
 "Touch"
 ],
 "c": 2,
-"fact": "Your fingertips are some of the most sensitive parts of your body."
+"fact": "Your fingertips are some of the most sensitive parts of your body.",
+"qa": "q-body-26",
+"fa": "f-body-26",
+"oa": [
+"o-taste",
+"o-smell",
+"o-touch"
+]
 },
 {
 "id": "body-27",
@@ -3677,7 +5651,14 @@ window.TT_QUESTIONS = [
 "In your ear"
 ],
 "c": 2,
-"fact": "The smallest bone is about the size of a grain of rice."
+"fact": "The smallest bone is about the size of a grain of rice.",
+"qa": "q-body-27",
+"fa": "f-body-27",
+"oa": [
+"o-in-your-hand",
+"o-in-your-foot",
+"o-in-your-ear"
+]
 },
 {
 "id": "body-28",
@@ -3690,7 +5671,14 @@ window.TT_QUESTIONS = [
 "To cool down"
 ],
 "c": 2,
-"fact": "Sweat dries on your skin and takes heat away with it."
+"fact": "Sweat dries on your skin and takes heat away with it.",
+"qa": "q-body-28",
+"fa": "f-body-28",
+"oa": [
+"o-to-grow-taller",
+"o-to-warm-up",
+"o-to-cool-down"
+]
 },
 {
 "id": "body-29",
@@ -3703,7 +5691,14 @@ window.TT_QUESTIONS = [
 "A scab"
 ],
 "c": 2,
-"fact": "New skin grows underneath the scab."
+"fact": "New skin grows underneath the scab.",
+"qa": "q-body-29",
+"fa": "f-body-29",
+"oa": [
+"o-a-feather",
+"o-a-bubble",
+"o-a-scab"
+]
 },
 {
 "id": "body-30",
@@ -3716,7 +5711,14 @@ window.TT_QUESTIONS = [
 "Sneeze into your elbow"
 ],
 "c": 2,
-"fact": "Sneezing into your elbow keeps germs off your hands."
+"fact": "Sneezing into your elbow keeps germs off your hands.",
+"qa": "q-body-30",
+"fa": "f-body-30",
+"oa": [
+"o-sneeze-at-a-friend",
+"o-sneeze-into-your-hands",
+"o-sneeze-into-your-elbow"
+]
 },
 {
 "id": "body-31",
@@ -3729,7 +5731,14 @@ window.TT_QUESTIONS = [
 "The elbow"
 ],
 "c": 1,
-"fact": "Your kneecap protects the front of your knee joint."
+"fact": "Your kneecap protects the front of your knee joint.",
+"qa": "q-body-31",
+"fa": "f-body-31",
+"oa": [
+"o-the-wrist",
+"o-the-knee",
+"o-the-elbow"
+]
 },
 {
 "id": "body-32",
@@ -3742,6 +5751,14 @@ window.TT_QUESTIONS = [
 "Chips"
 ],
 "c": 0,
-"fact": "Milk has calcium, which bones need to be strong."
+"fact": "Milk has calcium, which bones need to be strong.",
+"qa": "q-body-32",
+"fa": "f-body-32",
+"oa": [
+"o-milk",
+"o-candy",
+"o-chips"
+]
 }
 ];
+window.TT_PHRASES = {"That's right!": "p-that-s-right", "You got it!": "p-you-got-it", "Brilliant!": "p-brilliant", "Super!": "p-super", "Yes!": "p-yes", "Not quite!": "p-not-quite", "The answer is": "p-the-answer-is", "Fun fact!": "p-fun-fact", "Is it": "p-is-it", "or": "p-or", "It's your turn!": "p-it-s-your-turn", "What a team!": "p-what-a-team", "Superstars!": "p-superstars", "Great playing!": "p-great-playing"};
