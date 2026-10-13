@@ -34,6 +34,7 @@ Peekaworld lives in its own repo/deploy and is linked from a tile: https://peeka
 - Fonts: Outfit for UI; Lexend for words kids read; Fraunces italic for accents on the hub only. Hub mascot/logo is a smiling paper lantern (`#lan` SVG in root index.html).
 - Chunky press-able buttons (solid bottom shadow that compresses on press), big rounded corners, hand-drawn inline SVG art. No photos, no emoji.
 - Gentle feedback: wrong answers wiggle and say "try again". No fail screens.
+- Layout: roomy, with related controls grouped in soft white cards (`.group` in Table Talk). Every screen should fit a 1280x720 laptop window and an upright 768x1024 tablet without scrolling. On wide screens use side-by-side columns rather than shrinking padding (the user found the squeezed version too compressed).
 - Read-aloud uses the device's `speechSynthesis`; sound effects use WebAudio tones (no audio files).
 
 ## Word Garden notes
@@ -52,6 +53,7 @@ Peekaworld lives in its own repo/deploy and is linked from a tile: https://peeka
 - Question bank lives in `tools/trivia.txt` (one line per question: `category | level | question | correct;wrong;wrong | fun fact`). Never edit `table-talk/questions.js` by hand.
 - After editing questions: `python3 tools/make_trivia.py --audio` regenerates `questions.js` (answer order shuffled once with a fixed seed per question id) and records any missing clips into `table-talk/audio/` (question `q-<id>`, fact `f-<id>`, answers `o-<slug>`, phrases `p-<slug>`). It takes a while: about 1,400 clips at 6 in parallel.
 - Question ids are `<category>-<nn>` by order within the category, so insert new questions at the END of a category to keep existing ids (and their audio) stable.
+- Layout: setup is two grouped cards (players + Let's play on the left, categories on the right) at >=900px, stacked below that. The question screen is two columns at >=900px (question + answers | a panel that says "Take your time" and becomes result + fun fact + Next); stacked on tablets. After answering, answers nobody picked are hidden.
 - Sight words category (`words`, easy only): uses the same words as Word Garden (the, and, a, am, has, go). Its answers are NEVER read aloud (`READ_ANSWERS`), since hearing them gives the answer away, and they show in larger text. A question written `shown text>>spoken text` in trivia.txt displays one thing and says another (e.g. "Tap the word you hear>>Tap the word: the.").
 - Levels: `easy` (ages 4–5) and `tricky` (6–8). Each player gets their own level; no players means one "Our team" playing all levels.
 - localStorage: `tt-players`, `tt-cats`, `tt-added-words` (one-time migration that switched on Sight words), `tt-prefs` (count, readAloud), `tt-seen` (question ids played on this device; a pool restarts when used up).
