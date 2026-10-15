@@ -45,7 +45,7 @@ Peekaworld lives in its own repo/deploy and is linked from a tile: https://peeka
 - To add clips for new words: add them to `WORDS` in `tools/make_audio.py` and run `python3 tools/make_audio.py` (skips existing clips; `say` sometimes hangs, hence the timeout/retry).
 - Audio is woken on the first tap anywhere (`wake` listener). Always start sound from a tap or shortly after one.
 - "a" is spoken as "uh" (recorded that way, and `sayable()` for the fallback), because a lone "a" is read as the letter name.
-- Default words: the, and, a, go, has, am, of, you. A one-time migration (`wg-added-am-of-you`) added am/of/you to lists already saved on devices.
+- Default words: the, a, am, has, go (the user's chosen five). A one-time migration (`wg-five-words`) reset lists already saved on devices to these five; grown-ups can add more in settings.
 - Grown-ups screen is behind a simple addition question.
 
 ## Table Talk notes
@@ -54,7 +54,7 @@ Peekaworld lives in its own repo/deploy and is linked from a tile: https://peeka
 - After editing questions: `python3 tools/make_trivia.py --audio` regenerates `questions.js` (answer order shuffled once with a fixed seed per question id) and records any missing clips into `table-talk/audio/` (question `q-<id>`, fact `f-<id>`, answers `o-<slug>`, phrases `p-<slug>`). It takes a while: about 1,400 clips at 6 in parallel.
 - Question ids are `<category>-<nn>` by order within the category, so insert new questions at the END of a category to keep existing ids (and their audio) stable.
 - Layout: setup is two grouped cards (players + Let's play on the left, categories on the right) at >=900px, stacked below that. The question screen is two columns at >=900px (question + answers | a panel that says "Take your time" and becomes result + fun fact + Next); stacked on tablets. After answering, answers nobody picked are hidden. Category buttons toggle in place via `syncCats()` (never re-render the setup screen for them); "Deselect all" can leave zero categories, and Let's play then asks for at least one. Other setup re-draws call `renderSetup(false)` to skip the fade-in.
-- Sight words category (`words`, easy only): uses the same words as Word Garden (the, and, a, am, has, go). Its answers are NEVER read aloud (`READ_ANSWERS`), since hearing them gives the answer away, and they show in larger text. A question written `shown text>>spoken text` in trivia.txt displays one thing and says another (e.g. "Tap the word you hear>>Tap the word: the.").
+- Sight words category (`words`, easy only): uses the same five words as Word Garden (the, a, am, has, go); no other words appear as answers. Its answers are NEVER read aloud (`READ_ANSWERS`), since hearing them gives the answer away, and they show in larger text. A question written `shown text>>spoken text` in trivia.txt displays one thing and says another (e.g. "Tap the word you hear>>Tap the word: the.").
 - Levels: `easy` (ages 4–5) and `tricky` (6–8). Each player gets their own level; no players means one "Our team" playing all levels.
 - localStorage: `tt-players`, `tt-cats`, `tt-added-words` (one-time migration that switched on Sight words), `tt-prefs` (count, readAloud), `tt-seen` (question ids played on this device; a pool restarts when used up).
 - Read-aloud plays: question, "Is it", answer A, answer B, "or", answer C (each answer highlights as it's read); after answering: cheer or "Not quite! The answer is X", then "Fun fact!" + fact. Missing clips fall back to `speechSynthesis` (player names always do).

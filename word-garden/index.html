@@ -211,7 +211,7 @@ h1,h2,h3{font-weight:600;margin:0}
 <script src="audio/manifest.js"></script>
 <script>
 /* ---------- data + storage ---------- */
-const DEFAULT_WORDS = ['the','and','a','go','has','am','of','you'];
+const DEFAULT_WORDS = ['the','a','am','has','go'];
 const FILLER = ['is','it','in','to','see','can','we','me','my','up','look','like','you','for','at','on','he','she','was','are','big','run','come','here','play','not','one','red','blue','said','down'];
 const PRAISE = ['You got it!','Great job!','Super reading!','Wow!','Yes!','Amazing!','Nice one!'];
 const OOPS = ['Hmm, try again!','Almost! Try again.','Oops! One more try.','Keep going!'];
@@ -227,10 +227,11 @@ const state = {
   stars: store.get('wg-stars', 0),
 };
 if (!Array.isArray(state.words) || !state.words.length) state.words = DEFAULT_WORDS.slice();
-// One-time update: add the new words (am, of, you) to lists already saved on a device.
-if (!store.get('wg-added-am-of-you', false)){
-  ['am','of','you'].forEach(w => { if (!state.words.some(x => x.toLowerCase() === w)) state.words.push(w); });
-  store.set('wg-added-am-of-you', true);
+// One-time update: switch lists already saved on a device to the current five words.
+// (Grown-ups can still add more words afterwards from the settings screen.)
+if (!store.get('wg-five-words', false)){
+  state.words = DEFAULT_WORDS.slice();
+  store.set('wg-five-words', true);
   store.set('wg-words', state.words);
 }
 function save(){ store.set('wg-words', state.words); store.set('wg-scores', state.scores); store.set('wg-stars', state.stars); }

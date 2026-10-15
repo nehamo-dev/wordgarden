@@ -5768,7 +5768,7 @@ window.TT_QUESTIONS = [
 "say": "Tap the word: the.",
 "a": [
 "go",
-"and",
+"has",
 "the"
 ],
 "c": 2,
@@ -5777,7 +5777,7 @@ window.TT_QUESTIONS = [
 "fa": "f-words-01",
 "oa": [
 "o-go",
-"o-and",
+"o-has",
 "o-the"
 ]
 },
@@ -5786,20 +5786,20 @@ window.TT_QUESTIONS = [
 "cat": "words",
 "level": "easy",
 "q": "Tap the word you hear",
-"say": "Tap the word: and.",
+"say": "Tap the word: a. As in, a cat.",
 "a": [
 "am",
-"has",
-"and"
+"go",
+"a"
 ],
 "c": 2,
-"fact": "And joins things together, like peanut butter and jelly.",
+"fact": "A is a word all by itself, with just one letter.",
 "qa": "q-words-02",
 "fa": "f-words-02",
 "oa": [
 "o-am",
-"o-has",
-"o-and"
+"o-go",
+"o-a"
 ]
 },
 {
@@ -5807,45 +5807,24 @@ window.TT_QUESTIONS = [
 "cat": "words",
 "level": "easy",
 "q": "Tap the word you hear",
-"say": "Tap the word: a. As in, a cat.",
-"a": [
-"go",
-"am",
-"a"
-],
-"c": 2,
-"fact": "A is a word all by itself, with just one letter.",
-"qa": "q-words-03",
-"fa": "f-words-03",
-"oa": [
-"o-go",
-"o-am",
-"o-a"
-]
-},
-{
-"id": "words-04",
-"cat": "words",
-"level": "easy",
-"q": "Tap the word you hear",
 "say": "Tap the word: am.",
 "a": [
 "the",
-"and",
+"a",
 "am"
 ],
 "c": 2,
 "fact": "We say I am to tell people about ourselves, like I am five.",
-"qa": "q-words-04",
-"fa": "f-words-04",
+"qa": "q-words-03",
+"fa": "f-words-03",
 "oa": [
 "o-the",
-"o-and",
+"o-a",
 "o-am"
 ]
 },
 {
-"id": "words-05",
+"id": "words-04",
 "cat": "words",
 "level": "easy",
 "q": "Tap the word you hear",
@@ -5857,12 +5836,33 @@ window.TT_QUESTIONS = [
 ],
 "c": 2,
 "fact": "Has tells us someone owns something, like the cat has a tail.",
-"qa": "q-words-05",
-"fa": "f-words-05",
+"qa": "q-words-04",
+"fa": "f-words-04",
 "oa": [
 "o-a",
 "o-go",
 "o-has"
+]
+},
+{
+"id": "words-05",
+"cat": "words",
+"level": "easy",
+"q": "Tap the word you hear",
+"say": "Tap the word: go.",
+"a": [
+"has",
+"the",
+"go"
+],
+"c": 2,
+"fact": "Green traffic lights mean go.",
+"qa": "q-words-05",
+"fa": "f-words-05",
+"oa": [
+"o-has",
+"o-the",
+"o-go"
 ]
 },
 {
@@ -5870,20 +5870,20 @@ window.TT_QUESTIONS = [
 "cat": "words",
 "level": "easy",
 "q": "Tap the word you hear",
-"say": "Tap the word: go.",
+"say": "Tap the word: the.",
 "a": [
-"go",
 "the",
-"has"
+"am",
+"a"
 ],
 "c": 0,
-"fact": "Green traffic lights mean go.",
+"fact": "Look for the word the in your next bedtime story. It's everywhere.",
 "qa": "q-words-06",
 "fa": "f-words-06",
 "oa": [
-"o-go",
 "o-the",
-"o-has"
+"o-am",
+"o-a"
 ]
 },
 {
@@ -5891,20 +5891,20 @@ window.TT_QUESTIONS = [
 "cat": "words",
 "level": "easy",
 "q": "Tap the word you hear",
-"say": "Tap the word: the.",
+"say": "Tap the word: a. As in, a dog.",
 "a": [
+"a",
 "the",
-"has",
-"am"
+"has"
 ],
 "c": 0,
-"fact": "Look for the word the in your next bedtime story. It's everywhere.",
+"fact": "When you see the word a, it sounds like uh.",
 "qa": "q-words-07",
 "fa": "f-words-07",
 "oa": [
+"o-a",
 "o-the",
-"o-has",
-"o-am"
+"o-has"
 ]
 },
 {
@@ -5912,20 +5912,20 @@ window.TT_QUESTIONS = [
 "cat": "words",
 "level": "easy",
 "q": "Tap the word you hear",
-"say": "Tap the word: and.",
+"say": "Tap the word: am.",
 "a": [
-"a",
-"and",
-"go"
+"go",
+"am",
+"has"
 ],
 "c": 1,
-"fact": "And starts with the letter a.",
+"fact": "Am starts with the letter a.",
 "qa": "q-words-08",
 "fa": "f-words-08",
 "oa": [
-"o-a",
-"o-and",
-"o-go"
+"o-go",
+"o-am",
+"o-has"
 ]
 },
 {
@@ -5933,20 +5933,20 @@ window.TT_QUESTIONS = [
 "cat": "words",
 "level": "easy",
 "q": "Tap the word you hear",
-"say": "Tap the word: am.",
+"say": "Tap the word: has.",
 "a": [
-"am",
-"a",
-"and"
+"has",
+"the",
+"am"
 ],
 "c": 0,
-"fact": "Am and and both start with the letter a.",
+"fact": "Has and hat start with the same sound.",
 "qa": "q-words-09",
 "fa": "f-words-09",
 "oa": [
-"o-am",
-"o-a",
-"o-and"
+"o-has",
+"o-the",
+"o-am"
 ]
 },
 {
@@ -5954,150 +5954,87 @@ window.TT_QUESTIONS = [
 "cat": "words",
 "level": "easy",
 "q": "Tap the word you hear",
-"say": "Tap the word: has.",
+"say": "Tap the word: go.",
 "a": [
-"the",
-"has",
-"and"
+"am",
+"go",
+"a"
 ],
 "c": 1,
-"fact": "Has and hat start with the same sound.",
+"fact": "Go is spelled g, o. Just two letters.",
 "qa": "q-words-10",
 "fa": "f-words-10",
 "oa": [
-"o-the",
-"o-has",
-"o-and"
+"o-am",
+"o-go",
+"o-a"
 ]
 },
 {
 "id": "words-11",
 "cat": "words",
 "level": "easy",
-"q": "Tap the word you hear",
-"say": "Tap the word: go.",
+"q": "I ___ happy.",
+"say": "I, blank, happy. Which word fits?",
 "a": [
-"and",
-"go",
-"am"
+"has",
+"am",
+"go"
 ],
 "c": 1,
-"fact": "Go is spelled g, o. Just two letters.",
+"fact": "I am happy is a happy sentence to say every day.",
 "qa": "q-words-11",
 "fa": "f-words-11",
 "oa": [
-"o-and",
-"o-go",
-"o-am"
+"o-has",
+"o-am",
+"o-go"
 ]
 },
 {
 "id": "words-12",
 "cat": "words",
 "level": "easy",
-"q": "Tap the word you hear",
-"say": "Tap the word: a. As in, a dog.",
+"q": "The dog ___ a ball.",
+"say": "The dog, blank, a ball. Which word fits?",
 "a": [
-"has",
-"the",
-"a"
+"go",
+"am",
+"has"
 ],
 "c": 2,
-"fact": "When you see the word a, it sounds like uh.",
+"fact": "Dogs love to chase balls because it feels like hunting.",
 "qa": "q-words-12",
 "fa": "f-words-12",
 "oa": [
-"o-has",
-"o-the",
-"o-a"
+"o-go",
+"o-am",
+"o-has"
 ]
 },
 {
 "id": "words-13",
 "cat": "words",
 "level": "easy",
-"q": "I ___ happy.",
-"say": "I, blank, happy. Which word fits?",
+"q": "Let's ___ to the park!",
+"say": "Let's, blank, to the park! Which word fits?",
 "a": [
-"am",
+"go",
 "has",
-"go"
+"the"
 ],
 "c": 0,
-"fact": "I am happy is a happy sentence to say every day.",
+"fact": "Ready, set, go!",
 "qa": "q-words-13",
 "fa": "f-words-13",
 "oa": [
-"o-am",
+"o-go",
 "o-has",
-"o-go"
+"o-the"
 ]
 },
 {
 "id": "words-14",
-"cat": "words",
-"level": "easy",
-"q": "The dog ___ a ball.",
-"say": "The dog, blank, a ball. Which word fits?",
-"a": [
-"go",
-"has",
-"am"
-],
-"c": 1,
-"fact": "Dogs love to chase balls because it feels like hunting.",
-"qa": "q-words-14",
-"fa": "f-words-14",
-"oa": [
-"o-go",
-"o-has",
-"o-am"
-]
-},
-{
-"id": "words-15",
-"cat": "words",
-"level": "easy",
-"q": "Let's ___ to the park!",
-"say": "Let's, blank, to the park! Which word fits?",
-"a": [
-"and",
-"has",
-"go"
-],
-"c": 2,
-"fact": "Ready, set, go!",
-"qa": "q-words-15",
-"fa": "f-words-15",
-"oa": [
-"o-and",
-"o-has",
-"o-go"
-]
-},
-{
-"id": "words-16",
-"cat": "words",
-"level": "easy",
-"q": "Mom ___ Dad",
-"say": "Mom, blank, Dad. Which word fits?",
-"a": [
-"and",
-"go",
-"am"
-],
-"c": 0,
-"fact": "And is a joining word. It puts two things together.",
-"qa": "q-words-16",
-"fa": "f-words-16",
-"oa": [
-"o-and",
-"o-go",
-"o-am"
-]
-},
-{
-"id": "words-17",
 "cat": "words",
 "level": "easy",
 "q": "I see ___ cat.",
@@ -6109,8 +6046,8 @@ window.TT_QUESTIONS = [
 ],
 "c": 1,
 "fact": "We use a when there's just one, like a cat or a dog.",
-"qa": "q-words-17",
-"fa": "f-words-17",
+"qa": "q-words-14",
+"fa": "f-words-14",
 "oa": [
 "o-am",
 "o-a",
@@ -6118,70 +6055,91 @@ window.TT_QUESTIONS = [
 ]
 },
 {
-"id": "words-18",
+"id": "words-15",
 "cat": "words",
 "level": "easy",
 "q": "___ sun is hot.",
 "say": "Blank, sun is hot. Which word fits?",
 "a": [
-"Go",
 "Has",
+"Go",
 "The"
 ],
 "c": 2,
 "fact": "When the starts a sentence, it begins with a big capital T.",
-"qa": "q-words-18",
-"fa": "f-words-18",
+"qa": "q-words-15",
+"fa": "f-words-15",
 "oa": [
-"o-go",
 "o-has",
+"o-go",
 "o-the"
 ]
 },
 {
-"id": "words-19",
+"id": "words-16",
 "cat": "words",
 "level": "easy",
 "q": "She ___ a red hat.",
 "say": "She, blank, a red hat. Which word fits?",
 "a": [
 "has",
-"go",
-"am"
+"am",
+"go"
 ],
 "c": 0,
 "fact": "Has and hat sound almost the same at the start.",
-"qa": "q-words-19",
-"fa": "f-words-19",
+"qa": "q-words-16",
+"fa": "f-words-16",
 "oa": [
 "o-has",
-"o-go",
-"o-am"
+"o-am",
+"o-go"
 ]
 },
 {
-"id": "words-20",
+"id": "words-17",
 "cat": "words",
 "level": "easy",
 "q": "I ___ a big kid!",
 "say": "I, blank, a big kid! Which word fits?",
 "a": [
+"go",
 "am",
-"the",
-"and"
+"the"
 ],
-"c": 0,
+"c": 1,
 "fact": "You are growing bigger every day.",
-"qa": "q-words-20",
-"fa": "f-words-20",
+"qa": "q-words-17",
+"fa": "f-words-17",
 "oa": [
+"o-go",
 "o-am",
-"o-the",
-"o-and"
+"o-the"
 ]
 },
 {
-"id": "words-21",
+"id": "words-18",
+"cat": "words",
+"level": "easy",
+"q": "We can ___ outside.",
+"say": "We can, blank, outside. Which word fits?",
+"a": [
+"has",
+"am",
+"go"
+],
+"c": 2,
+"fact": "Playing outside helps your body grow strong.",
+"qa": "q-words-18",
+"fa": "f-words-18",
+"oa": [
+"o-has",
+"o-am",
+"o-go"
+]
+},
+{
+"id": "words-19",
 "cat": "words",
 "level": "easy",
 "q": "Which word starts with the letter g?",
@@ -6192,8 +6150,8 @@ window.TT_QUESTIONS = [
 ],
 "c": 0,
 "fact": "G makes the sound g, like in go and goat.",
-"qa": "q-words-21",
-"fa": "f-words-21",
+"qa": "q-words-19",
+"fa": "f-words-19",
 "oa": [
 "o-go",
 "o-am",
@@ -6201,47 +6159,47 @@ window.TT_QUESTIONS = [
 ]
 },
 {
-"id": "words-22",
+"id": "words-20",
 "cat": "words",
 "level": "easy",
 "q": "Which word starts with the letter h?",
 "a": [
-"and",
+"has",
 "go",
-"has"
+"a"
 ],
-"c": 2,
+"c": 0,
 "fact": "H makes a breathy sound, like when you fog up a window.",
-"qa": "q-words-22",
-"fa": "f-words-22",
+"qa": "q-words-20",
+"fa": "f-words-20",
 "oa": [
-"o-and",
+"o-has",
 "o-go",
-"o-has"
+"o-a"
 ]
 },
 {
-"id": "words-23",
+"id": "words-21",
 "cat": "words",
 "level": "easy",
 "q": "Which word starts with the letter t?",
 "a": [
-"am",
+"the",
 "a",
-"the"
+"am"
 ],
-"c": 2,
+"c": 0,
 "fact": "The letter t is in the and in tiger.",
-"qa": "q-words-23",
-"fa": "f-words-23",
+"qa": "q-words-21",
+"fa": "f-words-21",
 "oa": [
-"o-am",
+"o-the",
 "o-a",
-"o-the"
+"o-am"
 ]
 },
 {
-"id": "words-24",
+"id": "words-22",
 "cat": "words",
 "level": "easy",
 "q": "Which word rhymes with no?",
@@ -6252,8 +6210,8 @@ window.TT_QUESTIONS = [
 ],
 "c": 2,
 "fact": "Go, no, so and toe all rhyme.",
-"qa": "q-words-24",
-"fa": "f-words-24",
+"qa": "q-words-22",
+"fa": "f-words-22",
 "oa": [
 "o-has",
 "o-the",
@@ -6261,82 +6219,82 @@ window.TT_QUESTIONS = [
 ]
 },
 {
-"id": "words-25",
+"id": "words-23",
 "cat": "words",
 "level": "easy",
 "q": "Which word rhymes with jam?",
 "a": [
+"go",
+"the",
+"am"
+],
+"c": 2,
+"fact": "Am, jam, ham and Sam all rhyme.",
+"qa": "q-words-23",
+"fa": "f-words-23",
+"oa": [
+"o-go",
+"o-the",
+"o-am"
+]
+},
+{
+"id": "words-24",
+"cat": "words",
+"level": "easy",
+"q": "Which word has just one letter?",
+"a": [
+"the",
+"has",
+"a"
+],
+"c": 2,
+"fact": "A and I are the only words in English with one letter.",
+"qa": "q-words-24",
+"fa": "f-words-24",
+"oa": [
+"o-the",
+"o-has",
+"o-a"
+]
+},
+{
+"id": "words-25",
+"cat": "words",
+"level": "easy",
+"q": "Which word has three letters?",
+"a": [
+"has",
 "am",
-"and",
-"go"
+"a"
 ],
 "c": 0,
-"fact": "Am, jam, ham and Sam all rhyme.",
+"fact": "The and has both have three letters.",
 "qa": "q-words-25",
 "fa": "f-words-25",
 "oa": [
+"o-has",
 "o-am",
-"o-and",
-"o-go"
+"o-a"
 ]
 },
 {
 "id": "words-26",
 "cat": "words",
 "level": "easy",
-"q": "Which word rhymes with hand?",
+"q": "Which word has two letters?",
 "a": [
-"has",
-"and",
-"go"
+"the",
+"am",
+"has"
 ],
 "c": 1,
-"fact": "And, hand, sand and band all rhyme.",
+"fact": "Am and go both have just two letters.",
 "qa": "q-words-26",
 "fa": "f-words-26",
 "oa": [
-"o-has",
-"o-and",
-"o-go"
-]
-},
-{
-"id": "words-27",
-"cat": "words",
-"level": "easy",
-"q": "Which word has just one letter?",
-"a": [
-"a",
-"has",
-"the"
-],
-"c": 0,
-"fact": "A and I are the only words in English with one letter.",
-"qa": "q-words-27",
-"fa": "f-words-27",
-"oa": [
-"o-a",
-"o-has",
-"o-the"
-]
-},
-{
-"id": "words-28",
-"cat": "words",
-"level": "easy",
-"q": "Which word has three letters?",
-"a": [
-"am",
-"a",
-"has"
-],
-"c": 2,
-"fact": "The, and and has all have three letters.",
-"qa": "q-words-28",
-"fa": "f-words-28",
-"oa": [
+"o-the",
 "o-am",
-"o-a",
 "o-has"
 ]
 }
