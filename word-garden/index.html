@@ -47,6 +47,10 @@ h1,h2,h3{font-weight:600;margin:0}
 .garden-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px 12px}
 .garden-head h2{font-size:20px}
 .garden-head p{margin:0;color:var(--soft);font-size:15px}
+.listpick{display:inline-flex;background:var(--bg);border-radius:14px;padding:3px;gap:2px}
+.listpick button{padding:7px 14px;border-radius:11px;font-weight:600;font-size:15px;color:var(--soft);transition:background .15s,color .15s}
+.listpick button.on{background:#fff;color:var(--ink);box-shadow:0 2px 0 rgba(59,51,85,.1)}
+.garden-left{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .beds{display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:2px 6px;margin-top:6px}
 .plant{display:flex;flex-direction:column;align-items:center;padding:4px 0 6px;border-radius:20px}
 .plant svg{width:64px;height:80px;transform-origin:50% 92%}
@@ -211,7 +215,8 @@ h1,h2,h3{font-weight:600;margin:0}
 <script src="audio/manifest.js"></script>
 <script>
 /* ---------- data + storage ---------- */
-const DEFAULT_WORDS = ['the','a','am','has','go'];
+// Two word lists to pick from on the garden. Grown-ups can edit either one.
+const DEFAULT_LISTS = { 1: ['a','the','had','go','and'], 2: ['he','I','has','see','you'] };
 const FILLER = ['is','it','in','to','see','can','we','me','my','up','look','like','you','for','at','on','he','she','was','are','big','run','come','here','play','not','one','red','blue','said','down'];
 const PRAISE = ['You got it!','Great job!','Super reading!','Wow!','Yes!','Amazing!','Nice one!'];
 const OOPS = ['Hmm, try again!','Almost! Try again.','Oops! One more try.','Keep going!'];
@@ -222,19 +227,24 @@ const store = {
   set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
 };
 const state = {
-  words: store.get('wg-words', DEFAULT_WORDS),
+  lists: store.get('wg-lists', null),
+  list: store.get('wg-list', 1),
   scores: store.get('wg-scores', {}),
   stars: store.get('wg-stars', 0),
+  // The words being played are the chosen list.
+  get words(){ return this.lists[this.list]; },
+  set words(ws){ this.lists[this.list] = ws; },
 };
-if (!Array.isArray(state.words) || !state.words.length) state.words = DEFAULT_WORDS.slice();
-// One-time update: switch lists already saved on a device to the current five words.
-// (Grown-ups can still add more words afterwards from the settings screen.)
-if (!store.get('wg-five-words', false)){
-  state.words = DEFAULT_WORDS.slice();
-  store.set('wg-five-words', true);
-  store.set('wg-words', state.words);
+// One-time update: devices that saved a single word list switch to the two new lists.
+if (!store.get('wg-two-lists', false) || !state.lists){
+  state.lists = JSON.parse(JSON.stringify(DEFAULT_LISTS));
+  state.list = 1;
+  store.set('wg-two-lists', true);
 }
-function save(){ store.set('wg-words', state.words); store.set('wg-scores', state.scores); store.set('wg-stars', state.stars); }
+[1, 2].forEach(n => { if (!Array.isArray(state.lists[n]) || !state.lists[n].length) state.lists[n] = DEFAULT_LISTS[n].slice(); });
+if (state.list !== 1 && state.list !== 2) state.list = 1;
+function save(){ store.set('wg-lists', state.lists); store.set('wg-list', state.list); store.set('wg-scores', state.scores); store.set('wg-stars', state.stars); }
+save();
 
 /* ---------- helpers ---------- */
 const $ = (s, el = document) => el.querySelector(s);
@@ -474,7 +484,6 @@ const GAME_LIST = [
 function renderHome(){
   session = null;
   stopVoice();
-  const bloomed = state.words.filter(w => stageOf(scoreOf(w)) === 3).length;
   app.innerHTML = `
     <header class="top">
       <a class="brand" href="../" title="Back to Little Lanterns" style="color:inherit;text-decoration:none">${beeSVG()}<h1>Word Garden</h1></a>
@@ -484,8 +493,11 @@ function renderHome(){
       </div>
     </header>
     <section class="card">
-      <div class="garden-head"><h2>Your garden</h2><p>${bloomed ? `${bloomed} of ${state.words.length} in bloom · ` : ''}Tap a plant to hear its word</p></div>
-      <div class="beds">${state.words.map(w => plantHTML(w)).join('')}</div>
+      <div class="garden-head">
+        <div class="garden-left"><h2>Your garden</h2>
+          <div class="listpick" role="group" aria-label="Word list">${[1, 2].map(n => `<button data-list="${n}" aria-pressed="false">List ${n}</button>`).join('')}</div></div>
+        <p id="gardenNote"></p></div>
+      <div class="beds" id="beds"></div>
     </section>
     <h2 class="sec">Pick a game</h2>
     <div class="games">${GAME_LIST.map(g => `
@@ -493,7 +505,16 @@ function renderHome(){
         <h3>${g.title}</h3><p>${g.desc}</p><span class="gicon">${GAME_ICONS[g.id]}</span>
       </button>`).join('')}
     </div>`;
-  $$('.plant', app).forEach(p => p.onclick = () => { sayWord(p.dataset.word); replay(p, 'sway'); });
+  // Switching lists only redraws the garden beds, so the page doesn't flicker.
+  const drawGarden = () => {
+    $$('[data-list]').forEach(b => { const on = +b.dataset.list === state.list; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); });
+    const bloomed = state.words.filter(w => stageOf(scoreOf(w)) === 3).length;
+    $('#gardenNote').textContent = `${bloomed ? `${bloomed} of ${state.words.length} in bloom · ` : ''}Tap a plant to hear its word`;
+    $('#beds').innerHTML = state.words.map(w => plantHTML(w)).join('');
+    $$('.plant', app).forEach(p => p.onclick = () => { sayWord(p.dataset.word); replay(p, 'sway'); });
+  };
+  $$('[data-list]').forEach(b => b.onclick = () => { if (+b.dataset.list === state.list) return; state.list = +b.dataset.list; save(); sfx.tap(); drawGarden(); });
+  drawGarden();
   $$('.game-card', app).forEach(c => c.onclick = () => startGame(c.dataset.game));
   $('#parentBtn').onclick = parentGate;
 }
@@ -789,11 +810,15 @@ function parentGate(){
 function cleanWord(raw){ return raw.trim().replace(/[^a-zA-Z']/g, ''); }
 
 function renderParent(){
-  let draft = state.words.slice();
+  let editing = state.list;
+  let draft = state.lists[editing].slice();
   app.innerHTML = `
     <header class="top"><div class="brand"><h1>For grown-ups</h1></div><button class="ibtn" id="back" aria-label="Back">${CLOSE}</button></header>
     <section class="card form">
-      <label for="wordInput">Sight words</label>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px">
+        <label for="wordInput" style="margin:0">Sight words</label>
+        <div class="listpick" role="group" aria-label="List to edit">${[1, 2].map(n => `<button data-edit="${n}">List ${n}</button>`).join('')}</div>
+      </div>
       <div class="chips" id="chips"></div>
       <p class="hint">Type a word and press Enter or comma. You can paste a whole list too.</p>
     </section>
@@ -823,10 +848,17 @@ function renderParent(){
     if (refocus) $('#wordInput').focus();
   }
   chips.onclick = () => $('#wordInput').focus();
+  const pickEdit = n => {
+    editing = n; draft = state.lists[n].slice();
+    $$('[data-edit]').forEach(b => b.classList.toggle('on', +b.dataset.edit === n));
+    drawChips(); drawProgress && drawProgress();
+  };
+  $$('[data-edit]').forEach(b => b.onclick = () => pickEdit(+b.dataset.edit));
+  $$('[data-edit]').forEach(b => b.classList.toggle('on', +b.dataset.edit === editing));
   drawChips();
 
   function drawProgress(){
-    const list = state.words;
+    const list = state.lists[editing];
     $('#progress').innerHTML = list.length ? list.map(w => {
       const s = scoreOf(w);
       return `<div class="prog"><span class="word">${esc(w)}</span><div class="bar"><b style="width:${s * 20}%"></b></div><span>${s}/5</span></div>`;
@@ -838,7 +870,7 @@ function renderParent(){
     const pending = $('#wordInput').value;
     if (pending.trim()) addFrom(pending, false);
     if (!draft.length){ replay($('#chips'), 'shake'); return; }
-    state.words = draft.slice(); save();
+    state.lists[editing] = draft.slice(); save();
     const btn = $('#saveBtn'); btn.textContent = 'Saved'; sfx.yes();
     drawProgress();
     setTimeout(() => { if (btn.isConnected) btn.textContent = 'Save words'; }, 1400);

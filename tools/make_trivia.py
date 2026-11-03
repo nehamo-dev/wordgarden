@@ -16,7 +16,7 @@ AUDIO = os.path.join(HERE, '..', 'table-talk', 'audio')
 VOICE, RATE = 'Samantha', '165'
 PHRASES = ["That's right!", 'You got it!', 'Brilliant!', 'Super!', 'Yes!', 'Not quite!', 'The answer is',
            'Fun fact!', 'Is it', 'or', "It's your turn!", 'What a team!', 'Superstars!', 'Great playing!']
-CATS = ['india', 'science', 'animals', 'space', 'geo', 'history', 'tech', 'food', 'body', 'words']
+CATS = ['india', 'science', 'animals', 'space', 'geo', 'history', 'tech', 'food', 'body', 'words', 'words2']
 
 def load():
     qs, counts = [], {}

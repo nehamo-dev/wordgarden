@@ -26,7 +26,7 @@ Grown-ups can add words from a settings screen hidden behind a simple addition q
 
 [Play Table Talk](https://little-lanterns-nine.vercel.app/table-talk/)
 
-316 questions across Indian culture, science, animals, space, geography, history, technology, food, the human body and sight words. Every question ends with a fun fact to keep the conversation going. Each player gets their own level (*easy* for 4–5, *tricky* for 6–8), and the whole thing is read aloud, so pre-readers can play alongside older siblings.
+340 questions across Indian culture, science, animals, space, geography, history, technology, food, the human body and two sight-word lists. Every question ends with a fun fact to keep the conversation going. Each player gets their own level (*easy* for 4–5, *tricky* for 6–8), and the whole thing is read aloud, so pre-readers can play alongside older siblings.
 
 ### Peekaworld · *the world, the USA and space*
 

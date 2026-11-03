@@ -44,7 +44,7 @@ h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.02em}
 @media (min-width:900px){.groups{grid-template-columns:minmax(0,5fr) minmax(0,6fr);grid-template-rows:auto 1fr;grid-template-areas:"players cats" "go cats";align-items:start}
   .groups .setup-go{margin:4px 0 0;max-width:none}}
 .group{background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.9);border-radius:28px;padding:20px 22px 22px;box-shadow:0 14px 34px -22px rgba(59,51,85,.35)}
-.group-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:16px}
+.group-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:14px}
 .group-head h2{font-size:20px;font-weight:700;letter-spacing:-.01em}
 .group-head small{color:var(--soft);font-size:14px}
 .sec{font-weight:600;font-size:17px;margin:14px 2px 8px;display:flex;justify-content:space-between;align-items:baseline}
@@ -72,8 +72,8 @@ h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.02em}
 .seg button.on{background:#fff;color:var(--ink);box-shadow:0 2px 0 rgba(59,51,85,.08)}
 .addform .ok{background:var(--ink);color:#fff;font-weight:600;padding:10px 18px;border-radius:14px}
 .hint{color:var(--soft);font-size:15px;line-height:1.45;margin:14px 2px 0}
-.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
-.cat{display:flex;align-items:center;gap:10px;text-align:left;background:#fff;border-radius:18px;padding:10px 12px;font-weight:600;font-size:15px;box-shadow:0 3px 0 rgba(59,51,85,.07);border:2.5px solid transparent}
+.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px}
+.cat{display:flex;align-items:center;gap:10px;text-align:left;background:#fff;border-radius:18px;padding:8px 12px;font-weight:600;font-size:15px;box-shadow:0 3px 0 rgba(59,51,85,.07);border:2.5px solid transparent}
 .cat i{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;flex:none}
 .cat i svg{width:18px;height:18px}
 .cat{transition:opacity .15s,border-color .15s,transform .12s}
@@ -223,6 +223,7 @@ const CAT_ICON = {
   food:    '<path d="M3 13h18a9 9 0 0 1-18 0z" fill="#E0A93E"/><path d="M8 9c0-2 2-2 2-4M13 9c0-2 2-2 2-4" stroke="#E0A93E" stroke-width="1.8" fill="none" stroke-linecap="round"/>',
   body:    '<path d="M12 20s-7-4.4-9.3-9A5 5 0 0 1 12 6a5 5 0 0 1 9.3 5C19 15.6 12 20 12 20z" fill="#FF8B7B"/>',
   words:   '<text x="12" y="17" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="600" font-size="13" fill="#2E7D62">Aa</text>',
+  words2:  '<text x="12" y="17" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="600" font-size="13" fill="#5B49A8">Aa</text>',
 };
 const CATS = {
   india:   { name: 'Indian culture', bg: '#FFDCE6', fg: '#A63E5C', award: 'Culture star' },
@@ -234,10 +235,11 @@ const CATS = {
   tech:    { name: 'Technology',     bg: '#E1EEFF', fg: '#2F5F99', award: 'Tech whiz' },
   food:    { name: 'Food',           bg: '#FFF1DD', fg: '#8A5A12', award: 'Food expert' },
   body:    { name: 'Our body',       bg: '#FFDCE6', fg: '#A63E5C', award: 'Body boss' },
-  words:   { name: 'Sight words',    bg: '#D9F3E8', fg: '#2E7D62', award: 'Word wizard', note: 'Easy only' },
+  words:   { name: 'Sight words 1',  bg: '#D9F3E8', fg: '#2E7D62', award: 'Word wizard', note: 'a, the, had, go, and' },
+  words2:  { name: 'Sight words 2',  bg: '#E9E2FF', fg: '#5B49A8', award: 'Word wizard', note: 'he, I, has, see, you' },
 };
 // Sight-word answers are never read aloud: hearing them would give the answer away.
-const READ_ANSWERS = q => q.cat !== 'words';
+const READ_ANSWERS = q => q.cat !== 'words' && q.cat !== 'words2';
 const CAT_IDS = Object.keys(CATS);
 const PLAYER_COLORS = ['#FF8B7B', '#8CC4FF', '#B7A3F3', '#79D2B2', '#FFC95E', '#FFB3C7'];
 const BADGES = ['#FFD8CF', '#CFE5FF', '#CFF1E3'];
@@ -253,6 +255,8 @@ let cats = store.get('tt-cats', null);
 cats = Array.isArray(cats) ? cats.filter(c => CATS[c]) : CAT_IDS.slice();
 // One-time update: switch on the new Sight words category for devices that saved a category choice before it existed.
 if (!store.get('tt-added-words', false)){ if (!cats.includes('words')) cats.push('words'); store.set('tt-added-words', true); store.set('tt-cats', cats); }
+// One-time update: switch on Sight words 2 wherever Sight words was on.
+if (!store.get('tt-added-words2', false)){ if (cats.includes('words') && !cats.includes('words2')) cats.push('words2'); store.set('tt-added-words2', true); store.set('tt-cats', cats); }
 const savePlayers = () => store.set('tt-players', players);
 const saveCats = () => store.set('tt-cats', cats);
 const savePrefs = () => store.set('tt-prefs', prefs);
